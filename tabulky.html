@@ -723,7 +723,7 @@
       <a href="https://synthlucida.com" target="_blank" rel="noopener">SYNTHLUCIDA</a>
       <a href="./dokumenty.html" data-i18n="footerDocsLink">Xtally Dokumenty</a>
       <a href="./scanner.html" data-i18n="footerScannerLink">Xtally Scanner</a>
-      <a href="#app" data-i18n="footerEditor">Editor</a>
+      <a id="footerEditorLink" href="#app" data-i18n="footerEditor">Editor</a>
       <a id="footerTemplatesLink" href="#app" data-i18n="footerTemplates">Šablony</a>
       <a href="./privacy-tabulky.html" data-i18n="footerPrivacy">Ochrana soukromí</a>
     </div>
@@ -2895,6 +2895,11 @@ document.getElementById("heroTemplatesBtn").addEventListener("click", function()
 document.getElementById("importBtn").addEventListener("click", function(){ openModal(importModal); });
 document.getElementById("exportBtn").addEventListener("click", function(){ openModal(exportModal); });
 document.getElementById("footerTemplatesLink").addEventListener("click", function(e){ e.preventDefault(); renderTemplateGrid(); openModal(templatesModal); });
+document.getElementById("footerEditorLink").addEventListener("click", function(e){
+  e.preventDefault();
+  document.getElementById("app").scrollIntoView({ behavior: "smooth", block: "start" });
+  try { S.gridScroll.focus({ preventScroll: true }); } catch(err){ S.gridScroll.focus(); }
+});
 
 document.getElementById("exportXlsx").addEventListener("click", function(){ S.saveCurrentDoc(); closeModal(exportModal); exportXlsx(); });
 document.getElementById("exportCsv").addEventListener("click", function(){ S.saveCurrentDoc(); closeModal(exportModal); exportCsv(); });
