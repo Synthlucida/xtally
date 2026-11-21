@@ -689,7 +689,6 @@
       <a href="https://synthlucida.com" target="_blank" rel="noopener">SYNTHLUCIDA</a>
       <a href="./tabulky.html" data-i18n="footerSheetsLink">Xtally Tabulky</a>
       <a href="./scanner.html" data-i18n="footerScannerLink">Xtally Scanner</a>
-      <a id="footerEditorLink" href="#app" data-i18n="footerEditor">Editor</a>
       <a id="footerTemplatesLink" href="#app" data-i18n="footerTemplates">Šablony</a>
       <a href="./privacy-dokumenty.html" data-i18n="footerPrivacy">Ochrana soukromí</a>
     </div>
@@ -1669,11 +1668,6 @@ function a(e,t){return n(e)||r(e,t)||o(e,t)||i()}function o(e,n){if(e){if(typeof
   document.getElementById("openTemplatesBtn").addEventListener("click", function(){ openModal(templatesModal); });
   document.getElementById("heroTemplatesBtn").addEventListener("click", function(){ openModal(templatesModal); });
   document.getElementById("footerTemplatesLink").addEventListener("click", function(e){ e.preventDefault(); openModal(templatesModal); });
-  document.getElementById("footerEditorLink").addEventListener("click", function(e){
-    e.preventDefault();
-    document.getElementById("app").scrollIntoView({ behavior: "smooth", block: "start" });
-    try { editor.focus({ preventScroll: true }); } catch(err){ editor.focus(); }
-  });
   document.getElementById("closeTemplates").addEventListener("click", function(){ closeModal(templatesModal); });
 
   /* ============ Delete modal ============ */
