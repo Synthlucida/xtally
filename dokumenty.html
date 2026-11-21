@@ -1,0 +1,2020 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Xtally Dokumenty – Editor dokumentů zdarma online (šablony, Word, PDF)</title>
+<meta name="description" content="Xtally Dokumenty je jednoduchý editor dokumentů přímo v prohlížeči. Zdarma, bez registrace. Šablony na životopis, fakturu, smlouvu i dopis, import a export .docx pro Microsoft Word, export do PDF a textu. Vše zůstává jen ve vašem zařízení.">
+<meta name="keywords" content="editor dokumentů, online dokumenty zdarma, šablona životopisu, šablona faktury, jednoduchý textový editor, export do PDF, import Word dokumentu, export docx">
+<meta name="author" content="SYNTHLUCIDA">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://synthlucida.com/xtally/dokumenty.html">
+<link rel="alternate" hreflang="cs" href="https://synthlucida.com/xtally/dokumenty.html">
+<link rel="alternate" hreflang="en" href="https://synthlucida.com/xtally/dokumenty.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://synthlucida.com/xtally/dokumenty.html">
+
+<meta name="theme-color" content="#4f46e5">
+<meta name="color-scheme" content="light dark">
+<link rel="apple-touch-icon" href="./icons-dokumenty/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons-dokumenty/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./icons-dokumenty/favicon-16.png">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Xtally Dokumenty">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Xtally Dokumenty – Editor dokumentů zdarma online">
+<meta property="og:description" content="Napište životopis, fakturu, smlouvu nebo dopis přímo v prohlížeči. Import a export Wordu, zdarma, bez registrace.">
+<meta property="og:image" content="https://synthlucida.com/xtally/icons-dokumenty/og-image.png">
+<meta property="og:url" content="https://synthlucida.com/xtally/dokumenty.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Xtally Dokumenty – Editor dokumentů zdarma online">
+<meta name="twitter:description" content="Napište životopis, fakturu, smlouvu nebo dopis přímo v prohlížeči. Import a export Wordu, zdarma, bez registrace.">
+<meta name="twitter:image" content="https://synthlucida.com/xtally/icons-dokumenty/og-image.png">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Xtally Dokumenty",
+  "alternateName": "Xtally",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any (web browser)",
+  "url": "https://synthlucida.com/xtally/dokumenty.html",
+  "image": "https://synthlucida.com/xtally/icons-dokumenty/og-image.png",
+  "description": "Jednoduchý online editor dokumentů se šablonami (životopis, faktura, smlouva, dopis). Import a export Word (.docx), PDF a textu. Zdarma, bez registrace. Vše se zpracovává lokálně v prohlížeči.",
+  "inLanguage": ["cs", "en"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CZK" },
+  "author": { "@type": "Organization", "name": "SYNTHLUCIDA", "url": "https://synthlucida.com" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=Roboto:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #f4f4f8; --bg-soft:#ffffff; --ink:#16161f; --ink-soft:#55566b; --line:#e4e4ee;
+    --card:#ffffff; --paper:#ffffff; --accent:#4f46e5; --accent-2:#c026d3; --danger:#e11d48; --success:#16a34a;
+    --shadow: 0 20px 50px -20px rgba(79,70,229,.25), 0 2px 10px rgba(20,20,40,.06);
+    --radius:18px; --radius-sm:10px; --toolbar-bg:#ffffff; color-scheme:light;
+  }
+  html[data-theme="dark"]{
+    --bg:#0e0e16; --bg-soft:#14141f; --ink:#f2f2f8; --ink-soft:#a3a3ba; --line:#26263a;
+    --card:#171724; --paper:#1b1b29; --accent:#818cf8; --accent-2:#e879f9;
+    --shadow: 0 20px 50px -20px rgba(129,140,248,.35), 0 2px 10px rgba(0,0,0,.4);
+    --toolbar-bg:#171724; color-scheme:dark;
+  }
+  @media (prefers-color-scheme: dark){
+    html:not([data-theme="light"]):not([data-theme="dark"]){
+      --bg:#0e0e16; --bg-soft:#14141f; --ink:#f2f2f8; --ink-soft:#a3a3ba; --line:#26263a;
+      --card:#171724; --paper:#1b1b29; --accent:#818cf8; --accent-2:#e879f9;
+      --shadow: 0 20px 50px -20px rgba(129,140,248,.35), 0 2px 10px rgba(0,0,0,.4);
+      --toolbar-bg:#171724; color-scheme:dark;
+    }
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,-apple-system,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  h1,h2,h3,.brand{ font-family:'Sora','Inter',sans-serif; }
+  a{ color:var(--accent); }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+  .wrap{ max-width:1180px; margin:0 auto; padding-inline:20px; }
+  .skip-link{ position:absolute; left:-999px; top:0; background:var(--accent); color:#fff; padding:10px 16px; border-radius:0 0 10px 0; z-index:200; }
+  .skip-link:focus{ left:0; }
+
+  header.site{ position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--bg-soft) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding-block:14px; flex-wrap:wrap; }
+  .brand{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.25rem; text-decoration:none; color:var(--ink); }
+  .brand .mark{ width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:var(--shadow);}
+  .brand .mark svg{ width:18px; height:18px; }
+  .header-actions{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .synth-link{ font-size:.8rem; color:var(--ink-soft); text-decoration:none; border:1px solid var(--line); padding:6px 12px; border-radius:999px; white-space:nowrap; }
+  .synth-link:hover{ color:var(--accent); border-color:var(--accent); }
+  .lang-switch{ display:flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; }
+  .lang-switch button{ border:none; background:transparent; color:var(--ink-soft); font-size:.76rem; font-weight:700; padding:8px 11px; cursor:pointer; }
+  .lang-switch button.active{ background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; }
+  .icon-btn{ display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:10px; border:1px solid var(--line); background:var(--bg-soft); color:var(--ink); cursor:pointer; flex-shrink:0; }
+  .icon-btn:hover{ border-color:var(--accent); color:var(--accent); }
+  .icon-btn svg{ width:18px; height:18px; }
+
+  .btn{ display:inline-flex; align-items:center; gap:8px; justify-content:center; padding:10px 18px; border-radius:999px; border:1px solid transparent; font-weight:600; font-size:.92rem; cursor:pointer; text-decoration:none; white-space:nowrap; font-family:inherit; }
+  .btn-primary{ background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; box-shadow:var(--shadow); }
+  .btn-primary:hover{ filter:brightness(1.06); }
+  .btn-ghost{ background:transparent; border-color:var(--line); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
+  .btn-danger{ background:var(--danger); color:#fff; }
+  .btn-sm{ padding:7px 13px; font-size:.82rem; }
+  .btn svg{ width:16px; height:16px; }
+
+  .hero{ padding-block:14px 10px; text-align:center; }
+  .hero-details{ text-align:center; }
+  .hero-details summary{ list-style:none; cursor:pointer; }
+  .hero-details summary::-webkit-details-marker{ display:none; }
+  .hero-summary-row{ display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; padding-block:6px; }
+  .hero-toggle-hint{ display:inline-flex; align-items:center; gap:5px; font-size:.78rem; font-weight:600; color:var(--ink-soft); border:1px solid var(--line); padding:6px 12px; border-radius:999px; }
+  .hero-toggle-hint svg{ width:13px; height:13px; transition:transform .18s ease; }
+  .hero-details[open] .hero-toggle-hint svg{ transform:rotate(180deg); }
+  .hero-body{ padding-top:18px; }
+  .hero-mini-title{ font-family:'Sora','Inter',sans-serif; font-weight:700; font-size:1rem; margin:0; }
+  .relax-link{ display:flex; align-items:center; gap:7px; font-size:.8rem; font-weight:600; color:var(--ink-soft); text-decoration:none; padding:8px 2px 2px; margin-top:4px; border-top:1px solid var(--line); min-width:0; }
+  .relax-link:hover{ color:var(--accent); }
+  .relax-link svg{ width:15px; height:15px; flex-shrink:0; color:var(--accent); }
+  .relax-link span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .privacy-badge{ display:inline-flex; align-items:center; gap:8px; font-size:.82rem; font-weight:600; color:var(--success); background:color-mix(in srgb, var(--success) 12%, transparent); border:1px solid color-mix(in srgb, var(--success) 30%, transparent); padding:8px 16px; border-radius:999px; margin-bottom:18px; max-width:100%; }
+  .privacy-badge svg{ width:15px; height:15px; flex-shrink:0; }
+  .privacy-badge > span:not(svg){ min-width:0; }
+  .hero h1{ font-size:clamp(1.9rem,4.4vw,3.1rem); line-height:1.1; margin:0 0 16px; letter-spacing:-.02em; }
+  .hero h1 span{ background:linear-gradient(135deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p.lead{ max-width:640px; margin:0 auto 28px; color:var(--ink-soft); font-size:1.05rem; }
+  .hero-cta{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:34px;}
+  .feature-strip{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; max-width:860px; margin:0 auto; }
+  .feature-chip{ display:flex; align-items:center; gap:7px; font-size:.84rem; color:var(--ink-soft); background:var(--card); border:1px solid var(--line); padding:8px 14px; border-radius:999px; }
+  .feature-chip svg{ width:15px; height:15px; color:var(--accent); flex-shrink:0; }
+
+  /* Pevná výška okna editoru – dokument se posouvá uvnitř, takže lišta s formátováním
+     zůstává vždy viditelná i u dlouhých dokumentů. */
+  .app-shell{ display:grid; grid-template-columns:260px 1fr; grid-template-rows:minmax(0,1fr); gap:0; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; height:calc(100vh - 96px); height:calc(100dvh - 96px); min-height:560px; max-height:1100px; }
+  #printArea{ display:none; }
+  #app{ scroll-margin-top:76px; } /* odkaz "Začít psát" nesmí editor schovat pod lepící hlavičku */
+
+  /* Focus / fullscreen mode — just the editor, no landing page chrome */
+  body.focus-mode{ overflow:hidden; background:var(--card); }
+  body.focus-mode header.site,
+  body.focus-mode .hero,
+  body.focus-mode .section,
+  body.focus-mode footer.site{ display:none !important; }
+  body.focus-mode #app{ padding:0 !important; max-width:none !important; margin:0; height:100vh; height:100dvh; }
+  body.focus-mode .app-shell{ border-radius:0; border:none; box-shadow:none; height:100vh; height:100dvh; min-height:0; max-height:none; }
+  #focusModeBtn.active{ background:color-mix(in srgb, var(--accent) 18%, transparent); color:var(--accent); }
+  .sidebar-backdrop{ display:none; }
+  .sidebar{ border-right:1px solid var(--line); display:flex; flex-direction:column; background:var(--bg-soft); min-height:0; }
+  .sidebar-head{ padding:16px; display:flex; flex-direction:column; gap:8px; border-bottom:1px solid var(--line); }
+  .sidebar-head .row{ display:flex; gap:8px; }
+  .sidebar-head .btn{ flex:1; }
+  .doc-list{ list-style:none; margin:0; padding:8px; overflow-y:auto; flex:1; }
+  .doc-item{ display:flex; flex-direction:column; gap:2px; padding:10px 12px; border-radius:var(--radius-sm); cursor:pointer; margin-bottom:4px; border:1px solid transparent; }
+  .doc-item:hover{ background:color-mix(in srgb, var(--accent) 8%, transparent); }
+  .doc-item.active{ background:color-mix(in srgb, var(--accent) 14%, transparent); border-color:color-mix(in srgb, var(--accent) 35%, transparent); }
+  .doc-item .title{ font-weight:600; font-size:.9rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .doc-item .meta{ font-size:.74rem; color:var(--ink-soft); }
+  .doc-empty{ padding:24px 16px; text-align:center; color:var(--ink-soft); font-size:.86rem; }
+  .sidebar-foot{ padding:12px 16px; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:8px; }
+  .sidebar-foot-row{ display:flex; gap:8px; }
+  .sidebar-foot-row .btn{ flex:1; min-width:0; }
+
+  .editor-col{ display:flex; flex-direction:column; min-width:0; min-height:0; }
+  .toolbar{ display:flex; flex-wrap:wrap; align-items:center; gap:4px; padding:10px 14px; border-bottom:1px solid var(--line); background:var(--toolbar-bg); position:sticky; top:0; z-index:5; }
+  .toolbar .grp{ display:flex; align-items:center; gap:2px; padding-inline:4px; border-right:1px solid var(--line); }
+  .toolbar .grp:last-child{ border-right:none; }
+  .tbtn{ display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border:none; background:transparent; border-radius:8px; color:var(--ink); cursor:pointer; }
+  .tbtn svg{ width:16px; height:16px; }
+  .tbtn:hover{ background:color-mix(in srgb, var(--accent) 12%, transparent); color:var(--accent); }
+  .tbtn.active{ background:color-mix(in srgb, var(--accent) 18%, transparent); color:var(--accent); }
+  .tsel{ height:32px; border-radius:8px; border:1px solid var(--line); background:var(--bg-soft); color:var(--ink); font-size:.82rem; padding-inline:6px; cursor:pointer; font-family:inherit; }
+  #blockSelect, #fontFamilySelect{ max-width:112px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .tcolor{ width:32px; height:32px; padding:2px; border-radius:8px; border:1px solid var(--line); background:var(--bg-soft); cursor:pointer; }
+
+  .doc-title-row{ padding:16px 28px 0; display:flex; justify-content:center; }
+  .doc-title-input{ width:100%; max-width:760px; border:none; background:transparent; font-family:'Sora',sans-serif; font-size:1.3rem; font-weight:700; color:var(--ink); outline:none; }
+  .doc-title-input::placeholder{ color:var(--ink-soft); }
+
+  .editor-scroll{ flex:1; overflow-y:auto; overflow-x:auto; -webkit-overflow-scrolling:touch; padding:8px 28px 32px; }
+  #editor{ min-height:420px; outline:none; font-size:1rem; color:var(--ink); background:var(--paper); padding:8px 2px 40px; max-width:760px; width:100%; margin:0 auto; }
+  #editor h1{ font-size:1.6rem; margin:.6em 0 .3em; }
+  #editor h2{ font-size:1.25rem; margin:.8em 0 .3em; }
+  #editor h3{ font-size:1.05rem; margin:.8em 0 .3em; }
+  #editor p{ margin:.5em 0; }
+  #editor ul, #editor ol{ margin:.5em 0; padding-left:1.4em; }
+  #editor table{ border-collapse:collapse; margin:.6em 0; }
+  #editor td, #editor th{ border:1px solid var(--line); padding:6px 10px; }
+  #editor a{ color:var(--accent); }
+  #editor img{ max-width:100%; height:auto; border-radius:8px; margin:.4em 0; display:block; }
+  /* review 09/2026: cokoliv v dokumentu (i "position:fixed" z podvrženého souboru) zůstane
+     uvnitř editoru a nepřekryje appku; široké tabulky jdou posunout do strany */
+  #editor, #printContent{ contain:paint; }
+  #editor{ overflow-x:auto; }
+  #editor:empty:before{ content:attr(data-placeholder); color:var(--ink-soft); pointer-events:none; }
+
+  .statusbar{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:9px 28px; border-top:1px solid var(--line); font-size:.78rem; color:var(--ink-soft); background:var(--bg-soft); flex-wrap:wrap; }
+  .statusbar .save-state{ display:flex; align-items:center; gap:6px; }
+  .save-dot{ width:7px; height:7px; border-radius:50%; background:var(--success); }
+  .statusbar .exports{ display:flex; gap:6px; flex-wrap:wrap; }
+
+  .modal-backdrop{ position:fixed; inset:0; background:rgba(10,10,20,.55); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; z-index:100; padding:20px; }
+  .modal{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); width:100%; max-width:640px; max-height:84vh; overflow-y:auto; border:1px solid var(--line); }
+  .modal-head{ display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-bottom:1px solid var(--line); }
+  .modal-head h2{ margin:0; font-size:1.1rem; }
+  .modal-body{ padding:20px 22px; }
+  .modal.small{ max-width:420px; }
+  .field{ display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+  .field label{ font-size:.82rem; font-weight:600; color:var(--ink-soft); }
+  .field input[type=text], .field input[type=url]{ height:40px; border-radius:10px; border:1px solid var(--line); background:var(--bg-soft); color:var(--ink); padding-inline:12px; font-size:.92rem; outline:none; }
+  .field input:focus{ border-color:var(--accent); }
+  .modal-actions{ display:flex; justify-content:flex-end; gap:10px; margin-top:6px; }
+  .modal-note{ font-size:.8rem; color:var(--ink-soft); margin:14px 0 0; padding-top:12px; border-top:1px solid var(--line); }
+
+  .tpl-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px; }
+  .tpl-card{ border:1px solid var(--line); border-radius:var(--radius-sm); padding:16px; text-align:left; background:var(--bg-soft); cursor:pointer; display:flex; flex-direction:column; gap:8px; font-family:inherit; }
+  .tpl-card:hover{ border-color:var(--accent); box-shadow:var(--shadow); }
+  .tpl-card .ic{ width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; }
+  .tpl-card .ic svg{ width:17px; height:17px; color:#fff; }
+  .tpl-card h3{ margin:0; font-size:.95rem; }
+  .tpl-card p{ margin:0; font-size:.78rem; color:var(--ink-soft); }
+
+  .option-list{ display:flex; flex-direction:column; gap:10px; }
+  .option-row{ display:flex; align-items:center; gap:14px; width:100%; text-align:left; border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px 16px; background:var(--bg-soft); cursor:pointer; font-family:inherit; }
+  .option-row:hover{ border-color:var(--accent); box-shadow:var(--shadow); }
+  .option-row .ic{ width:36px; height:36px; border-radius:9px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .option-row .ic svg{ width:18px; height:18px; color:#fff; }
+  .option-row .txt h3{ margin:0 0 2px; font-size:.92rem; }
+  .option-row .txt p{ margin:0; font-size:.78rem; color:var(--ink-soft); }
+
+  .section{ padding-block:10px; }
+  .section h2{ font-size:clamp(1.4rem,2.6vw,1.9rem); margin:0 0 10px; text-align:center; }
+  .section .sub{ text-align:center; color:var(--ink-soft); max-width:640px; margin:0 auto 36px; }
+  .section-details summary{ list-style:none; cursor:pointer; }
+  .section-details summary::-webkit-details-marker{ display:none; }
+  .section-summary-row{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; }
+  .section-toggle-hint{ display:inline-flex; align-items:center; gap:5px; font-size:.8rem; font-weight:600; color:var(--ink-soft); border:1px solid var(--line); padding:6px 12px; border-radius:999px; flex-shrink:0; }
+  .section-toggle-hint svg{ width:13px; height:13px; transition:transform .18s ease; }
+  .section-details[open] .section-toggle-hint svg{ transform:rotate(180deg); }
+  .section-body{ padding-top:20px; }
+  .grid-3{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+  .info-card{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow); }
+  .info-card .ic{ width:38px; height:38px; border-radius:10px; background:color-mix(in srgb, var(--accent) 14%, transparent); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .info-card .ic svg{ width:19px; height:19px; color:var(--accent); }
+  .info-card h3{ margin:0 0 8px; font-size:1.02rem; }
+  .info-card p{ margin:0; color:var(--ink-soft); font-size:.9rem; }
+
+  .steps{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; counter-reset:step; max-width:1000px; margin:0 auto; }
+  .step{ position:relative; padding:24px 20px 20px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
+  .step .num{ width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-family:'Sora',sans-serif; margin-bottom:12px; }
+  .step h3{ margin:0 0 6px; font-size:.98rem; }
+  .step p{ margin:0; color:var(--ink-soft); font-size:.88rem; }
+
+  .privacy-panel{ max-width:820px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:30px; }
+  .privacy-panel ul{ margin:14px 0 0; padding-left:1.2em; color:var(--ink-soft); font-size:.92rem; }
+  .privacy-panel li{ margin-bottom:8px; }
+
+  .faq{ max-width:760px; margin:0 auto; }
+  .faq-item{ border-bottom:1px solid var(--line); padding:16px 0; }
+  .faq-item summary{ cursor:pointer; font-weight:600; list-style:none; display:flex; justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap; }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary:after{ content:"+"; color:var(--accent); font-size:1.2rem; }
+  .faq-item[open] summary:after{ content:"–"; }
+  .faq-item p{ margin:10px 0 0; color:var(--ink-soft); font-size:.92rem; }
+
+  footer.site{ border-top:1px solid var(--line); padding-block:36px; margin-top:20px; }
+  .footer-inner{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; }
+  .footer-note{ font-size:.84rem; color:var(--ink-soft); }
+  .footer-note a{ color:var(--ink); font-weight:600; text-decoration:none; }
+  .footer-note a:hover{ color:var(--accent); }
+  .footer-links{ display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; row-gap:10px; column-gap:16px; font-size:.84rem; }
+  .footer-links a{ color:var(--ink-soft); text-decoration:none; cursor:pointer; }
+  .footer-links a:hover{ color:var(--accent); }
+
+  .mobile-only{ display:none; }
+  .toast{ position:fixed; bottom:20px; left:50%; transform:translateX(-50%) translateY(20px); background:var(--ink); color:var(--bg); padding:11px 20px; border-radius:999px; font-size:.85rem; opacity:0; pointer-events:none; transition:.25s; z-index:200; box-shadow:var(--shadow); max-width:90vw; text-align:center; }
+  html[data-theme="dark"] .toast{ background:#fff; color:#111; }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  @media (max-width:880px){
+    .app-shell{ grid-template-columns:1fr; height:calc(100vh - 76px); height:calc(100dvh - 76px); min-height:460px; }
+    .sidebar{ position:fixed; top:0; left:0; bottom:0; width:min(84vw,300px); z-index:120; transform:translateX(-100%); transition:transform .25s ease; border-right:1px solid var(--line); box-shadow:var(--shadow); }
+    .sidebar.open{ transform:translateX(0); }
+    .sidebar-backdrop{ display:none; position:fixed; inset:0; background:rgba(10,10,20,.5); z-index:110; }
+    .sidebar-backdrop.show{ display:block; }
+    .mobile-only{ display:inline-flex; }
+    .doc-title-row{ padding-inline:16px; }
+    .editor-scroll{ padding-inline:16px; }
+    .statusbar{ padding-inline:16px; }
+    .synth-link{ display:none; }
+    /* Menší horní lišta na mobilu: jeden vodorovně scrollovatelný řádek
+       místo vlámání do několika řádků, aby dokument nebyl zbytečně
+       zatlačen dolů mimo obrazovku. */
+    .toolbar{ flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; }
+    .toolbar .grp{ flex-shrink:0; }
+    /* Zabrání automatickému přiblížení stránky na iOS při klepnutí do rozbalovacích
+       nabídek (Safari zooming, pokud má select font-size menší než 16px) */
+    .tsel{ font-size:16px; }
+    /* Větší dotykové plochy tlačítek na mobilu (blíž doporučeným ~44x44px) */
+    .tbtn{ width:40px; height:40px; }
+    .tbtn svg{ width:18px; height:18px; }
+    .icon-btn{ width:42px; height:42px; }
+    /* Sjednocené rozvržení rozbalovacích nabídek (Jak to funguje / Vše co potřebujete /
+       Soukromí / Časté dotazy) — nadpis vždy nahoře, tlačítko "Zobrazit" vždy pod ním,
+       ať je nadpis jakkoli dlouhý. */
+    .hero-summary-row, .section-summary-row{
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:6px;
+    }
+    .section-summary-row h2{ width:100%; }
+  }
+</style>
+</head>
+<body>
+<a href="#app" class="skip-link" data-i18n="skipLink">Přeskočit na editor</a>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a href="./" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4v16M9 4v16M13 4v16M4 15l14-9" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+      <span>Xtally <span style="font-weight:600;opacity:.7;font-size:.85em;" data-i18n="brandWord">Dokumenty</span></span>
+    </a>
+    <div class="header-actions">
+      <a class="synth-link" href="https://synthlucida.com" target="_blank" rel="noopener" data-i18n="synthLink">Součást SYNTHLUCIDA ↗</a>
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Jazyk / Language">
+        <button type="button" data-lang="cs">CS</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button class="icon-btn" id="themeToggle" type="button" data-i18n-title="themeToggle" data-i18n-aria="themeToggle" title="Přepnout vzhled" aria-label="Přepnout vzhled">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <details class="hero-details" id="heroDetails">
+      <summary>
+        <div class="hero-summary-row">
+          <span class="privacy-badge" style="margin-bottom:0;">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="privacyBadge">Nic se neodesílá na server – vše zůstává jen ve vašem zařízení</span>
+          </span>
+          <p class="hero-mini-title" data-i18n="brandWord2">Xtally Dokumenty</p>
+          <span class="hero-toggle-hint">
+            <span id="heroToggleLabel" data-i18n="heroToggleMore">O aplikaci a šablony</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </summary>
+      <div class="hero-body">
+        <h1 data-i18n-html="heroTitle">Napište dokument, aniž byste <span>cokoliv instalovali</span></h1>
+        <p class="lead" data-i18n="heroLead">Xtally je odlehčený editor dokumentů přímo v prohlížeči. Životopis, faktura, smlouva nebo obyčejný dopis – s hotovými šablonami je hotovo za pár minut. Umí i otevřít a uložit soubory Wordu (.docx).</p>
+        <div class="hero-cta">
+          <a href="#app" class="btn btn-primary" data-i18n="heroCtaStart">Začít psát zdarma</a>
+          <button class="btn btn-ghost" id="heroTemplatesBtn" type="button" data-i18n="heroCtaTemplates">Prohlédnout šablony</button>
+        </div>
+        <div class="feature-strip">
+          <span class="feature-chip"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="chipAutosave">Automatické ukládání</span></span>
+          <span class="feature-chip"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="chipWord">Import a export Wordu (.docx)</span></span>
+          <span class="feature-chip"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="chipResponsive">Responzivní na mobilu i počítači</span></span>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<main id="app" class="wrap" style="padding-bottom:20px;">
+  <div class="app-shell">
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <aside class="sidebar" id="sidebar" aria-label="Moje dokumenty">
+      <div class="sidebar-head">
+        <div class="row">
+          <button class="btn btn-primary btn-sm" id="newDocBtn" type="button"><span data-i18n="newDoc">+ Nový</span></button>
+          <button class="btn btn-ghost btn-sm" id="openTemplatesBtn" type="button" data-i18n="templatesBtn">Šablony</button>
+        </div>
+      </div>
+      <ul class="doc-list" id="docList"></ul>
+      <div class="sidebar-foot">
+        <div class="sidebar-foot-row">
+          <button class="btn btn-ghost btn-sm" id="backupBtn" type="button" data-i18n="backupBtn" data-i18n-title="backupBtnTitle" title="Zálohovat vše">Zálohovat</button>
+          <button class="btn btn-ghost btn-sm" id="restoreBtn" type="button" data-i18n="restoreBtn" data-i18n-title="restoreBtnTitle" title="Obnovit ze zálohy">Obnovit</button>
+        </div>
+        <a class="relax-link" href="https://relaxplayer.eu" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span data-i18n="relaxLink">Klidná chillout hudba k psaní ↗</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="editor-col">
+      <div class="toolbar" role="toolbar" aria-label="Formátování textu">
+        <div class="grp">
+          <button class="tbtn mobile-only" id="sidebarToggle" type="button" data-i18n-title="myDocs" data-i18n-aria="myDocs" title="Moje dokumenty" aria-label="Moje dokumenty">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="grp">
+          <select class="tsel" id="blockSelect" data-i18n-title="textStyle" data-i18n-aria="textStyle" title="Styl textu" aria-label="Styl textu">
+            <option value="P" data-i18n="blockNormal">Normální text</option>
+            <option value="H1" data-i18n="blockH1">Nadpis 1</option>
+            <option value="H2" data-i18n="blockH2">Nadpis 2</option>
+            <option value="H3" data-i18n="blockH3">Nadpis 3</option>
+          </select>
+          <select class="tsel" id="fontSizeSelect" data-i18n-title="fontSize" data-i18n-aria="fontSize" title="Velikost písma" aria-label="Velikost písma">
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16" selected>16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+            <option value="28">28</option>
+            <option value="32">32</option>
+            <option value="40">40</option>
+            <option value="56">56</option>
+            <option value="72">72</option>
+          </select>
+          <select class="tsel" id="fontFamilySelect" data-i18n-title="fontFamily" data-i18n-aria="fontFamily" title="Typ písma" aria-label="Typ písma">
+            <option value="Inter, system-ui, sans-serif" data-i18n="fontDefault">Výchozí</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
+            <option value="'Times New Roman', Times, serif">Times New Roman</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Verdana, Geneva, sans-serif">Verdana</option>
+            <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+            <option value="'Courier New', Courier, monospace">Courier New</option>
+            <option value="'Comic Sans MS', 'Comic Sans', cursive">Comic Sans MS</option>
+            <option value="'Roboto', Arial, sans-serif">Roboto</option>
+            <option value="'Merriweather', Georgia, serif">Merriweather</option>
+            <option value="'Lora', Georgia, serif">Lora</option>
+            <option value="'Poppins', Arial, sans-serif">Poppins</option>
+            <option value="'JetBrains Mono', 'Courier New', monospace">JetBrains Mono</option>
+          </select>
+        </div>
+        <div class="grp">
+          <button class="tbtn" data-cmd="bold" data-i18n-title="bold" data-i18n-aria="bold" title="Tučně (Ctrl+B)" aria-label="Tučně (Ctrl+B)">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 5h6.5a3.5 3.5 0 010 7H7V5zM7 12h7a3.5 3.5 0 010 7H7v-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="italic" data-i18n-title="italic" data-i18n-aria="italic" title="Kurzíva (Ctrl+I)" aria-label="Kurzíva (Ctrl+I)">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M11 5h6M7 19h6M14 5L10 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="underline" data-i18n-title="underline" data-i18n-aria="underline" title="Podtržené (Ctrl+U)" aria-label="Podtržené (Ctrl+U)">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 4v7a6 6 0 0012 0V4M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="strikeThrough" data-i18n-title="strike" data-i18n-aria="strike" title="Přeškrtnuté" aria-label="Přeškrtnuté">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M8 6.5c1-1 2.3-1.5 4-1.5 2.8 0 4.5 1.3 4.5 3.2 0 1-.5 1.8-1.5 2.3M8.5 15c-.3.5-.5 1-.5 1.7 0 1.9 1.9 3.3 4.5 3.3 2 0 3.4-.6 4.2-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="grp">
+          <button class="tbtn" data-cmd="insertUnorderedList" data-i18n-title="bullets" data-i18n-aria="bullets" title="Odrážky" aria-label="Odrážky">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="5" cy="6" r="1.4" fill="currentColor"/><circle cx="5" cy="12" r="1.4" fill="currentColor"/><circle cx="5" cy="18" r="1.4" fill="currentColor"/><path d="M9 6h11M9 12h11M9 18h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="insertOrderedList" data-i18n-title="numbered" data-i18n-aria="numbered" title="Číslovaný seznam" aria-label="Číslovaný seznam">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 6h11M9 12h11M9 18h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="2" y="8" font-size="6" fill="currentColor">1</text><text x="2" y="14" font-size="6" fill="currentColor">2</text><text x="2" y="20" font-size="6" fill="currentColor">3</text></svg>
+          </button>
+        </div>
+        <div class="grp">
+          <button class="tbtn" data-cmd="justifyLeft" data-i18n-title="alignLeft" data-i18n-aria="alignLeft" title="Zarovnat vlevo" aria-label="Zarovnat vlevo">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="justifyCenter" data-i18n-title="alignCenter" data-i18n-aria="alignCenter" title="Zarovnat na střed" aria-label="Zarovnat na střed">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M7 12h10M5 18h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="justifyRight" data-i18n-title="alignRight" data-i18n-aria="alignRight" title="Zarovnat vpravo" aria-label="Zarovnat vpravo">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M10 12h10M6 18h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="justifyFull" data-i18n-title="alignJustify" data-i18n-aria="alignJustify" title="Zarovnat do bloku" aria-label="Zarovnat do bloku">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="grp">
+          <input class="tcolor" type="color" id="colorPicker" value="#4f46e5" data-i18n-title="textColor" data-i18n-aria="textColor" title="Barva textu" aria-label="Barva textu">
+          <input class="tcolor" type="color" id="highlightPicker" value="#fef08a" data-i18n-title="highlightColor" data-i18n-aria="highlightColor" title="Zvýraznění textu" aria-label="Zvýraznění textu">
+          <button class="tbtn" id="linkBtn" type="button" data-i18n-title="insertLink" data-i18n-aria="insertLink" title="Vložit odkaz" aria-label="Vložit odkaz">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 15l6-6M10 7l1.2-1.2a3.5 3.5 0 115 5L15 12M14 17l-1.2 1.2a3.5 3.5 0 11-5-5L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tbtn" id="imageBtn" type="button" data-i18n-title="insertImage" data-i18n-aria="insertImage" title="Vložit obrázek" aria-label="Vložit obrázek">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.5" fill="currentColor"/><path d="M5 16l4.5-4.5a1.5 1.5 0 012.1 0L15 15m1-2l1.3-1.3a1.5 1.5 0 012.1 0L21 13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="removeFormat" data-i18n-title="clearFormat" data-i18n-aria="clearFormat" title="Vymazat formátování" aria-label="Vymazat formátování">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M11 5h8M9.5 5L7 19h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="grp">
+          <button class="tbtn" data-cmd="undo" data-i18n-title="undo" data-i18n-aria="undo" title="Zpět (Ctrl+Z)" aria-label="Zpět (Ctrl+Z)">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 7L4 12l5 5M4 12h10a6 6 0 010 12h-1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="tbtn" data-cmd="redo" data-i18n-title="redo" data-i18n-aria="redo" title="Vpřed (Ctrl+Y)" aria-label="Vpřed (Ctrl+Y)">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M15 7l5 5-5 5M20 12H10a6 6 0 000 12h1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="grp">
+          <button class="tbtn" id="printToolbarBtn" type="button" data-i18n-title="printTooltip" data-i18n-aria="printTooltip" title="Tisk / PDF" aria-label="Tisk / PDF">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9V3h12v6M6 18H4a1 1 0 01-1-1v-5a1 1 0 011-1h16a1 1 0 011 1v5a1 1 0 01-1 1h-2M6 14h12v7H6v-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="tbtn" id="focusModeBtn" type="button" data-i18n-title="focusMode" data-i18n-aria="focusMode" title="Celá obrazovka" aria-label="Celá obrazovka">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="doc-title-row">
+        <input type="text" id="docTitleInput" class="doc-title-input" data-i18n-placeholder="docTitlePlaceholder" placeholder="Název dokumentu" maxlength="120">
+      </div>
+
+      <div class="editor-scroll">
+        <div id="editor" contenteditable="true" data-i18n-dataplaceholder="editorPlaceholder" data-placeholder="Začněte psát, nebo vyberte šablonu vlevo…" spellcheck="true" role="textbox" aria-multiline="true" aria-label="Obsah dokumentu"></div>
+      </div>
+
+      <div class="statusbar">
+        <div class="save-state"><span class="save-dot" id="saveDot"></span><span id="saveLabel" data-i18n="saved">Uloženo</span> · <span id="wordCount">0 slov</span></div>
+        <div class="exports">
+          <button class="btn btn-ghost btn-sm" id="dupBtn" type="button" data-i18n="duplicate">Duplikovat</button>
+          <button class="btn btn-ghost btn-sm" id="deleteBtn" type="button" data-i18n="delete">Smazat</button>
+          <button class="btn btn-ghost btn-sm" id="openImportBtn" type="button" data-i18n="importBtn">Import</button>
+          <button class="btn btn-primary btn-sm" id="openExportBtn" type="button" data-i18n="exportBtn">Export</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section id="printArea">
+  <h1 id="printTitle" style="font-family:'Sora',sans-serif;"></h1>
+  <div id="printContent"></div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <details class="section-details" id="stepsDetails">
+      <summary>
+        <div class="section-summary-row">
+          <h2 data-i18n="stepsTitle" style="margin:0;">Jak to funguje</h2>
+          <span class="section-toggle-hint">
+            <span id="stepsToggleLabel" data-i18n="stepsToggleMore">Zobrazit</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </summary>
+      <div class="section-body">
+        <p class="sub" data-i18n="stepsSub">Čtyři kroky mezi vámi a hotovým dokumentem.</p>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><h3 data-i18n="step1h">Vyberte šablonu</h3><p data-i18n="step1p">Nebo začněte s prázdným dokumentem – podle toho, co zrovna potřebujete.</p></div>
+          <div class="step"><div class="num">2</div><h3 data-i18n="step2h">Napište a naformátujte</h3><p data-i18n="step2p">Tučné písmo, nadpisy, seznamy, zarovnání a barvy – vše jako v běžném editoru.</p></div>
+          <div class="step"><div class="num">3</div><h3 data-i18n="step3h">Automaticky se uloží</h3><p data-i18n="step3p">Xtally ukládá vaši práci průběžně přímo do tohoto zařízení – nic neztratíte.</p></div>
+          <div class="step"><div class="num">4</div><h3 data-i18n="step4h">Exportujte nebo stáhněte</h3><p data-i18n="step4p">PDF, Word (.docx), čistý text nebo záloha všech dokumentů – vyberte si.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <details class="section-details" id="featuresDetails">
+      <summary>
+        <div class="section-summary-row">
+          <h2 data-i18n="featuresTitle" style="margin:0;">Vše, co běžný člověk k dokumentům potřebuje</h2>
+          <span class="section-toggle-hint">
+            <span id="featuresToggleLabel" data-i18n="featuresToggleMore">Zobrazit</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </summary>
+      <div class="section-body">
+        <p class="sub" data-i18n="featuresSub">Xtally cíleně nemá desítky funkcí navíc – jen to, co skutečně použijete.</p>
+        <div class="grid-3">
+          <div class="info-card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3 data-i18n="feat1h">Kompletní formátování</h3>
+            <p data-i18n="feat1p">Tučné, kurzíva, podtržení, přeškrtnutí, nadpisy, velikosti a typ písma, barvy, zvýraznění i zarovnání do bloku.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7V3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <h3 data-i18n="feat2h">Hotové šablony</h3>
+            <p data-i18n="feat2p">Přes 15 šablon – životopis, faktura, nájemní smlouva, plná moc, výpověď a další – v češtině i angličtině.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7V3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 16h6" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+            <h3 data-i18n="feat3h">Import i export Wordu</h3>
+            <p data-i18n="feat3p">Otevřete existující .docx soubor z Microsoft Wordu, upravte ho a uložte zpět jako .docx pro Word.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 data-i18n="feat4h">Export, jaký potřebujete</h3>
+            <p data-i18n="feat4p">PDF přes tisk, Word (.docx), čistý text nebo záloha všech dokumentů v jednom JSON souboru.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3 data-i18n="feat5h">Data zůstávají u vás</h3>
+            <p data-i18n="feat5p">Dokumenty se ukládají jen ve vašem prohlížeči. Žádný účet, žádné nahrávání obsahu na cizí server.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 18h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3 data-i18n="feat6h">Responzivní na všech zařízeních</h3>
+            <p data-i18n="feat6p">Funguje na počítači, tabletu i mobilu a přizpůsobí se velikosti obrazovky.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <details class="section-details" id="privacyDetails">
+      <summary>
+        <div class="section-summary-row">
+          <h2 data-i18n="privacyTitle" style="margin:0;">Soukromí a vaše data</h2>
+          <span class="section-toggle-hint">
+            <span id="privacyToggleLabel" data-i18n="privacyToggleMore">Zobrazit</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </summary>
+      <div class="section-body">
+        <div class="privacy-panel">
+          <p style="margin:0;color:var(--ink-soft);" data-i18n="privacyIntro">Xtally nemá žádný server ani databázi. Všechno zpracování dokumentů probíhá výhradně ve vašem prohlížeči.</p>
+          <ul>
+            <li data-i18n="privacyLi1">Vaše dokumenty se ukládají jen lokálně (localStorage) na tomto zařízení a nikam se neodesílají.</li>
+            <li data-i18n="privacyLi2">Import a export Wordu (.docx) zpracovává přímo prohlížeč – z internetu se stáhne pouze kód knihovny, nikdy váš obsah.</li>
+            <li data-i18n="privacyLi3">Appka nepoužívá sledovací nástroje, cookies s reklamou ani analytiku třetích stran.</li>
+            <li data-i18n="privacyLi4">Protože data žijí jen ve vašem prohlížeči, doporučujeme si důležité dokumenty pravidelně zálohovat (tlačítko „Zálohovat“).</li>
+          </ul>
+          <p style="margin:16px 0 0;"><a href="./privacy-dokumenty.html" data-i18n="privacyFullLink">Přečíst kompletní zásady ochrany soukromí →</a></p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <details class="section-details" id="faqDetails">
+      <summary>
+        <div class="section-summary-row">
+          <h2 data-i18n="faqTitle" style="margin:0;">Časté dotazy</h2>
+          <span class="section-toggle-hint">
+            <span id="faqToggleLabel" data-i18n="faqToggleMore">Zobrazit</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </summary>
+      <div class="section-body">
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary data-i18n="faq1q">Je Xtally opravdu zdarma?</summary>
+            <p data-i18n="faq1a">Ano. Xtally je volně dostupný nástroj bez registrace, předplatného nebo skrytých poplatků.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq2q">Kam se ukládají moje dokumenty?</summary>
+            <p data-i18n="faq2a">Přímo ve vašem prohlížeči (localStorage). Nikam se neodesílají – pokud vymažete data prohlížeče, dokumenty zmizí, proto si důležité soubory zálohujte nebo exportujte.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq3q">Otevře appka soubory z Wordu?</summary>
+            <p data-i18n="faq3a">Ano, přes tlačítko Import můžete nahrát existující .docx soubor a upravit ho. Export do .docx je určený pro Microsoft Word na počítači – ten ho otevře bez problémů. Google Dokumenty, Pages nebo náhledy souborů v mobilu ho ale nemusí zobrazit správně, proto pro sdílení a tisk doporučujeme export do PDF.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq4q">Funguje appka i bez internetu?</summary>
+            <p data-i18n="faq4a">K otevření stránky internet potřebujete. Jakmile je stránka načtená, psaní i ukládání dokumentů funguje dál, i kdyby připojení vypadlo – dokumenty se ukládají jen ve vašem prohlížeči. Import a export Wordu fungují, pokud se potřebné knihovny načetly při otevření stránky.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq5q">Souvisí Xtally se SYNTHLUCIDA?</summary>
+            <p data-i18n="faq5a">Ano, je to samostatný projekt z rodiny bezplatných webových nástrojů <a href="https://synthlucida.com" target="_blank" rel="noopener">SYNTHLUCIDA</a>.</p>
+          </details>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap footer-inner">
+    <p class="footer-note"><span data-i18n="footerNote">Xtally je součástí rodiny bezplatných webových nástrojů</span> <a href="https://synthlucida.com" target="_blank" rel="noopener">SYNTHLUCIDA</a>. © <span id="year"></span> Xtally <span data-i18n="brandWord">Dokumenty</span>.</p>
+    <div class="footer-links">
+      <a href="https://synthlucida.com" target="_blank" rel="noopener">SYNTHLUCIDA</a>
+      <a href="./tabulky.html" data-i18n="footerSheetsLink">Xtally Tabulky</a>
+      <a href="./scanner.html" data-i18n="footerScannerLink">Xtally Scanner</a>
+      <a href="#app" data-i18n="footerEditor">Editor</a>
+      <a id="footerTemplatesLink" href="#app" data-i18n="footerTemplates">Šablony</a>
+      <a href="./privacy-dokumenty.html" data-i18n="footerPrivacy">Ochrana soukromí</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Templates modal -->
+<div class="modal-backdrop" id="templatesModal" hidden>
+  <div class="modal">
+    <div class="modal-head"><h2 data-i18n="tplModalTitle">Vyberte šablonu</h2>
+      <button class="icon-btn" id="closeTemplates" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-body"><div class="tpl-grid" id="tplGrid"></div></div>
+  </div>
+</div>
+
+<!-- Export modal -->
+<div class="modal-backdrop" id="exportModal" hidden>
+  <div class="modal">
+    <div class="modal-head"><h2 data-i18n="exportModalTitle">Exportovat dokument</h2>
+      <button class="icon-btn" id="closeExportModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="option-list">
+        <button class="option-row" id="exportPrintOpt" type="button">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9V3h12v6M6 18H4a1 1 0 01-1-1v-5a1 1 0 011-1h16a1 1 0 011 1v5a1 1 0 01-1 1h-2M6 14h12v7H6v-7z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <span class="txt"><h3 data-i18n="exportPrintH">Tisk / PDF</h3><p data-i18n="exportPrintP">Otevře dialog tisku prohlížeče, kde lze uložit jako PDF</p></span>
+        </button>
+        <button class="option-row" id="exportDocxOpt" type="button">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7V3z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <span class="txt"><h3 data-i18n="exportDocxH">Word (.docx)</h3><p data-i18n="exportDocxP">Pro Microsoft Word na počítači (Google Dokumenty ho nemusí zobrazit)</p></span>
+        </button>
+        <button class="option-row" id="exportTxtOpt" type="button">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span class="txt"><h3 data-i18n="exportTxtH">Text (.txt)</h3><p data-i18n="exportTxtP">Čistý text bez formátování</p></span>
+        </button>
+        <button class="option-row" id="exportJsonOpt" type="button">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="txt"><h3 data-i18n="exportJsonH">Záloha všech dokumentů (.json)</h3><p data-i18n="exportJsonP">Zálohuje úplně všechny vaše dokumenty do jednoho souboru</p></span>
+        </button>
+      </div>
+      <p class="modal-note" data-i18n="exportNote">Export probíhá vždy jen ve vašem prohlížeči – žádný soubor se nikam neodesílá.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Import modal -->
+<div class="modal-backdrop" id="importModal" hidden>
+  <div class="modal">
+    <div class="modal-head"><h2 data-i18n="importModalTitle">Importovat dokument</h2>
+      <button class="icon-btn" id="closeImportModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="option-list">
+        <button class="option-row" id="importDocxOpt" type="button">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7V3z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <span class="txt"><h3 data-i18n="importDocxH">Word dokument (.docx)</h3><p data-i18n="importDocxP">Nahraje existující .docx soubor jako nový dokument</p></span>
+        </button>
+        <button class="option-row" id="importTxtOpt" type="button">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span class="txt"><h3 data-i18n="importTxtH">Textový soubor (.txt)</h3><p data-i18n="importTxtP">Nahraje obyčejný text jako nový dokument</p></span>
+        </button>
+        <button class="option-row" id="importJsonOpt" type="button">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21V9m0 0l-4 4m4-4l4 4M5 3h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="txt"><h3 data-i18n="importJsonH">Obnovit zálohu (.json)</h3><p data-i18n="importJsonP">Načte dokumenty z dříve staženého zálohovacího souboru</p></span>
+        </button>
+      </div>
+      <p class="modal-note" data-i18n="importNote">Soubory se zpracovávají jen ve vašem prohlížeči a nikam se neodesílají.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Link modal -->
+<div class="modal-backdrop" id="linkModal" hidden>
+  <div class="modal small">
+    <div class="modal-head"><h2 data-i18n="linkModalTitle">Vložit odkaz</h2>
+      <button class="icon-btn" id="closeLinkModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="field"><label for="linkUrlInput" data-i18n="linkUrlLabel">Adresa (URL)</label><input type="url" id="linkUrlInput" placeholder="https://…"></div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost btn-sm" id="cancelLink" type="button" data-i18n="cancel">Zrušit</button>
+        <button class="btn btn-primary btn-sm" id="confirmLink" type="button" data-i18n="insert">Vložit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete confirm modal -->
+<div class="modal-backdrop" id="deleteModal" hidden>
+  <div class="modal small">
+    <div class="modal-head"><h2 data-i18n="deleteModalTitle">Smazat dokument?</h2>
+      <button class="icon-btn" id="closeDeleteModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <p style="margin-top:0;color:var(--ink-soft);" data-i18n="deleteModalText">Tuto akci nelze vrátit zpět. Dokument bude trvale odstraněn z tohoto zařízení.</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost btn-sm" id="cancelDelete" type="button" data-i18n="cancel">Zrušit</button>
+        <button class="btn btn-danger btn-sm" id="confirmDelete" type="button" data-i18n="delete">Smazat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Restore confirm modal -->
+<div class="modal-backdrop" id="restoreConfirmModal" hidden>
+  <div class="modal small">
+    <div class="modal-head"><h2 data-i18n="restoreModalTitle">Obnovit zálohu?</h2>
+      <button class="icon-btn" id="closeRestoreModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <p style="margin-top:0;color:var(--ink-soft);" id="restoreModalText" data-i18n="restoreModalText">Dokumenty ze zálohy budou přidány k vašim stávajícím dokumentům.</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost btn-sm" id="cancelRestore" type="button" data-i18n="cancel">Zrušit</button>
+        <button class="btn btn-primary btn-sm" id="confirmRestore" type="button" data-i18n="restoreBtn">Obnovit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<input type="file" id="importDocxInput" accept=".docx" hidden>
+<input type="file" id="importTxtInput" accept=".txt,text/plain" hidden>
+<input type="file" id="restoreJsonInput" accept=".json,application/json" hidden>
+<input type="file" id="insertImageInput" accept="image/*" hidden>
+
+<div class="toast" id="toast"></div>
+
+<!-- Client-side libraries for real Word (.docx) import/export — everything still runs only in this browser -->
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.12.3/mammoth.browser.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js" async></script>
+<!-- review 09/2026: DOMPurify 3.4.16 – čištění HTML z importovaných souborů (záloha .json, .docx) -->
+<script>
+/*! @license DOMPurify 3.4.16 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/3.4.16/LICENSE */
+(function(e,t){typeof exports==`object`&&typeof module<`u`?module.exports=t():typeof define==`function`&&define.amd?define([],t):(e=typeof globalThis<`u`?globalThis:e||self,e.DOMPurify=t())})(this,function(){"use strict";function e(e,t){this.v=e,this.k=t}function t(e,t){(t==null||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}function n(e){if(Array.isArray(e))return e}function r(e,t){var n=e==null?null:typeof Symbol<`u`&&e[Symbol.iterator]||e[`@@iterator`];if(n!=null){var r,i,a,o,s=[],c=!0,l=!1;try{if(a=(n=n.call(e)).next,t===0){if(Object(n)!==n)return;c=!1}else for(;!(c=(r=a.call(n)).done)&&(s.push(r.value),s.length!==t);c=!0);}catch(e){l=!0,i=e}finally{try{if(!c&&n.return!=null&&(o=n.return(),Object(o)!==o))return}finally{if(l)throw i}}return s}}function i(){throw TypeError(`Invalid attempt to destructure non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`)}
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */
+function a(e,t){return n(e)||r(e,t)||o(e,t)||i()}function o(e,n){if(e){if(typeof e==`string`)return t(e,n);var r={}.toString.call(e).slice(8,-1);return r===`Object`&&e.constructor&&(r=e.constructor.name),r===`Map`||r===`Set`?Array.from(e):r===`Arguments`||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?t(e,n):void 0}}function s(t){var n,r;function i(n,r){try{var o=t[n](r),s=o.value,c=s instanceof e;Promise.resolve(c?s.v:s).then(function(e){if(c){var r=n===`return`&&s.k?n:`next`;if(!s.k||e.done)return i(r,e);e=t[r](e).value}a(!!o.done,e)},function(e){i(`throw`,e)})}catch(e){a(2,e)}}function a(e,t){e===2?n.reject(t):n.resolve({value:t,done:e}),(n=n.next)?i(n.key,n.arg):r=null}this._invoke=function(e,t){return new Promise(function(a,o){var s={key:e,arg:t,resolve:a,reject:o,next:null};r?r=r.next=s:(n=r=s,i(e,t))})},typeof t.return!=`function`&&(this.return=void 0)}s.prototype[typeof Symbol==`function`&&Symbol.asyncIterator||`@@asyncIterator`]=function(){return this},s.prototype.next=function(e){return this._invoke(`next`,e)},s.prototype.throw=function(e){return this._invoke(`throw`,e)},s.prototype.return=function(e){return this._invoke(`return`,e)};let c=Object.entries,l=Object.setPrototypeOf,u=Object.isFrozen,d=Object.getPrototypeOf,f=Object.getOwnPropertyDescriptor,p=Object.freeze,m=Object.seal,h=Object.create,ee=typeof Reflect<`u`&&Reflect,g=ee.apply,te=ee.construct;p||(p=function(e){return e}),m||(m=function(e){return e}),g||(g=function(e,t){var n=[...arguments].slice(2);return e.apply(t,n)}),te||(te=function(e){return new e(...[...arguments].slice(1))});let _=T(Array.prototype.forEach);Array.prototype.indexOf;let ne=T(Array.prototype.lastIndexOf),re=T(Array.prototype.pop),ie=T(Array.prototype.push);Array.prototype.slice;let ae=T(Array.prototype.splice),v=Array.isArray,oe=T(String.prototype.toLowerCase),se=T(String.prototype.toString),ce=T(String.prototype.match),le=T(String.prototype.replace),ue=T(String.prototype.indexOf),de=T(String.prototype.trim),fe=T(Number.prototype.toString),y=T(Boolean.prototype.toString),b=typeof BigInt>`u`?null:T(BigInt.prototype.toString),pe=typeof Symbol>`u`?null:T(Symbol.prototype.toString),x=T(Object.prototype.hasOwnProperty),S=T(Object.prototype.toString),C=T(RegExp.prototype.test),w=E(TypeError);function T(e){return function(t){t instanceof RegExp&&(t.lastIndex=0);var n=[...arguments].slice(1);return g(e,t,n)}}function E(e){return function(){return te(e,[...arguments])}}function D(e,t){let n=arguments.length>2&&arguments[2]!==void 0?arguments[2]:oe;if(l&&l(e,null),!v(t))return e;let r=t.length;for(;r--;){let i=t[r];if(typeof i==`string`){let e=n(i);e!==i&&(u(t)||(t[r]=e),i=e)}e[i]=!0}return e}function me(e){for(let t=0;t<e.length;t++)x(e,t)||(e[t]=null);return e}function O(e){let t=h(null);for(let r of c(e)){var n=a(r,2);let i=n[0],o=n[1];x(e,i)&&(t[i]=v(o)?me(o):o&&typeof o==`object`&&o.constructor===Object?O(o):o)}return t}function he(e){switch(typeof e){case`string`:return e;case`number`:return fe(e);case`boolean`:return y(e);case`bigint`:return b?b(e):`0`;case`symbol`:return pe?pe(e):`Symbol()`;case`undefined`:return S(e);case`function`:case`object`:{if(e===null)return S(e);let t=e,n=k(t,`toString`);if(typeof n==`function`){let e=n(t);return typeof e==`string`?e:S(e)}return S(e)}default:return S(e)}}function k(e,t){for(;e!==null;){let n=f(e,t);if(n){if(n.get)return T(n.get);if(typeof n.value==`function`)return T(n.value)}e=d(e)}function n(){return null}return n}function ge(e){try{return C(e,``),!0}catch(e){return!1}}let _e=p(/* @__PURE__ */ `a.abbr.acronym.address.area.article.aside.audio.b.bdi.bdo.big.blink.blockquote.body.br.button.canvas.caption.center.cite.code.col.colgroup.content.data.datalist.dd.decorator.del.details.dfn.dialog.dir.div.dl.dt.element.em.fieldset.figcaption.figure.font.footer.form.h1.h2.h3.h4.h5.h6.head.header.hgroup.hr.html.i.img.input.ins.kbd.label.legend.li.main.map.mark.marquee.menu.menuitem.meter.nav.nobr.ol.optgroup.option.output.p.picture.pre.progress.q.rp.rt.ruby.s.samp.search.section.select.shadow.slot.small.source.spacer.span.strike.strong.style.sub.summary.sup.table.tbody.td.template.textarea.tfoot.th.thead.time.tr.track.tt.u.ul.var.video.wbr`.split(`.`)),ve=p(/* @__PURE__ */ `svg.a.altglyph.altglyphdef.altglyphitem.animatecolor.animatemotion.animatetransform.circle.clippath.defs.desc.ellipse.enterkeyhint.exportparts.filter.font.g.glyph.glyphref.hkern.image.inputmode.line.lineargradient.marker.mask.metadata.mpath.part.path.pattern.polygon.polyline.radialgradient.rect.stop.style.switch.symbol.text.textpath.title.tref.tspan.view.vkern`.split(`.`)),ye=p([`feBlend`,`feColorMatrix`,`feComponentTransfer`,`feComposite`,`feConvolveMatrix`,`feDiffuseLighting`,`feDisplacementMap`,`feDistantLight`,`feDropShadow`,`feFlood`,`feFuncA`,`feFuncB`,`feFuncG`,`feFuncR`,`feGaussianBlur`,`feImage`,`feMerge`,`feMergeNode`,`feMorphology`,`feOffset`,`fePointLight`,`feSpecularLighting`,`feSpotLight`,`feTile`,`feTurbulence`]),be=p([`animate`,`color-profile`,`cursor`,`discard`,`font-face`,`font-face-format`,`font-face-name`,`font-face-src`,`font-face-uri`,`foreignobject`,`hatch`,`hatchpath`,`mesh`,`meshgradient`,`meshpatch`,`meshrow`,`missing-glyph`,`script`,`set`,`solidcolor`,`unknown`,`use`]),xe=p(/* @__PURE__ */ `math.menclose.merror.mfenced.mfrac.mglyph.mi.mlabeledtr.mmultiscripts.mn.mo.mover.mpadded.mphantom.mroot.mrow.ms.mspace.msqrt.mstyle.msub.msup.msubsup.mtable.mtd.mtext.mtr.munder.munderover.mprescripts`.split(`.`)),Se=p([`maction`,`maligngroup`,`malignmark`,`mlongdiv`,`mscarries`,`mscarry`,`msgroup`,`mstack`,`msline`,`msrow`,`semantics`,`annotation`,`annotation-xml`,`mprescripts`,`none`]),Ce=p([`#text`]),we=p(/* @__PURE__ */ `accept.action.align.alt.autocapitalize.autocomplete.autopictureinpicture.autoplay.background.bgcolor.border.capture.cellpadding.cellspacing.checked.cite.class.clear.color.cols.colspan.command.commandfor.controls.controlslist.coords.crossorigin.datetime.decoding.default.dir.disabled.disablepictureinpicture.disableremoteplayback.download.draggable.enctype.enterkeyhint.exportparts.face.for.headers.height.hidden.high.href.hreflang.id.inert.inputmode.integrity.ismap.kind.label.lang.list.loading.loop.low.max.maxlength.media.method.min.minlength.multiple.muted.name.nonce.noshade.novalidate.nowrap.open.optimum.part.pattern.placeholder.playsinline.popover.popovertarget.popovertargetaction.poster.preload.pubdate.radiogroup.readonly.rel.required.rev.reversed.role.rows.rowspan.spellcheck.scope.selected.shape.size.sizes.slot.span.srclang.start.src.srcset.step.style.summary.tabindex.title.translate.type.usemap.valign.value.width.wrap.xmlns`.split(`.`)),Te=p(/* @__PURE__ */ `accent-height.accumulate.additive.alignment-baseline.amplitude.ascent.attributename.attributetype.azimuth.basefrequency.baseline-shift.begin.bias.by.class.clip.clippathunits.clip-path.clip-rule.color.color-interpolation.color-interpolation-filters.color-profile.color-rendering.cx.cy.d.dx.dy.diffuseconstant.direction.display.divisor.dominant-baseline.dur.edgemode.elevation.end.exponent.fill.fill-opacity.fill-rule.filter.filterunits.flood-color.flood-opacity.font-family.font-size.font-size-adjust.font-stretch.font-style.font-variant.font-weight.fx.fy.g1.g2.glyph-name.glyphref.gradientunits.gradienttransform.height.href.id.image-rendering.in.in2.intercept.k.k1.k2.k3.k4.kerning.keypoints.keysplines.keytimes.lang.lengthadjust.letter-spacing.kernelmatrix.kernelunitlength.lighting-color.local.marker-end.marker-mid.marker-start.markerheight.markerunits.markerwidth.maskcontentunits.maskunits.max.mask.mask-type.media.method.mode.min.name.numoctaves.offset.operator.opacity.order.orient.orientation.origin.overflow.paint-order.path.pathlength.patterncontentunits.patterntransform.patternunits.pointer-events.points.preservealpha.preserveaspectratio.primitiveunits.r.rx.ry.radius.refx.refy.repeatcount.repeatdur.restart.result.rotate.scale.seed.shape-rendering.slope.specularconstant.specularexponent.spreadmethod.startoffset.stddeviation.stitchtiles.stop-color.stop-opacity.stroke-dasharray.stroke-dashoffset.stroke-linecap.stroke-linejoin.stroke-miterlimit.stroke-opacity.stroke.stroke-width.style.surfacescale.systemlanguage.tabindex.tablevalues.targetx.targety.transform.transform-origin.text-anchor.text-decoration.text-orientation.text-rendering.textlength.type.u1.u2.unicode.values.vector-effect.viewbox.visibility.version.vert-adv-y.vert-origin-x.vert-origin-y.width.word-spacing.wrap.writing-mode.xchannelselector.ychannelselector.x.x1.x2.xmlns.y.y1.y2.z.zoomandpan`.split(`.`)),Ee=p(/* @__PURE__ */ `accent.accentunder.align.bevelled.close.columnalign.columnlines.columnspacing.columnspan.denomalign.depth.dir.display.displaystyle.encoding.fence.frame.height.href.id.largeop.length.linethickness.lquote.lspace.mathbackground.mathcolor.mathsize.mathvariant.maxsize.minsize.movablelimits.notation.numalign.open.rowalign.rowlines.rowspacing.rowspan.rspace.rquote.scriptlevel.scriptminsize.scriptsizemultiplier.selection.separator.separators.stretchy.subscriptshift.supscriptshift.symmetric.voffset.width.xmlns`.split(`.`)),De=p([`xlink:href`,`xml:id`,`xlink:title`,`xml:space`,`xmlns:xlink`]),Oe=m(/{{[\w\W]*|^[\w\W]*}}/g),ke=m(/<%[\w\W]*|^[\w\W]*%>/g),Ae=m(/\${[\w\W]*/g),je=m(/^data-[\-\w.\u00B7-\uFFFF]+$/),Me=m(/^aria-[\-\w]+$/),Ne=m(/^(?:(?:(?:f|ht)tps?|mailto|tel|callto|sms|cid|xmpp|matrix):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i),Pe=m(/^(?:\w+script|data):/i),Fe=m(/[\u0000-\u0020\u00A0\u1680\u180E\u2000-\u2029\u205F\u3000]/g),Ie=m(/^html$/i),Le=m(/^[a-z][.\w]*(-[.\w]+)+$/i),Re=m(/<[/\w!]/g),ze=m(/<[/\w]/g),Be=m(/<\/no(script|embed|frames)/i),Ve=m(/\/>/i),A={element:1,attribute:2,text:3,cdataSection:4,entityReference:5,entityNode:6,processingInstruction:7,comment:8,document:9,documentType:10,documentFragment:11,notation:12},j=[`style`,`script`,`xmp`,`iframe`,`noembed`,`noframes`,`plaintext`,`noscript`],He=p(D({},j)),Ue=function(){let e={};return _(j,t=>{e[t]=m(RegExp(`</`+t+`(?=[\\t\\n\\f\\r />])`,`i`))}),p(e)}(),We=function(){return typeof window>`u`?null:window},Ge=function(e,t){if(typeof e!=`object`||typeof e.createPolicy!=`function`)return null;let n=null,r=`data-tt-policy-suffix`;t&&t.hasAttribute(r)&&(n=t.getAttribute(r));let i=`dompurify`+(n?`#`+n:``);try{return e.createPolicy(i,{createHTML(e){return e},createScriptURL(e){return e}})}catch(e){return console.warn(`TrustedTypes policy `+i+` could not be created.`),null}},Ke=function(){return{afterSanitizeAttributes:[],afterSanitizeElements:[],afterSanitizeShadowDOM:[],beforeSanitizeAttributes:[],beforeSanitizeElements:[],beforeSanitizeShadowDOM:[],uponSanitizeAttribute:[],uponSanitizeElement:[],uponSanitizeShadowNode:[]}},M=function(e,t,n,r){return x(e,t)&&v(e[t])?D(r.base?O(r.base):{},e[t],r.transform):n},qe=function(e,t,n){let r=x(e,t)?e[t]:void 0;return r&&typeof r==`object`?O(r):n()};function Je(){let e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:We(),t=e=>Je(e);if(t.version=`3.4.16`,t.removed=[],!e||!e.document||e.document.nodeType!==A.document||!e.Element)return t.isSupported=!1,t;let n=e.document,r=n,i=r.currentScript;e.DocumentFragment;let a=e.HTMLTemplateElement,o=e.Node,s=e.Element,l=e.NodeFilter;e.NamedNodeMap===void 0&&(e.NamedNodeMap||e.MozNamedAttrMap),e.HTMLFormElement;let u=e.DOMParser,d=e.trustedTypes,f=s.prototype,ee=k(f,`cloneNode`),g=k(f,`remove`),te=k(f,`removeAttributeNode`),fe=k(f,`nextSibling`),y=k(f,`childNodes`),b=k(f,`parentNode`),pe=k(f,`shadowRoot`),S=k(f,`attributes`),T=o&&o.prototype?k(o.prototype,`nodeType`):null,E=o&&o.prototype?k(o.prototype,`nodeName`):null,me=o&&o.prototype?k(o.prototype,`ownerDocument`):null,j=function(e){return T?T(e):e.nodeType},Ye=function(e){return E?E(e):e.nodeName};if(typeof a==`function`){let e=n.createElement(`template`);e.content&&e.content.ownerDocument&&(n=e.content.ownerDocument)}let N,P=``,Xe,Ze=!1,Qe=0,$e=function(){if(Qe>0)throw w(`A configured TRUSTED_TYPES_POLICY callback (createHTML or createScriptURL) must not call DOMPurify.sanitize, as that causes infinite recursion. Do not pass a policy whose callbacks wrap DOMPurify as TRUSTED_TYPES_POLICY; see the "DOMPurify and Trusted Types" section of the README.`)},F=function(e){$e(),Qe++;try{return N.createHTML(e)}finally{Qe--}},et=function(e){$e(),Qe++;try{return N.createScriptURL(e)}finally{Qe--}},tt=function(){return Ze||(Xe=Ge(d,i),Ze=!0),Xe},nt=n,rt=nt.implementation,it=nt.createNodeIterator,at=nt.createDocumentFragment,ot=nt.getElementsByTagName,st=r.importNode,I=Ke();t.isSupported=typeof c==`function`&&typeof b==`function`&&rt&&rt.createHTMLDocument!==void 0;let ct=Oe,lt=ke,ut=Ae,dt=je,ft=Me,pt=Pe,mt=Fe,ht=Le,gt=Ne,L=null,_t=D({},[..._e,...ve,...ye,...xe,...Ce]),R=null,vt=D({},[...we,...Te,...Ee,...De]),z=Object.seal(h(null,{tagNameCheck:{writable:!0,configurable:!1,enumerable:!0,value:null},attributeNameCheck:{writable:!0,configurable:!1,enumerable:!0,value:null},allowCustomizedBuiltInElements:{writable:!0,configurable:!1,enumerable:!0,value:!1}})),yt=null,bt=null,B=Object.seal(h(null,{tagCheck:{writable:!0,configurable:!1,enumerable:!0,value:null},attributeCheck:{writable:!0,configurable:!1,enumerable:!0,value:null}})),xt=!0,St=!0,Ct=!1,wt=!0,V=!1,H=!0,U=!1,Tt=!1,Et=null,Dt=null,Ot=!1,W=!1,kt=!1,At=!1,jt=!0,Mt=!1,Nt=`user-content-`,Pt=!0,Ft=!1,G={},K=null,It=D({},/* @__PURE__ */ `annotation-xml.audio.colgroup.desc.foreignobject.head.iframe.math.mi.mn.mo.ms.mtext.noembed.noframes.noscript.plaintext.script.selectedcontent.style.svg.template.thead.title.video.xmp`.split(`.`)),Lt=null,Rt=D({},[`audio`,`video`,`img`,`source`,`image`,`track`]),zt=null,Bt=D({},[`alt`,`class`,`for`,`id`,`label`,`name`,`pattern`,`placeholder`,`role`,`summary`,`title`,`value`,`style`,`xmlns`]),Vt=`http://www.w3.org/1998/Math/MathML`,Ht=`http://www.w3.org/2000/svg`,q=`http://www.w3.org/1999/xhtml`,J=q,Ut=!1,Wt=null,Gt=D({},[Vt,Ht,q],se),Kt=p([`mi`,`mo`,`mn`,`ms`,`mtext`]),qt=D({},Kt),Jt=p([`annotation-xml`]),Yt=D({},Jt),Xt=D({},[`title`,`style`,`font`,`a`,`script`]),Zt=null,Qt=[`application/xhtml+xml`,`text/html`],Y=null,$t=null,en=n.createElement(`form`),tn=function(e){return e instanceof RegExp||e instanceof Function},nn=function(){let e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:{};if($t&&$t===e)return;(!e||typeof e!=`object`)&&(e={}),e=O(e),Zt=Qt.indexOf(e.PARSER_MEDIA_TYPE)===-1?`text/html`:e.PARSER_MEDIA_TYPE,Y=Zt===`application/xhtml+xml`?se:oe,L=M(e,`ALLOWED_TAGS`,_t,{transform:Y}),R=M(e,`ALLOWED_ATTR`,vt,{transform:Y}),Wt=M(e,`ALLOWED_NAMESPACES`,Gt,{transform:se}),zt=M(e,`ADD_URI_SAFE_ATTR`,Bt,{transform:Y,base:Bt}),Lt=M(e,`ADD_DATA_URI_TAGS`,Rt,{transform:Y,base:Rt}),K=M(e,`FORBID_CONTENTS`,It,{transform:Y}),yt=M(e,`FORBID_TAGS`,O({}),{transform:Y}),bt=M(e,`FORBID_ATTR`,O({}),{transform:Y}),G=x(e,`USE_PROFILES`)?e.USE_PROFILES&&typeof e.USE_PROFILES==`object`?O(e.USE_PROFILES):e.USE_PROFILES:!1,xt=e.ALLOW_ARIA_ATTR!==!1,St=e.ALLOW_DATA_ATTR!==!1,Ct=e.ALLOW_UNKNOWN_PROTOCOLS||!1,wt=e.ALLOW_SELF_CLOSE_IN_ATTR!==!1,V=e.SAFE_FOR_TEMPLATES||!1,H=e.SAFE_FOR_XML!==!1,U=e.WHOLE_DOCUMENT||!1,W=e.RETURN_DOM||!1,kt=e.RETURN_DOM_FRAGMENT||!1,At=e.RETURN_TRUSTED_TYPE||!1,Ot=e.FORCE_BODY||!1,jt=e.SANITIZE_DOM!==!1,Mt=e.SANITIZE_NAMED_PROPS||!1,Pt=e.KEEP_CONTENT!==!1,Ft=e.IN_PLACE||!1,gt=ge(e.ALLOWED_URI_REGEXP)?e.ALLOWED_URI_REGEXP:Ne,J=typeof e.NAMESPACE==`string`?e.NAMESPACE:q,qt=qe(e,`MATHML_TEXT_INTEGRATION_POINTS`,()=>D({},Kt)),Yt=qe(e,`HTML_INTEGRATION_POINTS`,()=>D({},Jt));let t=qe(e,`CUSTOM_ELEMENT_HANDLING`,()=>h(null));if(z=h(null),x(t,`tagNameCheck`)&&tn(t.tagNameCheck)&&(z.tagNameCheck=t.tagNameCheck),x(t,`attributeNameCheck`)&&tn(t.attributeNameCheck)&&(z.attributeNameCheck=t.attributeNameCheck),x(t,`allowCustomizedBuiltInElements`)&&typeof t.allowCustomizedBuiltInElements==`boolean`&&(z.allowCustomizedBuiltInElements=t.allowCustomizedBuiltInElements),m(z),V&&(St=!1),kt&&(W=!0),G&&(L=D({},Ce),R=h(null),G.html===!0&&(D(L,_e),D(R,we)),G.svg===!0&&(D(L,ve),D(R,Te),D(R,De)),G.svgFilters===!0&&(D(L,ye),D(R,Te),D(R,De)),G.mathMl===!0&&(D(L,xe),D(R,Ee),D(R,De))),B.tagCheck=null,B.attributeCheck=null,x(e,`ADD_TAGS`)&&(typeof e.ADD_TAGS==`function`?B.tagCheck=e.ADD_TAGS:v(e.ADD_TAGS)&&(L===_t&&(L=O(L)),D(L,e.ADD_TAGS,Y))),x(e,`ADD_ATTR`)&&(typeof e.ADD_ATTR==`function`?B.attributeCheck=e.ADD_ATTR:v(e.ADD_ATTR)&&(R===vt&&(R=O(R)),D(R,e.ADD_ATTR,Y))),x(e,`ADD_FORBID_CONTENTS`)&&v(e.ADD_FORBID_CONTENTS)&&(K===It&&(K=O(K)),D(K,e.ADD_FORBID_CONTENTS,Y)),Pt&&(L[`#text`]=!0),U&&D(L,[`html`,`head`,`body`]),L.table&&(D(L,[`tbody`]),delete yt.tbody),e.TRUSTED_TYPES_POLICY){if(typeof e.TRUSTED_TYPES_POLICY.createHTML!=`function`)throw w(`TRUSTED_TYPES_POLICY configuration option must provide a "createHTML" hook.`);if(typeof e.TRUSTED_TYPES_POLICY.createScriptURL!=`function`)throw w(`TRUSTED_TYPES_POLICY configuration option must provide a "createScriptURL" hook.`);let t=N;N=e.TRUSTED_TYPES_POLICY;try{P=F(``)}catch(e){throw N=t,e}}else e.TRUSTED_TYPES_POLICY===null?(N=void 0,P=``):(N===void 0&&(N=tt()),N&&typeof P==`string`&&(P=F(``)));p&&p(e),$t=e},rn=D({},[...ve,...ye,...be]),an=D({},[...xe,...Se]),on=function(e,t,n){return t.namespaceURI===q?e===`svg`:t.namespaceURI===Vt?e===`svg`&&(n===`annotation-xml`||qt[n]):!!rn[e]},sn=function(e,t,n){return t.namespaceURI===q?e===`math`:t.namespaceURI===Ht?e===`math`&&Yt[n]:!!an[e]},cn=function(e,t,n){return t.namespaceURI===Ht&&!Yt[n]||t.namespaceURI===Vt&&!qt[n]?!1:!an[e]&&(Xt[e]||!rn[e])},ln=function(e){let t=b(e);(!t||!t.tagName)&&(t={namespaceURI:J,tagName:`template`});let n=oe(e.tagName),r=oe(t.tagName);return Wt[e.namespaceURI]?e.namespaceURI===Ht?on(n,t,r):e.namespaceURI===Vt?sn(n,t,r):e.namespaceURI===q?cn(n,t,r):!!(Zt===`application/xhtml+xml`&&Wt[e.namespaceURI]):!1},X=function(e){ie(t.removed,{element:e});try{b(e).removeChild(e)}catch(t){if(g(e),!b(e))throw w(`a node selected for removal could not be detached from its tree and cannot be safely returned; refusing to sanitize in place`)}},un=function(e,t,n){try{te(e,t)}catch(t){try{e.removeAttribute(n)}catch(e){}}},dn=function(e){pn(e);let t=y(e);if(t){let e=[];_(t,t=>{ie(e,t)}),_(e,e=>{try{g(e)}catch(e){}})}let n=S(e);if(n)for(let t=n.length-1;t>=0;--t){let r=n[t],i=r&&r.name;typeof i==`string`&&un(e,r,i)}},Z=function(e,n,r){if(!r)try{r=n.getAttributeNode(e)}catch(e){r=null}ie(t.removed,{attribute:r||null,from:n});try{r?te(n,r):n.removeAttribute(e)}catch(t){try{n.removeAttribute(e)}catch(e){}}if(e===`is`){if(W||kt)try{X(n)}catch(e){}else try{n.setAttribute(e,``)}catch(e){}}},fn=function(e){let t=S(e);if(t)for(let n=t.length-1;n>=0;--n){let r=t[n],i=r&&r.name;typeof i!=`string`||R[Y(i)]||un(e,r,i)}},pn=function(e){let t=[e];for(;t.length>0;){let e=t.pop();j(e)===A.element&&fn(e);let n=y(e);if(n)for(let e=n.length-1;e>=0;--e)t.push(n[e])}},mn=function(e,t){return H?e===`patchsrc`||e===`for`&&t!==`label`&&t!==`output`:!1},hn=function(e){if(!H)return;let t=[e];for(;t.length>0;){let e=t.pop(),n=j(e);if(n===A.processingInstruction||n===A.comment&&C(ze,e.data)){try{g(e)}catch(e){}continue}if(n===A.element){let t=e,n=Y(Ye(e));try{t.hasAttribute&&t.hasAttribute(`patchsrc`)&&t.removeAttribute(`patchsrc`),t.hasAttribute&&t.hasAttribute(`for`)&&mn(`for`,n)&&t.removeAttribute(`for`)}catch(e){}}let r=y(e);if(r)for(let e=r.length-1;e>=0;--e)t.push(r[e])}},gn=function(e){let t=null,r=null;if(Ot)e=`<remove></remove>`+e;else{let t=ce(e,/^[\r\n\t ]+/);r=t&&t[0]}Zt===`application/xhtml+xml`&&J===q&&(e=`<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>`+e+`</body></html>`);let i=N?F(e):e;if(J===q)try{t=new u().parseFromString(i,Zt)}catch(e){}if(!t||!t.documentElement){t=rt.createDocument(J,`template`,null);try{t.documentElement.innerHTML=Ut?P:i}catch(e){}}let a=t.body||t.documentElement;return e&&r&&a.insertBefore(n.createTextNode(r),a.childNodes[0]||null),J===q?ot.call(t,U?`html`:`body`)[0]:U?t.documentElement:a},_n=function(e){let t=me?me(e):e.ownerDocument;return it.call(t||e,e,l.SHOW_ELEMENT|l.SHOW_COMMENT|l.SHOW_TEXT|l.SHOW_PROCESSING_INSTRUCTION|l.SHOW_CDATA_SECTION,null)},vn=function(e){return e=le(e,ct,` `),e=le(e,lt,` `),e=le(e,ut,` `),e},yn=function(e){var t;e.normalize();let n=me?me(e):e.ownerDocument,r=it.call(n||e,e,l.SHOW_TEXT|l.SHOW_COMMENT|l.SHOW_CDATA_SECTION|l.SHOW_PROCESSING_INSTRUCTION,null),i=r.nextNode();for(;i;)i.data=vn(i.data),i=r.nextNode();let a=(t=e.querySelectorAll)==null?void 0:t.call(e,`template`);a&&_(a,e=>{xn(e.content)&&yn(e.content)})},bn=function(e){let t=E?E(e):null;return typeof t!=`string`||Y(t)!==`form`?!1:typeof e.nodeName!=`string`||typeof e.textContent!=`string`||typeof e.removeChild!=`function`||e.attributes!==S(e)||typeof e.removeAttribute!=`function`||typeof e.removeAttributeNode!=`function`||typeof e.getAttributeNode!=`function`||typeof e.setAttribute!=`function`||typeof e.namespaceURI!=`string`||typeof e.insertBefore!=`function`||typeof e.hasChildNodes!=`function`||e.nodeType!==T(e)||e.childNodes!==y(e)},xn=function(e){if(!T||typeof e!=`object`||!e)return!1;try{return T(e)===A.documentFragment}catch(e){return!1}},Sn=function(e){if(!T||typeof e!=`object`||!e)return!1;try{return typeof T(e)==`number`}catch(e){return!1}};function Q(e,n,r){e.length!==0&&_(e,e=>{e.call(t,n,r,$t)})}let Cn=function(e,t){return!!(H&&e.hasChildNodes()&&!Sn(e.firstElementChild)&&C(Re,e.textContent)&&C(Re,e.innerHTML)||H&&e.namespaceURI===q&&He[t]&&(Sn(e.firstElementChild)||typeof e.textContent==`string`&&C(Ue[t],e.textContent))||e.nodeType===A.processingInstruction||H&&e.nodeType===A.comment&&C(ze,e.data))},wn=function(e,t){return e instanceof RegExp?C(e,t):e instanceof Function&&!!e(t,...[...arguments].slice(2))},Tn=function(e,t,n){if(!yt[t]&&An(t)&&wn(z.tagNameCheck,t))return!1;if(Pt&&!K[t]){let t=b(e),r=y(e);if(r&&t){let i=r.length;for(let a=i-1;a>=0;--a){let i=e===n?ee(r[a],!0):r[a];t.insertBefore(i,fe(e))}}}return X(e),!0},En=function(e,t,n,r){return e.length===0?t:t===n||t===r?O(t):t},$=function(e,t){return e===t||b(e)!==null?!1:(Ft&&pn(e),!0)},Dn=function(e,n){if(Q(I.beforeSanitizeElements,e,null),$(e,n))return!0;if(bn(e))return X(e),!0;let r=Y(Ye(e));if(L=En(I.uponSanitizeElement,L,_t,Et),Q(I.uponSanitizeElement,e,{tagName:r,allowedTags:L}),$(e,n))return!0;if(Cn(e,r))return X(e),!0;if(yt[r]||!(B.tagCheck instanceof Function&&B.tagCheck(r))&&!L[r]){let t=Tn(e,r,n);return t===!1&&(Q(I.afterSanitizeElements,e,null),$(e,n))?!0:t}if(j(e)===A.element&&!ln(e)||(r===`noscript`||r===`noembed`||r===`noframes`)&&C(Be,e.innerHTML))return X(e),!0;if(V&&e.nodeType===A.text){let n=vn(e.textContent);e.textContent!==n&&(ie(t.removed,{element:e.cloneNode()}),e.textContent=n)}return Q(I.afterSanitizeElements,e,null),$(e,n)},On=function(e,t,r){if(bt[t]||mn(t,e)||jt&&(t===`id`||t===`name`)&&(r in n||r in en))return!1;let i=R[t]||B.attributeCheck instanceof Function&&B.attributeCheck(t,e);return St&&C(dt,t)||xt&&C(ft,t)?!0:i?zt[t]||C(gt,le(r,mt,``))||(t===`src`||t===`xlink:href`||t===`href`)&&e!==`script`&&ue(r,`data:`)===0&&Lt[e]||Ct&&!C(pt,le(r,mt,``))?!0:!r:An(e)&&wn(z.tagNameCheck,e)&&wn(z.attributeNameCheck,t,e)||t===`is`&&z.allowCustomizedBuiltInElements&&wn(z.tagNameCheck,r)},kn=D({},[`annotation-xml`,`color-profile`,`font-face`,`font-face-format`,`font-face-name`,`font-face-src`,`font-face-uri`,`missing-glyph`]),An=function(e){return!kn[oe(e)]&&C(ht,e)},jn=function(e,t,n,r){if(N&&typeof d==`object`&&typeof d.getAttributeType==`function`&&!n)switch(d.getAttributeType(e,t)){case`TrustedHTML`:return F(r);case`TrustedScriptURL`:return et(r)}return r},Mn=function(e,t,n,r){try{return n?e.setAttributeNS(n,t,r):e.setAttribute(t,r),!bn(e)||(X(e),!1)}catch(n){return Z(t,e),!1}},Nn=function(e,n){if(Q(I.beforeSanitizeAttributes,e,null),$(e,n))return;let r=e.attributes;if(!r||bn(e))return;R=En(I.uponSanitizeAttribute,R,vt,Dt);let i={attrName:``,attrValue:``,keepAttr:!0,allowedAttributes:R,forceKeepAttr:void 0},a=r.length,o=Y(e.nodeName);for(;a--;){let n=r[a],s=n.name,c=n.namespaceURI,l=n.value,u=Y(s),d=l,f=s===`value`?d:de(d),p=!1;if(i.attrName=u,i.attrValue=f,i.keepAttr=!0,i.forceKeepAttr=void 0,Q(I.uponSanitizeAttribute,e,i),f=i.attrValue,Mt&&(u===`id`||u===`name`)&&ue(f,Nt)!==0&&(Z(s,e,n),f=Nt+f,p=!0),H&&C(/((--!?|])>)|<\/(style|script|title|xmp|textarea|noscript|iframe|noembed|noframes)/i,f)){Z(s,e,n);continue}if(u===`attributename`&&ce(f,`href`)){Z(s,e,n);continue}if(!i.forceKeepAttr){if(!i.keepAttr){Z(s,e,n);continue}if(!wt&&C(Ve,f)){Z(s,e,n);continue}if(V&&(f=vn(f)),!On(o,u,f)){Z(s,e,n);continue}f=jn(o,u,c,f),f!==d&&Mn(e,s,c,f)&&p&&re(t.removed)}}Q(I.afterSanitizeAttributes,e,null),$(e,n)},Pn=function(e){let t=null,n=_n(e);for(Q(I.beforeSanitizeShadowDOM,e,null);t=n.nextNode();)if(Q(I.uponSanitizeShadowNode,t,null),Dn(t,e),Nn(t,e),xn(t.content)&&Pn(t.content),j(t)===A.element){let e=pe(t);xn(e)&&(Fn(e),Pn(e))}Q(I.afterSanitizeShadowDOM,e,null)},Fn=function(e){let t=[{node:e,shadow:null}];for(;t.length>0;){let e=t.pop();if(e.shadow){Pn(e.shadow);continue}let n=e.node,r=j(n)===A.element,i=y(n);if(i)for(let e=i.length-1;e>=0;--e)t.push({node:i[e],shadow:null});if(r){let e=E?E(n):null;if(typeof e==`string`&&Y(e)===`template`){let e=n.content;xn(e)&&t.push({node:e,shadow:null})}}if(r){let e=pe(n);xn(e)&&t.push({node:null,shadow:e},{node:e,shadow:null})}}};return t.sanitize=function(e){let n=arguments.length>1&&arguments[1]!==void 0?arguments[1]:{},i=null,a=null,o=null,s=null;if(Ut=!e,Ut&&(e=`<!-->`),typeof e!=`string`&&!Sn(e)&&(e=he(e),typeof e!=`string`))throw w(`dirty is not a string, aborting`);if(!t.isSupported)return e;Tt?(L=Et,R=Dt):nn(n),(I.uponSanitizeElement.length>0||I.uponSanitizeAttribute.length>0)&&(L=O(L)),I.uponSanitizeAttribute.length>0&&(R=O(R)),t.removed=[];let c=Ft&&typeof e!=`string`&&Sn(e);if(c){hn(e);let t=Ye(e);if(typeof t==`string`){let n=Y(t);if(!L[n]||yt[n])throw dn(e),w(`root node is forbidden and cannot be sanitized in-place`)}if(bn(e))throw dn(e),w(`root node is clobbered and cannot be sanitized in-place`);try{Fn(e)}catch(t){throw dn(e),t}}else if(Sn(e))i=gn(`<!---->`),a=i.ownerDocument.importNode(e,!0),a.nodeType===A.element&&a.nodeName===`BODY`||a.nodeName===`HTML`?i=a:i.appendChild(a),Fn(i);else{if(!W&&!V&&!U&&e.indexOf(`<`)===-1)return N&&At?F(e):e;if(i=gn(e),!i)return W?null:At?P:``}i&&Ot&&X(i.firstChild);let l=c?e:i;try{let e=_n(l);for(;o=e.nextNode();)Dn(o,l),Nn(o,l),xn(o.content)&&Pn(o.content)}catch(n){throw c&&(dn(e),_(t.removed,e=>{e.element&&pn(e.element)})),n}if(c){let n=!1;if(_(t.removed,t=>{t.element&&(t.element===e&&(n=!0),pn(t.element))}),n)throw w(`a node selected for removal could not be safely returned; refusing to sanitize in place`);return V&&yn(e),e}if(W){if(V&&yn(i),kt)for(s=at.call(i.ownerDocument);i.firstChild;)s.appendChild(i.firstChild);else s=i;return(R.shadowroot||R.shadowrootmode)&&(s=st.call(r,s,!0)),s}let u=U?i.outerHTML:i.innerHTML;return U&&L[`!doctype`]&&i.ownerDocument&&i.ownerDocument.doctype&&i.ownerDocument.doctype.name&&C(Ie,i.ownerDocument.doctype.name)&&(u=`<!DOCTYPE `+i.ownerDocument.doctype.name+`>
+`+u),V&&(u=vn(u)),N&&At?F(u):u},t.setConfig=function(){let e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:{};nn(e),Tt=!0,Et=L,Dt=R},t.clearConfig=function(){$t=null,Tt=!1,Et=null,Dt=null,N=Xe,P=``},t.isValidAttribute=function(e,t,n){$t||nn({});let r=Y(e),i=Y(t);return On(r,i,n)},t.addHook=function(e,t){typeof t==`function`&&x(I,e)&&ie(I[e],t)},t.removeHook=function(e,t){if(x(I,e)){if(t!==void 0){let n=ne(I[e],t);return n===-1?void 0:ae(I[e],n,1)[0]}return re(I[e])}},t.removeHooks=function(e){x(I,e)&&(I[e]=[])},t.removeAllHooks=function(){I=Ke()},t}return Je()});
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============ i18n ============ */
+  var I18N = {
+    cs: {
+      brandWord:"Dokumenty", pageTitle:"Xtally Dokumenty – Editor dokumentů zdarma online (šablony, Word, PDF)",
+      skipLink:"Přeskočit na editor", synthLink:"Součást SYNTHLUCIDA ↗", themeToggle:"Přepnout vzhled",
+      privacyBadge:"Nic se neodesílá na server – vše zůstává jen ve vašem zařízení",
+      heroTitle:"Napište dokument, aniž byste <span>cokoliv instalovali</span>",
+      heroLead:"Xtally je odlehčený editor dokumentů přímo v prohlížeči. Životopis, faktura, smlouva nebo obyčejný dopis – s hotovými šablonami je hotovo za pár minut. Umí i otevřít a uložit soubory Wordu (.docx).",
+      heroCtaStart:"Začít psát zdarma", heroCtaTemplates:"Prohlédnout šablony",
+      brandWord2:"Xtally Dokumenty", heroToggleMore:"O aplikaci a šablony", heroToggleLess:"Skrýt",
+      relaxLink:"Klidná chillout hudba k psaní ↗",
+      stepsToggleMore:"Zobrazit kroky", stepsToggleLess:"Skrýt kroky",
+      faqToggleMore:"Zobrazit dotazy", faqToggleLess:"Skrýt dotazy",
+      privacyToggleMore:"Zobrazit podrobnosti", privacyToggleLess:"Skrýt podrobnosti",
+      featuresToggleMore:"Zobrazit funkce", featuresToggleLess:"Skrýt funkce",
+      chipAutosave:"Automatické ukládání", chipWord:"Import a export Wordu (.docx)", chipResponsive:"Responzivní na mobilu i počítači",
+      newDoc:"+ Nový", templatesBtn:"Šablony", backupBtn:"Zálohovat", backupBtnTitle:"Zálohovat všechny dokumenty", restoreBtn:"Obnovit", restoreBtnTitle:"Obnovit ze zálohy",
+      myDocs:"Moje dokumenty", textStyle:"Styl textu", fontSize:"Velikost písma", fontFamily:"Typ písma",
+      blockNormal:"Normální text", blockH1:"Nadpis 1", blockH2:"Nadpis 2", blockH3:"Nadpis 3",
+      sizeSmall:"Malé", sizeNormal:"Normální", sizeLarge:"Velké", sizeHuge:"Obrovské",
+      fontDefault:"Výchozí", fontSerif:"Patkové (serif)", fontMono:"Strojopis (mono)",
+      bold:"Tučně (Ctrl+B)", italic:"Kurzíva (Ctrl+I)", underline:"Podtržené (Ctrl+U)", strike:"Přeškrtnuté",
+      bullets:"Odrážky", numbered:"Číslovaný seznam",
+      alignLeft:"Zarovnat vlevo", alignCenter:"Zarovnat na střed", alignRight:"Zarovnat vpravo", alignJustify:"Zarovnat do bloku",
+      textColor:"Barva textu", highlightColor:"Zvýraznění textu", insertLink:"Vložit odkaz", insertImage:"Vložit obrázek", clearFormat:"Vymazat formátování",
+      undo:"Zpět (Ctrl+Z)", redo:"Vpřed (Ctrl+Y)", printTooltip:"Tisk / PDF", focusMode:"Celá obrazovka (jen editor)",
+      docTitlePlaceholder:"Název dokumentu", editorPlaceholder:"Začněte psát, nebo vyberte šablonu vlevo…",
+      saved:"Uloženo", saving:"Ukládání…",
+      duplicate:"Duplikovat", delete:"Smazat", importBtn:"Import", exportBtn:"Export",
+      stepsTitle:"Jak to funguje", stepsSub:"Čtyři kroky mezi vámi a hotovým dokumentem.",
+      step1h:"Vyberte šablonu", step1p:"Nebo začněte s prázdným dokumentem – podle toho, co zrovna potřebujete.",
+      step2h:"Napište a naformátujte", step2p:"Tučné písmo, nadpisy, seznamy, zarovnání a barvy – vše jako v běžném editoru.",
+      step3h:"Automaticky se uloží", step3p:"Xtally ukládá vaši práci průběžně přímo do tohoto zařízení – nic neztratíte.",
+      step4h:"Exportujte nebo stáhněte", step4p:"PDF, Word (.docx), čistý text nebo záloha všech dokumentů – vyberte si.",
+      featuresTitle:"Vše, co běžný člověk k dokumentům potřebuje", featuresSub:"Xtally cíleně nemá desítky funkcí navíc – jen to, co skutečně použijete.",
+      feat1h:"Kompletní formátování", feat1p:"Tučné, kurzíva, podtržení, přeškrtnutí, nadpisy, velikosti a typ písma, barvy, zvýraznění i zarovnání do bloku.",
+      feat2h:"Hotové šablony", feat2p:"Přes 15 šablon – životopis, faktura, nájemní smlouva, plná moc, výpověď a další – v češtině i angličtině.",
+      feat3h:"Import i export Wordu", feat3p:"Otevřete existující .docx soubor z Microsoft Wordu, upravte ho a uložte zpět jako .docx pro Word.",
+      feat4h:"Export, jaký potřebujete", feat4p:"PDF přes tisk, Word (.docx), čistý text nebo záloha všech dokumentů v jednom JSON souboru.",
+      feat5h:"Data zůstávají u vás", feat5p:"Dokumenty se ukládají jen ve vašem prohlížeči. Žádný účet, žádné nahrávání obsahu na cizí server.",
+      feat6h:"Responzivní na všech zařízeních", feat6p:"Funguje na počítači, tabletu i mobilu a přizpůsobí se velikosti obrazovky.",
+      privacyTitle:"Soukromí a vaše data",
+      privacyIntro:"Xtally nemá žádný server ani databázi. Všechno zpracování dokumentů probíhá výhradně ve vašem prohlížeči.",
+      privacyLi1:"Vaše dokumenty se ukládají jen lokálně (localStorage) na tomto zařízení a nikam se neodesílají.",
+      privacyLi2:"Import a export Wordu (.docx) zpracovává přímo prohlížeč – z internetu se stáhne pouze kód knihovny, nikdy váš obsah.",
+      privacyLi3:"Appka nepoužívá sledovací nástroje, cookies s reklamou ani analytiku třetích stran.",
+      privacyLi4:"Protože data žijí jen ve vašem prohlížeči, doporučujeme si důležité dokumenty pravidelně zálohovat (tlačítko „Zálohovat“).",
+      privacyFullLink:"Přečíst kompletní zásady ochrany soukromí →", footerPrivacy:"Ochrana soukromí",
+      faqTitle:"Časté dotazy",
+      faq1q:"Je Xtally opravdu zdarma?", faq1a:"Ano. Xtally je volně dostupný nástroj bez registrace, předplatného nebo skrytých poplatků.",
+      faq2q:"Kam se ukládají moje dokumenty?", faq2a:"Přímo ve vašem prohlížeči (localStorage). Nikam se neodesílají – pokud vymažete data prohlížeče, dokumenty zmizí, proto si důležité soubory zálohujte nebo exportujte.",
+      faq3q:"Otevře appka soubory z Wordu?", faq3a:"Ano, přes tlačítko Import můžete nahrát existující .docx soubor a upravit ho. Export do .docx je určený pro Microsoft Word na počítači – ten ho otevře bez problémů. Google Dokumenty, Pages nebo náhledy souborů v mobilu ho ale nemusí zobrazit správně, proto pro sdílení a tisk doporučujeme export do PDF.",
+      faq4q:"Funguje appka i bez internetu?", faq4a:"K otevření stránky internet potřebujete. Jakmile je stránka načtená, psaní i ukládání dokumentů funguje dál, i kdyby připojení vypadlo – dokumenty se ukládají jen ve vašem prohlížeči. Import a export Wordu fungují, pokud se potřebné knihovny načetly při otevření stránky.",
+      faq5q:"Souvisí Xtally se SYNTHLUCIDA?", faq5a:"Ano, je to samostatný projekt z rodiny bezplatných webových nástrojů SYNTHLUCIDA.",
+      footerNote:"Xtally je součástí rodiny bezplatných webových nástrojů", footerEditor:"Editor", footerScannerLink:"Xtally Scanner", footerTemplates:"Šablony", footerSheetsLink:"Xtally Tabulky",
+      tplModalTitle:"Vyberte šablonu",
+      exportModalTitle:"Exportovat dokument",
+      exportPrintH:"Tisk / PDF", exportPrintP:"Otevře dialog tisku prohlížeče, kde lze uložit jako PDF",
+      exportDocxH:"Word (.docx)", exportDocxP:"Pro Microsoft Word na počítači (Google Dokumenty ho nemusí zobrazit)",
+      exportTxtH:"Text (.txt)", exportTxtP:"Čistý text bez formátování",
+      exportJsonH:"Záloha všech dokumentů (.json)", exportJsonP:"Zálohuje úplně všechny vaše dokumenty do jednoho souboru",
+      exportNote:"Export probíhá vždy jen ve vašem prohlížeči – žádný soubor se nikam neodesílá.",
+      importModalTitle:"Importovat dokument",
+      importDocxH:"Word dokument (.docx)", importDocxP:"Nahraje existující .docx soubor jako nový dokument",
+      importTxtH:"Textový soubor (.txt)", importTxtP:"Nahraje obyčejný text jako nový dokument",
+      importJsonH:"Obnovit zálohu (.json)", importJsonP:"Načte dokumenty z dříve staženého zálohovacího souboru",
+      importNote:"Soubory se zpracovávají jen ve vašem prohlížeči a nikam se neodesílají.",
+      linkModalTitle:"Vložit odkaz", linkUrlLabel:"Adresa (URL)", cancel:"Zrušit", insert:"Vložit",
+      deleteModalTitle:"Smazat dokument?", deleteModalText:"Tuto akci nelze vrátit zpět. Dokument bude trvale odstraněn z tohoto zařízení.",
+      restoreModalTitle:"Obnovit zálohu?", restoreModalText:"Dokumenty ze zálohy budou přidány k vašim stávajícím dokumentům.",
+      welcomeTitle:"Vítejte v Xtally",
+      welcomeHtml:"<h1>Vítejte v Xtally 👋</h1><p>Toto je váš první dokument. Klidně ho smažte a začněte nový, nebo vyberte hotovou šablonu vlevo nahoře.</p><ul><li>Formátujte text pomocí lišty nahoře</li><li>Vše se automaticky ukládá do tohoto zařízení</li><li>Dokument můžete kdykoliv exportovat do PDF, Wordu, textu, nebo importovat existující .docx</li></ul>",
+      untitled:"Bez názvu", noDocs:"Zatím žádné dokumenty.", updatedAt:"Upraveno",
+      toastTemplate:"Šablona „{0}“ vložena", toastDuplicated:"Dokument zduplikován", toastDeleted:"Dokument smazán",
+      toastSaved:"Uloženo", toastTxtExported:"Text exportován", toastDocxExported:"Word dokument exportován", toastDocxFallback:"Knihovna pro Word se nenačetla, export proběhl ve zjednodušeném formátu .doc",
+      toastBackupSaved:"Záloha stažena", toastDocxImported:"Word dokument importován", toastTxtImported:"Textový soubor importován",
+      toastRestoreOk:"Záloha obnovena", toastRestoreSame:"Všechny dokumenty ze zálohy už v appce jsou", toastRestoreBad:"Soubor zálohy se nepodařilo přečíst", toastDocxImportBad:"Soubor .docx se nepodařilo přečíst – zkuste jiný soubor",
+      toastLibLoading:"Knihovna se ještě načítá, zkuste to prosím za pár vteřin znovu",
+      toastImageBad:"Soubor se nepodařilo vložit jako obrázek", toastImageTooBig:"Obrázek je příliš velký (max. 20 MB)",
+      toastStorageFull:"Úložiště prohlížeče je plné – změny se neuložily! Zmenšete nebo smažte obrázky, případně staré dokumenty, a zálohujte.",
+      saveFailed:"Neuloženo – plné úložiště", copySuffix:" (kopie)",
+      wordsZero:"0 slov", word1:" slovo", word234:" slova", word5:" slov"
+    },
+    en: {
+      brandWord:"Documents", pageTitle:"Xtally Documents – Free Online Document Editor (Templates, Word, PDF)",
+      skipLink:"Skip to editor", synthLink:"Part of SYNTHLUCIDA ↗", themeToggle:"Toggle appearance",
+      privacyBadge:"Nothing is uploaded to any server – everything stays on your device",
+      heroTitle:"Write a document without <span>installing anything</span>",
+      heroLead:"Xtally is a lightweight document editor right in your browser. Resume, invoice, agreement or a plain letter — ready in minutes with built-in templates. It can also open and save Word (.docx) files.",
+      heroCtaStart:"Start writing for free", heroCtaTemplates:"Browse templates",
+      brandWord2:"Xtally Documents", heroToggleMore:"About & templates", heroToggleLess:"Hide",
+      relaxLink:"Calm chillout music for writing ↗",
+      stepsToggleMore:"Show steps", stepsToggleLess:"Hide steps",
+      faqToggleMore:"Show questions", faqToggleLess:"Hide questions",
+      privacyToggleMore:"Show details", privacyToggleLess:"Hide details",
+      featuresToggleMore:"Show features", featuresToggleLess:"Hide features",
+      chipAutosave:"Autosave built in", chipWord:"Import & export Word (.docx)", chipResponsive:"Responsive on mobile and desktop",
+      newDoc:"+ New", templatesBtn:"Templates", backupBtn:"Backup", backupBtnTitle:"Back up all documents", restoreBtn:"Restore", restoreBtnTitle:"Restore from backup",
+      myDocs:"My documents", textStyle:"Text style", fontSize:"Font size", fontFamily:"Font family",
+      blockNormal:"Normal text", blockH1:"Heading 1", blockH2:"Heading 2", blockH3:"Heading 3",
+      sizeSmall:"Small", sizeNormal:"Normal", sizeLarge:"Large", sizeHuge:"Huge",
+      fontDefault:"Default", fontSerif:"Serif", fontMono:"Monospace",
+      bold:"Bold (Ctrl+B)", italic:"Italic (Ctrl+I)", underline:"Underline (Ctrl+U)", strike:"Strikethrough",
+      bullets:"Bulleted list", numbered:"Numbered list",
+      alignLeft:"Align left", alignCenter:"Align center", alignRight:"Align right", alignJustify:"Justify",
+      textColor:"Text color", highlightColor:"Highlight color", insertLink:"Insert link", insertImage:"Insert image", clearFormat:"Clear formatting",
+      undo:"Undo (Ctrl+Z)", redo:"Redo (Ctrl+Y)", printTooltip:"Print / PDF", focusMode:"Fullscreen (editor only)",
+      docTitlePlaceholder:"Document title", editorPlaceholder:"Start typing, or pick a template on the left…",
+      saved:"Saved", saving:"Saving…",
+      duplicate:"Duplicate", delete:"Delete", importBtn:"Import", exportBtn:"Export",
+      stepsTitle:"How it works", stepsSub:"Four steps between you and a finished document.",
+      step1h:"Pick a template", step1p:"Or start from a blank document — whatever you need right now.",
+      step2h:"Write and format", step2p:"Bold text, headings, lists, alignment and colors — just like a regular editor.",
+      step3h:"It saves itself", step3p:"Xtally saves your work continuously, right on this device — nothing gets lost.",
+      step4h:"Export or download", step4p:"PDF, Word (.docx), plain text, or a full backup of every document — your choice.",
+      featuresTitle:"Everything an ordinary person needs for documents", featuresSub:"Xtally deliberately skips the extra bells and whistles — just what you'll actually use.",
+      feat1h:"Complete formatting", feat1p:"Bold, italic, underline, strikethrough, headings, font sizes and families, colors, highlighting and full justification.",
+      feat2h:"Ready-made templates", feat2p:"15+ templates — resume, invoice, lease agreement, power of attorney, resignation letter and more — in Czech and English.",
+      feat3h:"Import and export Word", feat3p:"Open an existing .docx file from Microsoft Word, edit it, and save it back as a .docx for Word.",
+      feat4h:"Export the way you need", feat4p:"PDF via print, Word (.docx), plain text, or a backup of every document in a single JSON file.",
+      feat5h:"Your data stays yours", feat5p:"Documents are stored only in your browser. No account, no uploading your content to any server.",
+      feat6h:"Responsive on every device", feat6p:"Works on desktop, tablet and phone and adapts to the screen size.",
+      privacyTitle:"Privacy and your data",
+      privacyIntro:"Xtally has no server and no database. All document processing happens entirely in your browser.",
+      privacyLi1:"Your documents are stored only locally (localStorage) on this device and are never uploaded anywhere.",
+      privacyLi2:"Word (.docx) import and export is handled entirely by your browser — only the library code is fetched from the internet, never your content.",
+      privacyLi3:"The app uses no tracking tools, ad cookies, or third-party analytics.",
+      privacyLi4:"Because your data lives only in your browser, back up important documents regularly (the \"Backup\" button).",
+      privacyFullLink:"Read the full privacy policy →", footerPrivacy:"Privacy Policy",
+      faqTitle:"Frequently asked questions",
+      faq1q:"Is Xtally really free?", faq1a:"Yes. Xtally is a freely available tool with no sign-up, subscription, or hidden fees.",
+      faq2q:"Where are my documents stored?", faq2a:"Right in your browser (localStorage). Nothing is uploaded — if you clear your browser data your documents will disappear, so back up or export anything important.",
+      faq3q:"Can it open Word files?", faq3a:"Yes — use the Import button to upload an existing .docx file and edit it. The .docx export is meant for Microsoft Word on a computer, which opens it without issues. Google Docs, Pages or mobile file previews may not display it correctly, so for sharing and printing we recommend exporting to PDF.",
+      faq4q:"Does it work without internet?", faq4a:"You need a connection to open the page. Once it has loaded, writing and saving documents keeps working even if the connection drops – documents are stored only in your browser. Word import and export work if the required libraries loaded when the page opened.",
+      faq5q:"Is Xtally related to SYNTHLUCIDA?", faq5a:"Yes, it's a standalone project from the SYNTHLUCIDA family of free web tools.",
+      footerNote:"Xtally is part of the SYNTHLUCIDA family of free web tools", footerEditor:"Editor", footerScannerLink:"Xtally Scanner", footerTemplates:"Templates", footerSheetsLink:"Xtally Sheets",
+      tplModalTitle:"Choose a template",
+      exportModalTitle:"Export document",
+      exportPrintH:"Print / PDF", exportPrintP:"Opens your browser's print dialog, where you can save as PDF",
+      exportDocxH:"Word (.docx)", exportDocxP:"For Microsoft Word on a computer (Google Docs may not display it)",
+      exportTxtH:"Text (.txt)", exportTxtP:"Plain text with no formatting",
+      exportJsonH:"Backup all documents (.json)", exportJsonP:"Backs up every single one of your documents into one file",
+      exportNote:"Export always happens only in your browser — no file is ever uploaded anywhere.",
+      importModalTitle:"Import document",
+      importDocxH:"Word document (.docx)", importDocxP:"Uploads an existing .docx file as a new document",
+      importTxtH:"Text file (.txt)", importTxtP:"Uploads plain text as a new document",
+      importJsonH:"Restore backup (.json)", importJsonP:"Loads documents from a previously downloaded backup file",
+      importNote:"Files are processed only in your browser and are never uploaded anywhere.",
+      linkModalTitle:"Insert link", linkUrlLabel:"URL", cancel:"Cancel", insert:"Insert",
+      deleteModalTitle:"Delete this document?", deleteModalText:"This can't be undone. The document will be permanently removed from this device.",
+      restoreModalTitle:"Restore backup?", restoreModalText:"Documents from the backup will be added to your existing documents.",
+      welcomeTitle:"Welcome to Xtally",
+      welcomeHtml:"<h1>Welcome to Xtally 👋</h1><p>This is your first document. Feel free to delete it and start a new one, or pick a ready-made template from the top left.</p><ul><li>Format text using the toolbar above</li><li>Everything is saved automatically to this device</li><li>Export anytime to PDF, Word, or text, or import an existing .docx</li></ul>",
+      untitled:"Untitled", noDocs:"No documents yet.", updatedAt:"Updated",
+      toastTemplate:"Template \"{0}\" inserted", toastDuplicated:"Document duplicated", toastDeleted:"Document deleted",
+      toastSaved:"Saved", toastTxtExported:"Text exported", toastDocxExported:"Word document exported", toastDocxFallback:"The Word library failed to load, exported using the simplified .doc format instead",
+      toastBackupSaved:"Backup downloaded", toastDocxImported:"Word document imported", toastTxtImported:"Text file imported",
+      toastRestoreOk:"Backup restored", toastRestoreSame:"All documents from the backup are already here", toastRestoreBad:"Couldn't read the backup file", toastDocxImportBad:"Couldn't read the .docx file — try a different file",
+      toastLibLoading:"The library is still loading, please try again in a few seconds",
+      toastImageBad:"Couldn't insert that file as an image", toastImageTooBig:"Image is too large (max 20 MB)",
+      toastStorageFull:"Browser storage is full – your changes were NOT saved! Shrink or remove images or old documents, and make a backup.",
+      saveFailed:"Not saved – storage full", copySuffix:" (copy)",
+      wordsZero:"0 words", word1:" word", word234:" words", word5:" words"
+    }
+  };
+
+  var currentLang = "cs";
+  var urlParams = new URLSearchParams(location.search);
+  var urlLang = urlParams.get("lang");
+  var savedLang = null;
+  try { savedLang = localStorage.getItem("xtally_lang"); } catch(e){}
+  /* Jazyk v URL (?lang=en / ?lang=cs) má přednost před uloženým nastavením */
+  if (urlLang === "cs" || urlLang === "en") currentLang = urlLang;
+  else if (savedLang === "cs" || savedLang === "en") currentLang = savedLang;
+  else {
+    var nav = (navigator.language || "cs").toLowerCase();
+    currentLang = nav.indexOf("cs") === 0 || nav.indexOf("sk") === 0 ? "cs" : "en";
+  }
+
+  function t(key){ return (I18N[currentLang] && I18N[currentLang][key]) || (I18N.cs[key] || key); }
+
+  function applyI18n(){
+    document.documentElement.lang = currentLang;
+    document.title = t("pageTitle");
+    document.querySelectorAll("[data-i18n]").forEach(function(el){ el.textContent = t(el.getAttribute("data-i18n")); });
+    document.querySelectorAll("[data-i18n-html]").forEach(function(el){ el.innerHTML = t(el.getAttribute("data-i18n-html")); });
+    document.querySelectorAll("[data-i18n-title]").forEach(function(el){ el.title = t(el.getAttribute("data-i18n-title")); });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function(el){ el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria"))); });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function(el){ el.placeholder = t(el.getAttribute("data-i18n-placeholder")); });
+    document.querySelectorAll("[data-i18n-dataplaceholder]").forEach(function(el){ el.setAttribute("data-placeholder", t(el.getAttribute("data-i18n-dataplaceholder"))); });
+    document.querySelectorAll("#langSwitch button").forEach(function(b){ b.classList.toggle("active", b.dataset.lang === currentLang); });
+  }
+
+  /* ============ Templates (bilingual) ============ */
+  var TEMPLATES = [
+    { id:"cv", icon:"user",
+      cs:{ name:"Životopis", desc:"Klasický CV formát",
+        html:"<h1>Jméno Příjmení</h1><p>Adresa, Město &bull; Telefon &bull; E-mail</p><h2>Profil</h2><p>Stručný popis vašich zkušeností a cílů (2–3 věty).</p><h2>Pracovní zkušenosti</h2><p><strong>Pozice – Název firmy</strong> (měsíc/rok – měsíc/rok)</p><ul><li>Hlavní náplň práce a zodpovědnosti</li><li>Klíčový výsledek nebo úspěch</li></ul><h2>Vzdělání</h2><p><strong>Název školy</strong>, obor (rok – rok)</p><h2>Dovednosti</h2><ul><li>Dovednost 1</li><li>Dovednost 2</li><li>Dovednost 3</li></ul><h2>Jazyky</h2><p>Čeština – rodilý mluvčí, Angličtina – B2</p>" },
+      en:{ name:"Resume / CV", desc:"Classic CV layout",
+        html:"<h1>Full Name</h1><p>Address, City &bull; Phone &bull; Email</p><h2>Profile</h2><p>A short summary of your experience and goals (2–3 sentences).</p><h2>Work Experience</h2><p><strong>Job Title – Company Name</strong> (Month/Year – Month/Year)</p><ul><li>Main responsibilities and duties</li><li>A key achievement or result</li></ul><h2>Education</h2><p><strong>School Name</strong>, Field of Study (Year – Year)</p><h2>Skills</h2><ul><li>Skill 1</li><li>Skill 2</li><li>Skill 3</li></ul><h2>Languages</h2><p>English – native speaker, Spanish – B2</p>" } },
+    { id:"cover", icon:"mail",
+      cs:{ name:"Motivační dopis", desc:"K žádosti o práci",
+        html:"<p>Jméno Příjmení<br>Adresa<br>Telefon, e-mail</p><p>V [Město], dne [datum]</p><p>Vážený pane / Vážená paní,</p><p>reaguji na Vaši nabídku na pozici [název pozice], kterou jste zveřejnili na [zdroj]. Mám zkušenosti s [oblast] a věřím, že bych mohl/mohla svými dovednostmi přispět k [cíl firmy].</p><p>V minulosti jsem [stručně popsat relevantní zkušenost]. Rád/a bych tuto zkušenost zúročil/a i ve Vaší společnosti.</p><p>Budu se těšit na osobní setkání, kde Vám rád/a představím své zkušenosti podrobněji.</p><p>S pozdravem,<br>Jméno Příjmení</p>" },
+      en:{ name:"Cover Letter", desc:"For a job application",
+        html:"<p>Full Name<br>Address<br>Phone, email</p><p>[City], [date]</p><p>Dear Hiring Manager,</p><p>I am writing to apply for the [position title] role advertised on [source]. I have experience in [field] and believe I could contribute to [company goal] with my skills.</p><p>In my previous role, I [briefly describe relevant experience]. I would welcome the opportunity to bring this experience to your company.</p><p>I look forward to discussing my application with you in person.</p><p>Sincerely,<br>Full Name</p>" } },
+    { id:"invoice", icon:"invoice",
+      cs:{ name:"Faktura", desc:"Jednoduchá faktura",
+        html:"<h1>Faktura č. 2026001</h1><p><strong>Dodavatel</strong><br>Jméno / Firma<br>Adresa<br>IČO: ____ DIČ: ____</p><p><strong>Odběratel</strong><br>Jméno / Firma<br>Adresa</p><p>Datum vystavení: [datum] &nbsp;&nbsp; Datum splatnosti: [datum] &nbsp;&nbsp; Způsob platby: bankovní převod</p><table border=\"1\" cellpadding=\"6\"><thead><tr><th>Položka</th><th>Množství</th><th>Cena/ks</th><th>Celkem</th></tr></thead><tbody><tr><td>Popis položky</td><td>1</td><td>0 Kč</td><td>0 Kč</td></tr></tbody></table><p style=\"text-align:right\"><strong>Celkem k úhradě: 0 Kč</strong></p><p>Číslo účtu: ____/____</p>" },
+      en:{ name:"Invoice", desc:"Simple invoice",
+        html:"<h1>Invoice No. 2026001</h1><p><strong>From</strong><br>Name / Company<br>Address<br>Tax ID: ____</p><p><strong>Bill To</strong><br>Name / Company<br>Address</p><p>Issue date: [date] &nbsp;&nbsp; Due date: [date] &nbsp;&nbsp; Payment method: bank transfer</p><table border=\"1\" cellpadding=\"6\"><thead><tr><th>Item</th><th>Qty</th><th>Unit price</th><th>Total</th></tr></thead><tbody><tr><td>Item description</td><td>1</td><td>$0</td><td>$0</td></tr></tbody></table><p style=\"text-align:right\"><strong>Total due: $0</strong></p><p>Account number: ____</p>" } },
+    { id:"contract", icon:"doc",
+      cs:{ name:"Dohoda / smlouva", desc:"Dohoda o provedení práce",
+        html:"<h1>Dohoda o provedení práce</h1><p>uzavřená mezi:</p><p><strong>Objednatel:</strong> Jméno, adresa, IČO<br><strong>Zhotovitel:</strong> Jméno, adresa</p><h2>1. Předmět dohody</h2><p>Popis díla nebo služby, kterou se zhotovitel zavazuje provést.</p><h2>2. Odměna</h2><p>Za provedení díla náleží zhotoviteli odměna ve výši ____ Kč, splatná do ____ dnů od dokončení.</p><h2>3. Termín plnění</h2><p>Dílo bude dokončeno nejpozději do [datum].</p><h2>4. Závěrečná ustanovení</h2><p>Tato dohoda je vyhotovena ve dvou stejnopisech. Obě strany prohlašují, že si dohodu přečetly a souhlasí s jejím obsahem.</p><p>V [Město], dne [datum]</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Objednatel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zhotovitel</p>" },
+      en:{ name:"Agreement / Contract", desc:"Simple service agreement",
+        html:"<h1>Service Agreement</h1><p>entered into between:</p><p><strong>Client:</strong> Name, address<br><strong>Contractor:</strong> Name, address</p><h2>1. Scope of Work</h2><p>Description of the work or service the contractor agrees to perform.</p><h2>2. Payment</h2><p>The contractor shall be paid $____, due within ____ days of completion.</p><h2>3. Timeline</h2><p>The work will be completed no later than [date].</p><h2>4. Final Provisions</h2><p>This agreement is made in two identical copies. Both parties confirm they have read and agree to its contents.</p><p>[City], [date]</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Client &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contractor</p>" } },
+    { id:"letter", icon:"mail",
+      cs:{ name:"Formální dopis / žádost", desc:"Žádost na úřad či instituci",
+        html:"<p>Jméno Příjmení<br>Adresa</p><p>[Název úřadu / instituce]<br>Adresa</p><p>V [Město], dne [datum]</p><p><strong>Věc: Žádost o [předmět žádosti]</strong></p><p>Vážení,</p><p>tímto Vás žádám o [konkrétní požadavek]. Důvodem mé žádosti je [zdůvodnění].</p><p>Předem děkuji za vyřízení mé žádosti a zůstávám s pozdravem.</p><p>Jméno Příjmení<br>Podpis</p>" },
+      en:{ name:"Formal Letter / Request", desc:"Request to an office or institution",
+        html:"<p>Full Name<br>Address</p><p>[Institution name]<br>Address</p><p>[City], [date]</p><p><strong>Subject: Request for [subject]</strong></p><p>Dear Sir or Madam,</p><p>I am writing to request [specific request]. The reason for my request is [explanation].</p><p>Thank you in advance for your consideration.</p><p>Sincerely,<br>Full Name<br>Signature</p>" } },
+    { id:"meeting", icon:"list",
+      cs:{ name:"Zápis z jednání", desc:"Program, závěry, úkoly",
+        html:"<h1>Zápis z jednání</h1><p>Datum: [datum] &nbsp;&nbsp; Místo: [místo] &nbsp;&nbsp; Čas: [čas]</p><p><strong>Účastníci:</strong> [jména]</p><h2>Program jednání</h2><ol><li>Bod 1</li><li>Bod 2</li><li>Bod 3</li></ol><h2>Závěry a úkoly</h2><ul><li>Úkol – zodpovědná osoba – termín</li><li>Úkol – zodpovědná osoba – termín</li></ul><h2>Poznámky</h2><p>Volný prostor pro poznámky z jednání.</p>" },
+      en:{ name:"Meeting Minutes", desc:"Agenda, decisions, action items",
+        html:"<h1>Meeting Minutes</h1><p>Date: [date] &nbsp;&nbsp; Location: [location] &nbsp;&nbsp; Time: [time]</p><p><strong>Attendees:</strong> [names]</p><h2>Agenda</h2><ol><li>Item 1</li><li>Item 2</li><li>Item 3</li></ol><h2>Decisions &amp; Action Items</h2><ul><li>Task – owner – due date</li><li>Task – owner – due date</li></ul><h2>Notes</h2><p>Free space for meeting notes.</p>" } },
+    { id:"todo", icon:"check",
+      cs:{ name:"To-do / poznámky", desc:"Prázdný seznam úkolů", html:"<h1>Poznámky</h1><ul><li>☐ Úkol 1</li><li>☐ Úkol 2</li><li>☐ Úkol 3</li></ul><p>Volný prostor pro další poznámky…</p>" },
+      en:{ name:"To-do / Notes", desc:"Blank task list", html:"<h1>Notes</h1><ul><li>☐ Task 1</li><li>☐ Task 2</li><li>☐ Task 3</li></ul><p>Free space for more notes…</p>" } },
+    { id:"resignation", icon:"mail",
+      cs:{ name:"Výpověď z pracovního poměru", desc:"Ukončení pracovního poměru",
+        html:"<p>Jméno Příjmení<br>Adresa</p><p>[Název zaměstnavatele]<br>Adresa</p><p>V [Město], dne [datum]</p><p><strong>Věc: Výpověď z pracovního poměru</strong></p><p>Vážení,</p><p>tímto podávám výpověď z pracovního poměru sjednaného pracovní smlouvou ze dne [datum uzavření smlouvy], a to v souladu s § 50 zákoníku práce.</p><p>Pracovní poměr skončí uplynutím dvouměsíční výpovědní doby, tedy dne [datum].</p><p>Děkuji za dosavadní spolupráci.</p><p>S pozdravem,<br>Jméno Příjmení<br>Podpis</p>" },
+      en:{ name:"Resignation Letter", desc:"Formally end employment",
+        html:"<p>Full Name<br>Address</p><p>[Employer name]<br>Address</p><p>[City], [date]</p><p><strong>Subject: Resignation from employment</strong></p><p>Dear [Manager's name],</p><p>I am writing to formally resign from my position as [job title], effective [last working day], in accordance with my [notice period] notice period as outlined in my contract.</p><p>Thank you for the opportunity to work with the team, and I am happy to help ensure a smooth handover during my remaining time.</p><p>Sincerely,<br>Full Name<br>Signature</p>" } },
+    { id:"reference", icon:"doc",
+      cs:{ name:"Pracovní posudek", desc:"Potvrzení od zaměstnavatele",
+        html:"<h1>Pracovní posudek</h1><p>Zaměstnavatel potvrzuje, že <strong>Jméno Příjmení</strong>, nar. [datum narození], byl/a v pracovním poměru u společnosti [název firmy] v období od [datum] do [datum], na pozici <strong>[název pozice]</strong>.</p><h2>Náplň práce</h2><p>Stručný popis hlavních pracovních povinností a odpovědností.</p><h2>Hodnocení</h2><p>Jmenovaný/á vykonával/a svěřené úkoly svědomitě a spolehlivě. [Doplňte konkrétní hodnocení výkonu, spolehlivosti a spolupráce s týmem.]</p><p>Pracovní poměr skončil [důvod ukončení, např. dohodou].</p><p>V [Město], dne [datum]</p><p>_____________________<br>Jméno, funkce, razítko firmy</p>" },
+      en:{ name:"Reference Letter", desc:"Employer confirmation letter",
+        html:"<h1>Reference Letter</h1><p>This letter confirms that <strong>Full Name</strong> was employed at [Company Name] from [date] to [date], in the position of <strong>[Job Title]</strong>.</p><h2>Responsibilities</h2><p>A brief summary of the main duties and responsibilities.</p><h2>Assessment</h2><p>During this time, [Name] performed their duties reliably and professionally. [Add specific comments on performance, reliability and teamwork.]</p><p>Employment ended [reason, e.g. by mutual agreement].</p><p>[City], [date]</p><p>_____________________<br>Name, title, company stamp</p>" } },
+    { id:"quote", icon:"invoice",
+      cs:{ name:"Cenová nabídka", desc:"Nabídka před fakturací",
+        html:"<h1>Cenová nabídka č. 2026001</h1><p><strong>Dodavatel</strong><br>Jméno / Firma<br>Adresa<br>IČO: ____</p><p><strong>Pro</strong><br>Jméno / Firma<br>Adresa</p><p>Datum: [datum] &nbsp;&nbsp; Platnost nabídky do: [datum]</p><table border=\"1\" cellpadding=\"6\"><thead><tr><th>Položka</th><th>Množství</th><th>Cena/ks</th><th>Celkem</th></tr></thead><tbody><tr><td>Popis položky nebo služby</td><td>1</td><td>0 Kč</td><td>0 Kč</td></tr></tbody></table><p style=\"text-align:right\"><strong>Celková cena: 0 Kč</strong></p><p>Nabídka nezahrnuje případné vícepráce nad rámec popisu. V případě zájmu mě prosím kontaktujte.</p>" },
+      en:{ name:"Price Quote", desc:"Estimate before invoicing",
+        html:"<h1>Price Quote No. 2026001</h1><p><strong>From</strong><br>Name / Company<br>Address<br>Tax ID: ____</p><p><strong>For</strong><br>Name / Company<br>Address</p><p>Date: [date] &nbsp;&nbsp; Valid until: [date]</p><table border=\"1\" cellpadding=\"6\"><thead><tr><th>Item</th><th>Qty</th><th>Unit price</th><th>Total</th></tr></thead><tbody><tr><td>Description of item or service</td><td>1</td><td>$0</td><td>$0</td></tr></tbody></table><p style=\"text-align:right\"><strong>Total estimate: $0</strong></p><p>This quote does not include work outside the described scope. Please get in touch if you'd like to proceed.</p>" } },
+    { id:"reminder", icon:"mail",
+      cs:{ name:"Upomínka k platbě", desc:"Připomenutí nezaplacené faktury",
+        html:"<p>Jméno / Firma<br>Adresa</p><p>[Jméno odběratele]<br>Adresa</p><p>V [Město], dne [datum]</p><p><strong>Věc: Upomínka – nezaplacená faktura č. [číslo faktury]</strong></p><p>Vážení,</p><p>dovoluji si Vás upozornit, že faktura č. [číslo faktury] ze dne [datum vystavení] na částku [částka] Kč, splatná dne [datum splatnosti], nebyla dosud uhrazena.</p><p>Žádám Vás o úhradu do [nový termín], případně o sdělení, pokud již byla platba provedena.</p><p>Předem děkuji za brzké vyřízení.</p><p>S pozdravem,<br>Jméno Příjmení</p>" },
+      en:{ name:"Payment Reminder", desc:"Follow up on an unpaid invoice",
+        html:"<p>Name / Company<br>Address</p><p>[Client name]<br>Address</p><p>[City], [date]</p><p><strong>Subject: Reminder – Unpaid Invoice No. [invoice number]</strong></p><p>Dear [Client name],</p><p>This is a friendly reminder that Invoice No. [invoice number], issued on [issue date] for [amount], due on [due date], remains unpaid.</p><p>Please arrange payment by [new deadline], or let me know if this has already been settled.</p><p>Thank you for your prompt attention to this matter.</p><p>Sincerely,<br>Full Name</p>" } },
+    { id:"lease", icon:"home",
+      cs:{ name:"Nájemní smlouva", desc:"Pronájem bytu či pokoje",
+        html:"<h1>Smlouva o nájmu bytu</h1><p>uzavřená mezi:</p><p><strong>Pronajímatel:</strong> Jméno, adresa<br><strong>Nájemce:</strong> Jméno, adresa</p><h2>1. Předmět nájmu</h2><p>Byt na adrese [adresa nemovitosti], o velikosti [m²], včetně vybavení: [seznam vybavení].</p><h2>2. Doba nájmu</h2><p>Nájem se sjednává na dobu [určitou/neurčitou] od [datum].</p><h2>3. Nájemné a kauce</h2><p>Měsíční nájemné činí ____ Kč, splatné vždy do [den] v měsíci. Kauce ve výši ____ Kč bude uhrazena před předáním bytu.</p><h2>4. Práva a povinnosti</h2><p>Nájemce se zavazuje užívat byt řádně a včas hradit nájemné a služby. Pronajímatel se zavazuje předat byt ve stavu způsobilém k užívání.</p><p>V [Město], dne [datum]</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Pronajímatel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nájemce</p>" },
+      en:{ name:"Lease Agreement", desc:"Renting a flat or room",
+        html:"<h1>Residential Lease Agreement</h1><p>entered into between:</p><p><strong>Landlord:</strong> Name, address<br><strong>Tenant:</strong> Name, address</p><h2>1. Property</h2><p>The property at [property address], approximately [size], including: [list of included items/furniture].</p><h2>2. Lease Term</h2><p>The lease begins on [date] for a [fixed/indefinite] term.</p><h2>3. Rent and Deposit</h2><p>Monthly rent is $____, due on the [day] of each month. A security deposit of $____ is due before move-in.</p><h2>4. Rights and Obligations</h2><p>The tenant agrees to maintain the property and pay rent and utilities on time. The landlord agrees to deliver the property in habitable condition.</p><p>[City], [date]</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Landlord &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tenant</p>" } },
+    { id:"poa", icon:"shield",
+      cs:{ name:"Plná moc", desc:"Zmocnění k zastupování",
+        html:"<h1>Plná moc</h1><p><strong>Zmocnitel:</strong> Jméno Příjmení, nar. [datum narození], bytem [adresa]</p><p>tímto zmocňuje</p><p><strong>Zmocněnce:</strong> Jméno Příjmení, nar. [datum narození], bytem [adresa]</p><p>aby jej/ji zastupoval/a ve věci [popis věci, ke které se plná moc vztahuje], a to v plném rozsahu / v rozsahu [uveďte konkrétní úkony].</p><p>Tato plná moc se uděluje na dobu [určitou do data / neurčitou].</p><p>V [Město], dne [datum]</p><p>_____________________<br>Podpis zmocnitele</p><p>Podpis zmocněnce se přijímá: _____________________</p>" },
+      en:{ name:"Power of Attorney", desc:"Authorization to act on your behalf",
+        html:"<h1>Power of Attorney</h1><p><strong>Principal:</strong> Full Name, born [date of birth], residing at [address]</p><p>hereby authorizes</p><p><strong>Agent:</strong> Full Name, born [date of birth], residing at [address]</p><p>to act on their behalf in the matter of [describe the matter this power of attorney covers], to the full extent / specifically for [list specific actions].</p><p>This power of attorney is granted for [a fixed period until date / an indefinite period].</p><p>[City], [date]</p><p>_____________________<br>Principal's signature</p><p>Agent's signature (acceptance): _____________________</p>" } },
+    { id:"cancellation", icon:"mail",
+      cs:{ name:"Odstoupení od smlouvy", desc:"Vrácení zboží do 14 dnů",
+        html:"<p>Jméno Příjmení<br>Adresa</p><p>[Název obchodníka]<br>Adresa</p><p>V [Město], dne [datum]</p><p><strong>Věc: Odstoupení od smlouvy uzavřené na dálku</strong></p><p>Vážení,</p><p>v souladu s § 1829 občanského zákoníku tímto odstupuji od smlouvy č. [číslo objednávky] ze dne [datum objednávky] na nákup zboží [popis zboží].</p><p>Zboží zasílám zpět a žádám o vrácení kupní ceny ve výši [částka] Kč na účet číslo ____/____.</p><p>Datum objednání: [datum] &nbsp;&nbsp; Datum obdržení: [datum]</p><p>S pozdravem,<br>Jméno Příjmení</p>" },
+      en:{ name:"Withdrawal from Contract", desc:"Return a purchase within 14 days",
+        html:"<p>Full Name<br>Address</p><p>[Seller name]<br>Address</p><p>[City], [date]</p><p><strong>Subject: Withdrawal from a distance contract</strong></p><p>Dear Sir or Madam,</p><p>I am writing to notify you that I am withdrawing from the contract for order No. [order number], placed on [order date], for the purchase of [item description].</p><p>I am returning the item and request a refund of [amount] to account number ____.</p><p>Order date: [date] &nbsp;&nbsp; Received date: [date]</p><p>Sincerely,<br>Full Name</p>" } },
+    { id:"leave", icon:"mail",
+      cs:{ name:"Žádost o dovolenou", desc:"Žádost zaměstnavateli",
+        html:"<p>Jméno Příjmení<br>Oddělení / Pozice</p><p>[Jméno nadřízeného]</p><p>V [Město], dne [datum]</p><p><strong>Věc: Žádost o čerpání dovolené</strong></p><p>Vážený pane / Vážená paní,</p><p>tímto žádám o schválení dovolené v termínu od [datum] do [datum], tj. celkem [počet] pracovních dnů.</p><p>Po dobu mé nepřítomnosti bude mé pracovní povinnosti zajišťovat [jméno kolegy], se kterým/kterou jsem předání úkolů předem domluvil/a.</p><p>Děkuji za schválení.</p><p>S pozdravem,<br>Jméno Příjmení</p>" },
+      en:{ name:"Leave Request", desc:"Vacation request to your employer",
+        html:"<p>Full Name<br>Department / Position</p><p>[Manager's name]</p><p>[City], [date]</p><p><strong>Subject: Vacation leave request</strong></p><p>Dear [Manager's name],</p><p>I would like to request vacation leave from [start date] to [end date], for a total of [number] working days.</p><p>During my absence, [colleague's name] will be covering my responsibilities; we have already discussed the handover.</p><p>Thank you for your approval.</p><p>Sincerely,<br>Full Name</p>" } },
+    { id:"handover", icon:"list",
+      cs:{ name:"Předávací protokol", desc:"Předání bytu, vozidla či vybavení",
+        html:"<h1>Předávací protokol</h1><p>Datum předání: [datum] &nbsp;&nbsp; Místo: [místo]</p><p><strong>Předávající:</strong> Jméno, adresa<br><strong>Přebírající:</strong> Jméno, adresa</p><h2>Předmět předání</h2><p>Popis předávané věci (byt, vozidlo, vybavení apod.) včetně stavu a identifikačních údajů.</p><h2>Stav při předání</h2><ul><li>Stav měřidel / počet ujetých km: ____</li><li>Viditelné vady / poškození: ____</li><li>Předané klíče / doklady: ____</li></ul><h2>Poznámky</h2><p>Volný prostor pro další poznámky obou stran.</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Předávající &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Přebírající</p>" },
+      en:{ name:"Handover Protocol", desc:"Handing over a property, vehicle or equipment",
+        html:"<h1>Handover Protocol</h1><p>Date of handover: [date] &nbsp;&nbsp; Location: [location]</p><p><strong>Handed over by:</strong> Name, address<br><strong>Received by:</strong> Name, address</p><h2>Item Being Handed Over</h2><p>Description of the property, vehicle or equipment, including identifying details and condition.</p><h2>Condition at Handover</h2><ul><li>Meter readings / mileage: ____</li><li>Visible defects / damage: ____</li><li>Keys / documents handed over: ____</li></ul><h2>Notes</h2><p>Free space for additional notes from both parties.</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Handed over by &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Received by</p>" } },
+    { id:"brief", icon:"list",
+      cs:{ name:"Projektový záměr", desc:"Stručný přehled projektu",
+        html:"<h1>Projektový záměr: [název projektu]</h1><p>Datum: [datum] &nbsp;&nbsp; Autor: [jméno]</p><h2>Cíl projektu</h2><p>Co má projekt vyřešit a jakého výsledku má dosáhnout.</p><h2>Rozsah</h2><p>Co je a co naopak není součástí projektu.</p><h2>Klíčové milníky</h2><ul><li>Milník 1 – termín</li><li>Milník 2 – termín</li><li>Milník 3 – termín</li></ul><h2>Zdroje a rozpočet</h2><p>Potřební lidé, nástroje a orientační rozpočet.</p><h2>Rizika</h2><p>Co by mohlo projekt zpomalit nebo ohrozit.</p>" },
+      en:{ name:"Project Brief", desc:"A short project overview",
+        html:"<h1>Project Brief: [project name]</h1><p>Date: [date] &nbsp;&nbsp; Author: [name]</p><h2>Goal</h2><p>What the project needs to solve and what success looks like.</p><h2>Scope</h2><p>What is — and isn't — included in this project.</p><h2>Key Milestones</h2><ul><li>Milestone 1 – date</li><li>Milestone 2 – date</li><li>Milestone 3 – date</li></ul><h2>Resources &amp; Budget</h2><p>People, tools and an approximate budget needed.</p><h2>Risks</h2><p>What could slow down or derail the project.</p>" } },
+    { id:"press", icon:"megaphone",
+      cs:{ name:"Tisková zpráva", desc:"Oznámení pro média",
+        html:"<p style=\"color:var(--ink-soft);font-size:.85rem;\">TISKOVÁ ZPRÁVA – K okamžitému zveřejnění</p><h1>Titulek tiskové zprávy</h1><p>[Město], [datum] – Úvodní odstavec shrnující nejdůležitější informaci (kdo, co, kdy, kde, proč) v jedné až dvou větách.</p><p>Druhý odstavec s podrobnostmi – kontext, čísla, souvislosti.</p><p>\"Citace klíčové osoby k tématu,\" řekl/a [jméno, pozice].</p><p>Závěrečný odstavec s dalšími informacemi nebo výhledem do budoucna.</p><h2>Kontakt pro média</h2><p>Jméno Příjmení<br>E-mail, telefon<br>[Název organizace]</p>" },
+      en:{ name:"Press Release", desc:"An announcement for media",
+        html:"<p style=\"color:var(--ink-soft);font-size:.85rem;\">PRESS RELEASE – For Immediate Release</p><h1>Press release headline</h1><p>[City], [date] – Opening paragraph summarizing the most important information (who, what, when, where, why) in one or two sentences.</p><p>Second paragraph with supporting details — context, figures, background.</p><p>\"A quote from a key spokesperson about the announcement,\" said [name, title].</p><p>Closing paragraph with additional information or next steps.</p><h2>Media Contact</h2><p>Full Name<br>Email, phone<br>[Organization name]</p>" } },
+    { id:"lease_renewal", icon:"home",
+      cs:{ name:"Prodloužení nájemní smlouvy", desc:"Dodatek k existující smlouvě",
+        html:"<h1>Dodatek č. 1 ke smlouvě o nájmu bytu</h1><p>uzavřený mezi:</p><p><strong>Pronajímatel:</strong> Jméno, adresa<br><strong>Nájemce:</strong> Jméno, adresa</p><p>Smluvní strany uzavřely dne [datum původní smlouvy] smlouvu o nájmu bytu na adrese [adresa nemovitosti].</p><h2>1. Prodloužení doby nájmu</h2><p>Smluvní strany se dohodly na prodloužení doby nájmu, a to od [datum] do [nové datum] / na dobu neurčitou.</p><h2>2. Nájemné</h2><p>Výše nájemného se [nemění a nadále činí ____ Kč měsíčně / mění a nově činí ____ Kč měsíčně] od [datum účinnosti změny].</p><h2>3. Ostatní ujednání</h2><p>Ostatní ustanovení původní nájemní smlouvy ze dne [datum] zůstávají tímto dodatkem nedotčena.</p><p>V [Město], dne [datum]</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Pronajímatel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nájemce</p>" },
+      en:{ name:"Lease Renewal Agreement", desc:"Addendum to an existing lease",
+        html:"<h1>Lease Renewal Addendum</h1><p>entered into between:</p><p><strong>Landlord:</strong> Name, address<br><strong>Tenant:</strong> Name, address</p><p>The parties entered into a lease agreement on [original lease date] for the property at [property address].</p><h2>1. Extension of Lease Term</h2><p>The parties agree to extend the lease term from [date] to [new date] / to an indefinite term.</p><h2>2. Rent</h2><p>The monthly rent [remains unchanged at $____ / changes to $____] effective [effective date].</p><h2>3. Other Terms</h2><p>All other terms of the original lease dated [date] remain unchanged and in full effect.</p><p>[City], [date]</p><p>_____________________ &nbsp;&nbsp;&nbsp; _____________________<br>Landlord &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tenant</p>" } },
+    { id:"landlord_notice", icon:"mail",
+      cs:{ name:"Výpověď nájmu nájemníkovi", desc:"Ukončení nájmu ze strany pronajímatele",
+        html:"<p>Jméno / Firma pronajímatele<br>Adresa</p><p>[Jméno nájemníka]<br>Adresa bytu: [adresa nemovitosti]</p><p>V [Město], dne [datum]</p><p><strong>Věc: Výpověď z nájmu bytu</strong></p><p>Vážený pane / Vážená paní,</p><p>tímto Vám dávám výpověď z nájmu bytu na adrese [adresa nemovitosti], sjednaného nájemní smlouvou ze dne [datum uzavření smlouvy], a to z důvodu: [uveďte důvod výpovědi, např. dle § 2288 občanského zákoníku].</p><p>Výpovědní doba činí [délka, obvykle 3 měsíce] a počíná běžet prvním dnem měsíce následujícího po doručení této výpovědi. Nájem tak skončí ke dni [datum].</p><p>Žádám Vás o vyklizení a předání bytu nejpozději k výše uvedenému datu, včetně vyrovnání případných nedoplatků na nájemném a vrácení klíčů. Předání proběhne na základě předávacího protokolu.</p><p>S pozdravem,<br>Jméno Příjmení</p>" },
+      en:{ name:"Landlord's Notice to Vacate", desc:"Lease termination by the landlord",
+        html:"<p>Landlord name / Company<br>Address</p><p>[Tenant name]<br>Property address: [property address]</p><p>[City], [date]</p><p><strong>Subject: Notice of Lease Termination</strong></p><p>Dear [Tenant name],</p><p>This letter is to inform you that I am terminating the lease for the property at [property address], entered into on [original lease date], for the following reason: [state the reason for termination].</p><p>The notice period is [length, typically 30–90 days per your lease/local law], beginning on [start date]. The lease will therefore end on [end date].</p><p>Please arrange to vacate and hand over the property by the above date, including settlement of any outstanding rent and return of keys. The handover will be documented with a handover protocol.</p><p>Sincerely,<br>Full Name</p>" } },
+    { id:"tenant_notice", icon:"mail",
+      cs:{ name:"Výpověď nájmu ze strany nájemníka", desc:"Nájemník oznamuje ukončení nájmu",
+        html:"<p>Jméno Příjmení<br>Adresa bytu: [adresa nemovitosti]</p><p>[Jméno pronajímatele]<br>Adresa</p><p>V [Město], dne [datum]</p><p><strong>Věc: Výpověď z nájmu bytu</strong></p><p>Vážený pane / Vážená paní,</p><p>tímto Vám oznamuji výpověď z nájmu bytu na adrese [adresa nemovitosti], sjednaného nájemní smlouvou ze dne [datum uzavření smlouvy].</p><p>V souladu s podmínkami smlouvy / § 2231 občanského zákoníku činí výpovědní doba [délka, obvykle 3 měsíce] a nájem tak skončí ke dni [datum].</p><p>Prosím o sdělení termínu předání bytu a vyúčtování kauce. Byt předám vyklizený a ve stavu odpovídajícím běžnému opotřebení, na základě předávacího protokolu.</p><p>S pozdravem,<br>Jméno Příjmení<br>Telefon, e-mail</p>" },
+      en:{ name:"Tenant's Notice to Terminate Lease", desc:"Tenant gives notice to move out",
+        html:"<p>Full Name<br>Property address: [property address]</p><p>[Landlord name]<br>Address</p><p>[City], [date]</p><p><strong>Subject: Notice of Lease Termination</strong></p><p>Dear [Landlord name],</p><p>This letter is to inform you that I am giving notice to terminate my lease for the property at [property address], entered into on [original lease date].</p><p>Per the terms of the lease, the notice period is [length, typically 30 days], and the lease will therefore end on [end date].</p><p>Please let me know a convenient date for the move-out inspection and return of my security deposit. I will leave the property clean and in a condition consistent with normal wear and tear, documented with a handover protocol.</p><p>Sincerely,<br>Full Name<br>Phone, email</p>" } },
+    { id:"blank", icon:"plus",
+      cs:{ name:"Prázdný dokument", desc:"Začít od nuly", html:"" },
+      en:{ name:"Blank document", desc:"Start from scratch", html:"" } }
+  ];
+
+  var TPL_ICONS = {
+    user:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#fff" stroke-width="2"/><path d="M5 20c1.2-3.6 4-5.4 7-5.4S18.8 16.4 20 20" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+    mail:'<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#fff" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+    invoice:'<svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="1.5" stroke="#fff" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+    doc:'<svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13H7V3z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>',
+    list:'<svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+    check:'<svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    plus:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>',
+    home:'<svg viewBox="0 0 24 24" fill="none"><path d="M4 11l8-7 8 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 001 1h10a1 1 0 001-1v-9" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M10 20v-6h4v6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>',
+    shield:'<svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    megaphone:'<svg viewBox="0 0 24 24" fill="none"><path d="M3 10v4a1 1 0 001 1h2l9 4V5l-9 4H4a1 1 0 00-1 1z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M18 9a4 4 0 010 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M7 15v4a1 1 0 001 1h1a1 1 0 001-1v-3" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>'
+  };
+
+  var tplGrid = document.getElementById("tplGrid");
+  function renderTemplateGrid(){
+    tplGrid.innerHTML = "";
+    TEMPLATES.forEach(function(tpl){
+      var tr = tpl[currentLang] || tpl.cs;
+      var card = document.createElement("button");
+      card.type = "button";
+      card.className = "tpl-card";
+      card.innerHTML = '<span class="ic">' + (TPL_ICONS[tpl.icon] || TPL_ICONS.doc) + '</span><h3></h3><p></p>';
+      card.querySelector("h3").textContent = tr.name;
+      card.querySelector("p").textContent = tr.desc;
+      card.addEventListener("click", function(){ createFromTemplate(tpl); closeModal(templatesModal); });
+      tplGrid.appendChild(card);
+    });
+  }
+
+  /* ============ Theme ============ */
+  var htmlEl = document.documentElement;
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem("xtally_theme"); } catch(e){}
+  if (savedTheme) htmlEl.setAttribute("data-theme", savedTheme);
+  document.getElementById("themeToggle").addEventListener("click", function(){
+    var current = htmlEl.getAttribute("data-theme");
+    var isDark = current ? current === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = isDark ? "light" : "dark";
+    htmlEl.setAttribute("data-theme", next);
+    try { localStorage.setItem("xtally_theme", next); } catch(e){}
+  });
+
+  /* ============ Storage / documents ============ */
+  var STORE_KEY = "xtally_docs_v1";
+  var CURRENT_KEY = "xtally_current_v1";
+  var docs = [];
+  var currentId = null;
+
+  function uid(){
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "id-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+  }
+  /* localStorage je jediný zdroj pravdy: před každou změnou se seznam dokumentů
+     znovu načte, aby appka otevřená ve dvou kartách
+     nepřepsala dokumenty vytvořené nebo upravené v té druhé. */
+  var persistFailed = false;
+  var lastQuotaToast = 0;
+  function readStore(){
+    try {
+      var raw = localStorage.getItem(STORE_KEY);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? normalizeDocs(arr) : [];
+    } catch(e){ return null; }
+  }
+  /* review 09/2026: nepoužitelné položky (null, čísla…) vynechat a chybějící údaje doplnit,
+     jinak jedna poškozená položka shodila celou appku */
+  function normalizeDocs(arr){
+    var out = [], seen = {};
+    arr.forEach(function(d, i){
+      if (!d || typeof d !== "object") return;
+      var id = (typeof d.id === "string" && d.id) ? d.id : "recovered-" + i;
+      if (seen[id]) return;
+      seen[id] = true;
+      out.push({
+        id: id,
+        title: typeof d.title === "string" ? d.title : "",
+        html: typeof d.html === "string" ? d.html : "",
+        updatedAt: (typeof d.updatedAt === "number" && isFinite(d.updatedAt)) ? d.updatedAt : 0
+      });
+    });
+    return out;
+  }
+  function loadDocs(){ docs = readStore() || []; }
+  function syncDocs(){
+    if (persistFailed) return; /* v paměti jsou neuložené změny – nepřepisovat je starší verzí */
+    var arr = readStore(); if (arr) docs = arr;
+  }
+  function persistDocs(){
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(docs));
+      persistFailed = false;
+      return true;
+    } catch(e){
+      persistFailed = true;
+      if (Date.now() - lastQuotaToast > 8000){ lastQuotaToast = Date.now(); showToast(t("toastStorageFull")); }
+      setSaveState("error");
+      return false;
+    }
+  }
+  function findDoc(id){ for (var i=0;i<docs.length;i++) if (docs[i].id === id) return docs[i]; return null; }
+  function createDoc(title, html){
+    syncDocs();
+    var d = { id:uid(), title: title || t("untitled"), html: html || "", updatedAt: Date.now() };
+    docs.unshift(d); persistDocs(); return d;
+  }
+  function createFromTemplate(tpl){
+    var tr = tpl[currentLang] || tpl.cs;
+    saveCurrentDoc();
+    var d = createDoc(tpl.id === "blank" ? t("untitled") : tr.name, tr.html);
+    selectDoc(d.id);
+    showToast(t("toastTemplate").replace("{0}", tr.name));
+  }
+  function deleteDoc(id){
+    clearTimeout(saveTimer); saveTimer = null;
+    syncDocs();
+    docs = docs.filter(function(d){ return d.id !== id; });
+    if (docs.length === 0) docs.unshift({ id:uid(), title:t("untitled"), html:"", updatedAt:Date.now() });
+    persistDocs();
+    currentId = null; /* smazaný dokument se už nesmí znovu uložit */
+    selectDoc(docs[0].id);
+  }
+  function duplicateDoc(id){
+    saveCurrentDoc();
+    var d = findDoc(id); if (!d) return;
+    var copy = { id:uid(), title: d.title + t("copySuffix"), html: d.html, updatedAt: Date.now() };
+    docs.unshift(copy); persistDocs(); selectDoc(copy.id);
+    showToast(t("toastDuplicated"));
+  }
+  /* Co je aktuálně uložené pro otevřený dokument – podle toho se pozná, jestli
+     je co ukládat (samotné prohlížení tak nemění datum úpravy ani pořadí). */
+  var lastSaved = { html:null, title:null, stored:null };
+  function currentTitleValue(){ return docTitleInput.value.trim() || t("untitled"); }
+  function isDirty(){ return editor.innerHTML !== lastSaved.html || currentTitleValue() !== lastSaved.title; }
+  function selectDoc(id){
+    if (currentId && currentId !== id) saveCurrentDoc(); /* nejdřív uložit rozepsaný dokument */
+    var d = findDoc(id); if (!d) return;
+    clearTimeout(saveTimer); saveTimer = null;
+    currentId = id;
+    try { localStorage.setItem(CURRENT_KEY, id); } catch(e){}
+    docTitleInput.value = d.title;
+    editor.innerHTML = d.html;
+    lastSaved = { html: editor.innerHTML, title: currentTitleValue(), stored: d.html };
+    lastEditorRange = null;
+    renderDocList();
+    updateWordCount();
+    setSaveState(persistFailed ? "error" : true);
+  }
+  function renderDocList(){
+    docList.innerHTML = "";
+    if (docs.length === 0){
+      var empty = document.createElement("li"); empty.className = "doc-empty"; empty.textContent = t("noDocs");
+      docList.appendChild(empty); return;
+    }
+    var sorted = docs.slice().sort(function(a,b){ return b.updatedAt - a.updatedAt; });
+    sorted.forEach(function(d){
+      var li = document.createElement("li");
+      li.className = "doc-item" + (d.id === currentId ? " active" : "");
+      var dt = new Date(d.updatedAt);
+      var locale = currentLang === "cs" ? "cs-CZ" : "en-US";
+      var dateStr = dt.toLocaleDateString(locale, { day:"2-digit", month:"2-digit" }) + " " + dt.toLocaleTimeString(locale, { hour:"2-digit", minute:"2-digit" });
+      li.innerHTML = '<span class="title"></span><span class="meta"></span>';
+      li.querySelector(".title").textContent = d.title || t("untitled");
+      li.querySelector(".meta").textContent = t("updatedAt") + " " + dateStr;
+      li.addEventListener("click", function(){ selectDoc(d.id); closeSidebarMobile(); });
+      docList.appendChild(li);
+    });
+  }
+
+  var saveTimer = null;
+  function saveCurrentDoc(){
+    clearTimeout(saveTimer); saveTimer = null;
+    if (!currentId) return true;
+    if (!isDirty() && !persistFailed){ setSaveState(true); return true; }
+    var html = editor.innerHTML, title = currentTitleValue();
+    syncDocs();
+    var d = findDoc(currentId);
+    /* Dokument mezitím zmizel (smazán v jiné kartě) a uživatel v něm psal – radši ho zachovat */
+    if (!d){ d = { id:currentId, title:title, html:html, updatedAt:Date.now() }; docs.unshift(d); }
+    d.html = html; d.title = title; d.updatedAt = Date.now();
+    var ok = persistDocs();
+    if (ok){ lastSaved = { html:html, title:title, stored:html }; setSaveState(true); }
+    return ok;
+  }
+  function scheduleSave(){
+    setSaveState(false);
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function(){ saveCurrentDoc(); renderDocList(); }, 450);
+  }
+  function setSaveState(saved){
+    if (saved === "error"){
+      saveLabel.textContent = t("saveFailed");
+      saveDot.style.background = "var(--danger)";
+      return;
+    }
+    saveLabel.textContent = saved ? t("saved") : t("saving");
+    saveDot.style.background = saved ? "var(--success)" : "var(--accent)";
+  }
+  function updateWordCount(){
+    var text = editor.innerText.trim();
+    var n = text.length ? text.split(/\s+/).length : 0;
+    var label;
+    if (currentLang === "cs"){
+      label = n === 0 ? t("wordsZero") : n + (n === 1 ? t("word1") : (n >= 2 && n <= 4 ? t("word234") : t("word5")));
+    } else {
+      label = n + (n === 1 ? t("word1") : t("word5"));
+    }
+    wordCount.textContent = label;
+  }
+
+  /* ============ DOM refs ============ */
+  var editor = document.getElementById("editor");
+  var docTitleInput = document.getElementById("docTitleInput");
+  var docList = document.getElementById("docList");
+  var saveLabel = document.getElementById("saveLabel");
+  var saveDot = document.getElementById("saveDot");
+  var wordCount = document.getElementById("wordCount");
+  var toast = document.getElementById("toast");
+
+  function showToast(msg){
+    toast.textContent = msg; toast.classList.add("show");
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function(){ toast.classList.remove("show"); }, 2400);
+  }
+
+  /* ============ Modal helpers ============ */
+  function openModal(m){ m.hidden = false; }
+  function closeModal(m){ m.hidden = true; }
+  var templatesModal = document.getElementById("templatesModal");
+  var exportModal = document.getElementById("exportModal");
+  var importModal = document.getElementById("importModal");
+  var linkModal = document.getElementById("linkModal");
+  var deleteModal = document.getElementById("deleteModal");
+  var restoreConfirmModal = document.getElementById("restoreConfirmModal");
+  [templatesModal, exportModal, importModal, linkModal, deleteModal, restoreConfirmModal].forEach(function(m){
+    m.addEventListener("click", function(e){ if (e.target === m) closeModal(m); });
+  });
+
+  /* ============ Init documents ============ */
+  loadDocs();
+  if (docs.length === 0){
+    createDoc(t("welcomeTitle"), t("welcomeHtml"));
+  }
+  var savedCurrent = null;
+  try { savedCurrent = localStorage.getItem(CURRENT_KEY); } catch(e){}
+  var startId = (savedCurrent && findDoc(savedCurrent)) ? savedCurrent : docs[0].id;
+  applyI18n();
+  function setupCollapsible(detailsId, labelId, moreKey, lessKey){
+    var d = document.getElementById(detailsId);
+    var label = document.getElementById(labelId);
+    function update(){
+      if (!d || !label) return;
+      var key = d.open ? lessKey : moreKey;
+      label.setAttribute("data-i18n", key);
+      label.textContent = t(key);
+    }
+    if (d){ d.addEventListener("toggle", update); update(); }
+    return update;
+  }
+  var updateHeroToggleLabel = setupCollapsible("heroDetails", "heroToggleLabel", "heroToggleMore", "heroToggleLess");
+  var updateStepsToggleLabel = setupCollapsible("stepsDetails", "stepsToggleLabel", "stepsToggleMore", "stepsToggleLess");
+  var updateFaqToggleLabel = setupCollapsible("faqDetails", "faqToggleLabel", "faqToggleMore", "faqToggleLess");
+  var updatePrivacyToggleLabel = setupCollapsible("privacyDetails", "privacyToggleLabel", "privacyToggleMore", "privacyToggleLess");
+  var updateFeaturesToggleLabel = setupCollapsible("featuresDetails", "featuresToggleLabel", "featuresToggleMore", "featuresToggleLess");
+  renderTemplateGrid();
+  selectDoc(startId);
+
+  /* Změna v jiné kartě / okně appky → aktualizovat seznam (a otevřený dokument,
+     pokud v něm tady zrovna nic nerozepisujeme). */
+  window.addEventListener("storage", function(e){
+    if (e.key !== STORE_KEY && e.key !== null) return;
+    if (persistFailed) return;
+    syncDocs();
+    var dirty = saveTimer !== null || isDirty();
+    var d = findDoc(currentId);
+    if (!dirty){
+      if (!d){
+        if (!docs.length){ docs.unshift({ id:uid(), title:t("untitled"), html:"", updatedAt:Date.now() }); persistDocs(); }
+        currentId = null; selectDoc(docs[0].id); return;
+      }
+      if (d.html !== lastSaved.stored || d.title !== lastSaved.title){
+        if (document.activeElement !== editor && document.activeElement !== docTitleInput){ var keep = currentId; currentId = null; selectDoc(keep); return; }
+      }
+    }
+    renderDocList();
+  });
+
+  document.getElementById("langSwitch").addEventListener("click", function(e){
+    var btn = e.target.closest("button[data-lang]");
+    if (!btn) return;
+    currentLang = btn.dataset.lang;
+    try { localStorage.setItem("xtally_lang", currentLang); } catch(e2){}
+    applyI18n();
+    updateHeroToggleLabel();
+    updateStepsToggleLabel();
+    updateFaqToggleLabel();
+    updatePrivacyToggleLabel();
+    updateFeaturesToggleLabel();
+    renderTemplateGrid();
+    renderDocList();
+    updateWordCount();
+  });
+
+  /* ============ Editing events ============ */
+  editor.addEventListener("input", function(){ convertSizeFonts(); updateWordCount(); scheduleSave(); });
+  docTitleInput.addEventListener("input", function(){ scheduleSave(); });
+  /* Mobilní prohlížeče beforeunload často nevyvolají – ukládat i při skrytí stránky */
+  window.addEventListener("beforeunload", saveCurrentDoc);
+  window.addEventListener("pagehide", saveCurrentDoc);
+  document.addEventListener("visibilitychange", function(){ if (document.visibilityState === "hidden") saveCurrentDoc(); });
+
+  /* ============ Toolbar ============ */
+  var blockSelect = document.getElementById("blockSelect");
+  var fontSizeSelect = document.getElementById("fontSizeSelect");
+  var fontFamilySelect = document.getElementById("fontFamilySelect");
+  /* Poslední pozice kurzoru v editoru – na mobilu výběr z rozbalovací nabídky
+     nebo barvy často zruší označení textu, takže ho před příkazem obnovíme. */
+  var lastEditorRange = null;
+  function focusEditor(){
+    var sel = window.getSelection();
+    var inside = sel && sel.rangeCount > 0 && editor.contains(sel.anchorNode);
+    editor.focus();
+    if (!inside && lastEditorRange && editor.contains(lastEditorRange.startContainer)){
+      try { sel.removeAllRanges(); sel.addRange(lastEditorRange); } catch(e){}
+    }
+  }
+  document.querySelectorAll(".toolbar .tbtn").forEach(function(btn){
+    /* Tlačítko nesmí editoru "ukrást" fokus a tím i označený text */
+    btn.addEventListener("mousedown", function(e){ e.preventDefault(); });
+  });
+  document.querySelectorAll(".tbtn[data-cmd]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      focusEditor();
+      try { document.execCommand(btn.dataset.cmd, false, null); } catch(e){}
+      scheduleSave(); updateToolbarState();
+    });
+  });
+  blockSelect.addEventListener("change", function(){
+    focusEditor(); try { document.execCommand("formatBlock", false, "<" + this.value.toLowerCase() + ">"); } catch(e){} scheduleSave();
+  });
+  /* execCommand umí jen velikosti 1–7, proto se použije "7" jako značka a hned
+     se přepíše na <span style="font-size:Npx">. Při psaní bez označeného textu
+     vznikne <font size=7> až s prvním znakem – to řeší convertSizeFonts() v "input". */
+  var lastFontPx = 16;
+  function convertSizeFonts(){
+    var fonts = editor.querySelectorAll('font[size="7"]');
+    if (!fonts.length) return;
+    var sel = window.getSelection();
+    var r = sel && sel.rangeCount ? sel.getRangeAt(0) : null;
+    var sc = r && r.startContainer, so = r && r.startOffset, ec = r && r.endContainer, eo = r && r.endOffset;
+    fonts.forEach(function(f){
+      var span = document.createElement("span");
+      span.style.fontSize = lastFontPx + "px";
+      if (f.getAttribute("face")) span.style.fontFamily = f.getAttribute("face");
+      if (f.getAttribute("color")) span.style.color = f.getAttribute("color");
+      while (f.firstChild) span.appendChild(f.firstChild);
+      f.parentNode.replaceChild(span, f);
+    });
+    if (r && sc && sc.isConnected && ec && ec.isConnected){
+      try { var nr = document.createRange(); nr.setStart(sc, so); nr.setEnd(ec, eo); sel.removeAllRanges(); sel.addRange(nr); } catch(e){}
+    }
+  }
+  function applyFontSizePx(px){
+    lastFontPx = px;
+    focusEditor();
+    try { document.execCommand("fontSize", false, "7"); } catch(e){ return; }
+    convertSizeFonts();
+  }
+  fontSizeSelect.addEventListener("change", function(){
+    applyFontSizePx(parseInt(this.value, 10) || 16);
+    scheduleSave();
+  });
+  fontFamilySelect.addEventListener("change", function(){
+    focusEditor(); try { document.execCommand("fontName", false, this.value); } catch(e){} scheduleSave();
+  });
+  document.getElementById("colorPicker").addEventListener("input", function(){
+    focusEditor(); try { document.execCommand("foreColor", false, this.value); } catch(e){} scheduleSave();
+  });
+  document.getElementById("highlightPicker").addEventListener("input", function(){
+    focusEditor();
+    try { document.execCommand("hiliteColor", false, this.value); }
+    catch(e){ try { document.execCommand("backColor", false, this.value); } catch(e2){} }
+    scheduleSave();
+  });
+  function updateToolbarState(){
+    ["bold","italic","underline","strikeThrough","insertUnorderedList","insertOrderedList"].forEach(function(cmd){
+      var btn = document.querySelector('.tbtn[data-cmd="' + cmd + '"]');
+      if (!btn) return;
+      var active = false; try { active = document.queryCommandState(cmd); } catch(e){}
+      btn.classList.toggle("active", active);
+    });
+  }
+  /* Rozbalovací nabídky ukazují styl / velikost / písmo textu u kurzoru. Díky tomu
+     jde stejnou volbu použít opakovaně (dřív se "Nadpis 2" na druhý odstavec
+     nepoužil, protože se hodnota nabídky nezměnila). */
+  function syncSelects(){
+    var sel = window.getSelection();
+    if (!sel || !sel.rangeCount) return;
+    var node = sel.anchorNode;
+    if (!node || !editor.contains(node)) return;
+    var el = node.nodeType === 1 ? node : node.parentElement;
+    if (!el) return;
+    var blk = el.closest("h1,h2,h3,h4,p,li,td,th,div");
+    var tag = blk && blk !== editor && editor.contains(blk) ? blk.tagName : "P";
+    blockSelect.value = /^H[1-3]$/.test(tag) ? tag : "P";
+    var cs = getComputedStyle(el);
+    var px = String(Math.round(parseFloat(cs.fontSize)));
+    fontSizeSelect.value = px;
+    if (fontSizeSelect.value !== px) fontSizeSelect.selectedIndex = -1;
+    var fam = (cs.fontFamily.split(",")[0] || "").replace(/['"]/g, "").trim().toLowerCase();
+    var idx = -1;
+    for (var i = 0; i < fontFamilySelect.options.length; i++){
+      var first = fontFamilySelect.options[i].value.split(",")[0].replace(/['"]/g, "").trim().toLowerCase();
+      if (first === fam){ idx = i; break; }
+    }
+    fontFamilySelect.selectedIndex = idx;
+  }
+  document.addEventListener("selectionchange", function(){
+    var sel = window.getSelection();
+    if (sel && sel.rangeCount && editor.contains(sel.anchorNode)) lastEditorRange = sel.getRangeAt(0).cloneRange();
+    if (document.activeElement === editor){ updateToolbarState(); syncSelects(); }
+  });
+
+  /* ============ Link modal ============ */
+  var linkUrlInput = document.getElementById("linkUrlInput");
+  var savedRange = null;
+  document.getElementById("linkBtn").addEventListener("click", function(){
+    var sel = window.getSelection();
+    savedRange = (sel && sel.rangeCount > 0 && editor.contains(sel.anchorNode)) ? sel.getRangeAt(0).cloneRange() : (lastEditorRange ? lastEditorRange.cloneRange() : null);
+    linkUrlInput.value = ""; openModal(linkModal); linkUrlInput.focus();
+  });
+  document.getElementById("closeLinkModal").addEventListener("click", function(){ closeModal(linkModal); });
+  document.getElementById("cancelLink").addEventListener("click", function(){ closeModal(linkModal); });
+  linkUrlInput.addEventListener("keydown", function(e){
+    if (e.key === "Enter"){ e.preventDefault(); document.getElementById("confirmLink").click(); }
+  });
+  document.getElementById("confirmLink").addEventListener("click", function(){
+    var url = linkUrlInput.value.trim();
+    if (!url){ closeModal(linkModal); return; }
+    if (!/^(https?:\/\/|mailto:|tel:)/i.test(url)) url = (/^[^\s@\/]+@[^\s@\/]+\.[^\s@\/]+$/.test(url) ? "mailto:" : "https://") + url;
+    editor.focus();
+    var sel = window.getSelection();
+    if (savedRange){ sel.removeAllRanges(); sel.addRange(savedRange); }
+    else if (!sel.rangeCount || !editor.contains(sel.anchorNode)){
+      var er = document.createRange(); er.selectNodeContents(editor); er.collapse(false); sel.removeAllRanges(); sel.addRange(er);
+    }
+    try {
+      if (sel.isCollapsed){
+        /* Bez označeného textu vložit samotnou adresu jako odkaz (Firefox by jinak neudělal nic) */
+        var a = document.createElement("a"); a.href = url; a.textContent = url.replace(/^mailto:/i, "");
+        var ir = sel.getRangeAt(0); ir.insertNode(a);
+        ir.setStartAfter(a); ir.collapse(true); sel.removeAllRanges(); sel.addRange(ir);
+      } else {
+        document.execCommand("createLink", false, url);
+      }
+    } catch(e){}
+    scheduleSave(); closeModal(linkModal);
+  });
+
+  /* ============ Insert image ============ */
+  var insertImageInput = document.getElementById("insertImageInput");
+  var savedImageRange = null;
+  var MAX_IMAGE_BYTES = 20 * 1024 * 1024;
+  document.getElementById("imageBtn").addEventListener("click", function(){
+    var sel = window.getSelection();
+    savedImageRange = (sel && sel.rangeCount > 0 && editor.contains(sel.anchorNode)) ? sel.getRangeAt(0).cloneRange() : (lastEditorRange ? lastEditorRange.cloneRange() : null);
+    insertImageInput.value = "";
+    insertImageInput.click();
+  });
+  /* Fotky z mobilu mají klidně 5–10 MB a jako base64 by se do localStorage
+     (~5 MB na celý web) vůbec nevešly – dokument by se pak tiše přestal ukládat.
+     Větší obrázky se proto zmenší na max. 1600 px a uloží jako JPEG. */
+  function prepareImage(file, cb){
+    var readRaw = function(){
+      var fr = new FileReader();
+      fr.onload = function(){ cb(String(fr.result || "")); };
+      fr.onerror = function(){ cb(null); };
+      fr.readAsDataURL(file);
+    };
+    if (file.size <= 300 * 1024 || /gif|svg/i.test(file.type)) return readRaw();
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function(){
+      try {
+        var MAX = 1600, w = img.naturalWidth, h = img.naturalHeight;
+        var scale = Math.min(1, MAX / Math.max(w, h));
+        var c = document.createElement("canvas");
+        c.width = Math.max(1, Math.round(w * scale)); c.height = Math.max(1, Math.round(h * scale));
+        var ctx = c.getContext("2d");
+        var out = null;
+        if (/png|webp/i.test(file.type)){
+          ctx.drawImage(img, 0, 0, c.width, c.height);
+          out = c.toDataURL("image/png");
+          if (out.length > 1200 * 1024) out = null; /* moc velké PNG → radši JPEG */
+        }
+        if (!out){
+          ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, c.width, c.height);
+          ctx.drawImage(img, 0, 0, c.width, c.height);
+          out = c.toDataURL("image/jpeg", 0.85);
+        }
+        URL.revokeObjectURL(url); cb(out);
+      } catch(e){ URL.revokeObjectURL(url); readRaw(); }
+    };
+    img.onerror = function(){ URL.revokeObjectURL(url); readRaw(); };
+    img.src = url;
+  }
+  insertImageInput.addEventListener("change", function(){
+    var file = this.files && this.files[0];
+    if (!file) return;
+    if (!/^image\//.test(file.type)){ showToast(t("toastImageBad")); return; }
+    if (file.size > MAX_IMAGE_BYTES){ showToast(t("toastImageTooBig")); return; }
+    prepareImage(file, function(dataUrl){
+      if (!dataUrl){ showToast(t("toastImageBad")); return; }
+      var reader = { result: dataUrl };
+      editor.focus();
+      var sel = window.getSelection();
+      if (savedImageRange){
+        sel.removeAllRanges(); sel.addRange(savedImageRange);
+      } else if (!sel.rangeCount || !editor.contains(sel.anchorNode)){
+        var r = document.createRange(); r.selectNodeContents(editor); r.collapse(false);
+        sel.removeAllRanges(); sel.addRange(r);
+      }
+      try { document.execCommand("insertImage", false, String(reader.result || "")); } catch(e){}
+      var imgs = editor.querySelectorAll("img:not([alt])");
+      if (imgs.length) imgs[imgs.length - 1].setAttribute("alt", file.name.replace(/\.[^.]+$/, ""));
+      scheduleSave(); updateWordCount();
+    });
+  });
+
+  /* ============ Templates modal open ============ */
+  document.getElementById("openTemplatesBtn").addEventListener("click", function(){ openModal(templatesModal); });
+  document.getElementById("heroTemplatesBtn").addEventListener("click", function(){ openModal(templatesModal); });
+  document.getElementById("footerTemplatesLink").addEventListener("click", function(e){ e.preventDefault(); openModal(templatesModal); });
+  document.getElementById("closeTemplates").addEventListener("click", function(){ closeModal(templatesModal); });
+
+  /* ============ Delete modal ============ */
+  document.getElementById("deleteBtn").addEventListener("click", function(){ openModal(deleteModal); });
+  document.getElementById("closeDeleteModal").addEventListener("click", function(){ closeModal(deleteModal); });
+  document.getElementById("cancelDelete").addEventListener("click", function(){ closeModal(deleteModal); });
+  document.getElementById("confirmDelete").addEventListener("click", function(){
+    deleteDoc(currentId); closeModal(deleteModal); showToast(t("toastDeleted"));
+  });
+
+  /* ============ New / duplicate ============ */
+  document.getElementById("newDocBtn").addEventListener("click", function(){
+    saveCurrentDoc();
+    var d = createDoc(t("untitled"), "");
+    selectDoc(d.id); docTitleInput.focus(); docTitleInput.select(); closeSidebarMobile();
+  });
+  document.getElementById("dupBtn").addEventListener("click", function(){ saveCurrentDoc(); duplicateDoc(currentId); });
+
+  /* ============ Sidebar mobile ============ */
+  var sidebar = document.getElementById("sidebar");
+  var sidebarBackdrop = document.getElementById("sidebarBackdrop");
+  function openSidebarMobile(){ sidebar.classList.add("open"); sidebarBackdrop.classList.add("show"); }
+  function closeSidebarMobile(){ sidebar.classList.remove("open"); sidebarBackdrop.classList.remove("show"); }
+  document.getElementById("sidebarToggle").addEventListener("click", openSidebarMobile);
+  sidebarBackdrop.addEventListener("click", closeSidebarMobile);
+
+  /* ============ Helpers ============ */
+  function downloadBlob(blob, filename){
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
+  }
+  function safeFilename(name){
+    return (name || "document").replace(/[\\/:*?"<>|]+/g, "-").trim() || "document";
+  }
+  function waitForGlobal(name, timeoutMs){
+    return new Promise(function(resolve){
+      if (window[name]) return resolve(true);
+      var waited = 0;
+      var iv = setInterval(function(){
+        waited += 150;
+        if (window[name]){ clearInterval(iv); resolve(true); }
+        else if (waited >= timeoutMs){ clearInterval(iv); resolve(false); }
+      }, 150);
+    });
+  }
+  function escapeHtml(str){
+    return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  /* HTML z cizích souborů (záloha .json, .docx) – aby podvržený soubor nemohl v appce
+     spustit kód. review 09/2026: čistí ho osvědčená knihovna DOMPurify (dřív vlastní
+     seznam zakázaných věcí, přes který pár triků prošlo). Jen běžné HTML (bez SVG/MathML),
+     bez <style> a formulářů; id/name se přejmenují, aby nekolidovaly s prvky appky. */
+  function sanitizeHtml(html){
+    if (!window.DOMPurify || !window.DOMPurify.isSupported) return "";
+    try {
+      return window.DOMPurify.sanitize(String(html || ""), {
+        USE_PROFILES: { html: true },
+        FORBID_TAGS: ["style", "form", "input", "button", "textarea", "select"],
+        FORBID_ATTR: ["target"],
+        SANITIZE_NAMED_PROPS: true
+      });
+    } catch(e){ return ""; }
+  }
+  /* Minimální čtení souboru ze ZIPu (.docx) – potřeba jen pro vlastní export Xtally,
+     který obsah ukládá jako "altChunk" (word/afchunk.mht), jenž mammoth neumí přečíst. */
+  function readZipEntry(buf, name){
+    try {
+      var u8 = new Uint8Array(buf), dv = new DataView(buf);
+      for (var i = u8.length - 22; i >= Math.max(0, u8.length - 65557); i--){
+        if (dv.getUint32(i, true) !== 0x06054b50) continue;
+        var count = dv.getUint16(i + 10, true), off = dv.getUint32(i + 16, true);
+        for (var n = 0; n < count; n++){
+          if (dv.getUint32(off, true) !== 0x02014b50) return Promise.resolve(null);
+          var method = dv.getUint16(off + 10, true), csize = dv.getUint32(off + 20, true);
+          var nlen = dv.getUint16(off + 28, true), elen = dv.getUint16(off + 30, true), clen = dv.getUint16(off + 32, true);
+          var lho = dv.getUint32(off + 42, true);
+          var fname = new TextDecoder().decode(u8.subarray(off + 46, off + 46 + nlen));
+          if (fname === name){
+            var start = lho + 30 + dv.getUint16(lho + 26, true) + dv.getUint16(lho + 28, true);
+            var data = u8.slice(start, start + csize);
+            if (method === 0) return Promise.resolve(data);
+            if (method === 8 && window.DecompressionStream){
+              return new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).arrayBuffer()
+                .then(function(b){ return new Uint8Array(b); }).catch(function(){ return null; });
+            }
+            return Promise.resolve(null);
+          }
+          off += 46 + nlen + elen + clen;
+        }
+        break;
+      }
+    } catch(e){}
+    return Promise.resolve(null);
+  }
+  function mhtToHtml(text){
+    var html = null, images = {};
+    text.split(/\r?\n--[^\r\n]*mhtDocumentPart[^\r\n]*/).forEach(function(part){
+      var m = part.match(/^\s*([\s\S]*?)\r?\n\r?\n([\s\S]*)$/);
+      if (!m) return;
+      var ct = (m[1].match(/Content-Type:\s*([^;\s]+)/i) || [])[1] || "";
+      var loc = (m[1].match(/Content-Location:\s*(\S+)/i) || [])[1];
+      if (/^text\/html$/i.test(ct) && html === null){
+        html = m[2].replace(/=\r?\n/g, "").replace(/=([0-9A-F]{2})/gi, function(_, h){ return String.fromCharCode(parseInt(h, 16)); });
+      } else if (/^image\//i.test(ct) && loc){
+        images[loc] = "data:" + ct + ";base64," + m[2].replace(/\s+/g, "");
+      }
+    });
+    if (html === null) return "";
+    Object.keys(images).forEach(function(loc){ html = html.split(loc).join(images[loc]); });
+    var doc = new DOMParser().parseFromString(html, "text/html");
+    var root = doc.body;
+    /* odstranit obalový <div style="font-family:Calibri..."> z exportu */
+    if (root.children.length === 1 && root.firstElementChild.tagName === "DIV" && /Calibri/i.test(root.firstElementChild.getAttribute("style") || "")) root = root.firstElementChild;
+    return root.innerHTML;
+  }
+  function todayStr(){
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+  }
+
+  /* ============ Export menu ============ */
+  document.getElementById("openExportBtn").addEventListener("click", function(){ openModal(exportModal); });
+  document.getElementById("closeExportModal").addEventListener("click", function(){ closeModal(exportModal); });
+
+  var printTitle = document.getElementById("printTitle");
+  var printContent = document.getElementById("printContent");
+  function fillPrintArea(){
+    printTitle.textContent = docTitleInput.value.trim();
+    printContent.innerHTML = editor.innerHTML;
+  }
+  /* Tisk přes Ctrl+P / menu prohlížeče taky vytiskne aktuální dokument (dřív prázdnou stránku) */
+  window.addEventListener("beforeprint", fillPrintArea);
+  function printDocument(){
+    saveCurrentDoc();
+    fillPrintArea();
+    var prevTitle = document.title;
+    document.title = safeFilename(docTitleInput.value);
+    window.print();
+    setTimeout(function(){ document.title = prevTitle; }, 1000);
+  }
+  document.getElementById("exportPrintOpt").addEventListener("click", function(){
+    closeModal(exportModal);
+    printDocument();
+  });
+  document.getElementById("printToolbarBtn").addEventListener("click", function(){
+    printDocument();
+  });
+
+  /* ============ Focus / fullscreen mode ============ */
+  var focusModeBtn = document.getElementById("focusModeBtn");
+  var ICON_FOCUS_ON = '<svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ICON_FOCUS_OFF = '<svg viewBox="0 0 24 24" fill="none"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function setFocusMode(on){
+    document.body.classList.toggle("focus-mode", on);
+    focusModeBtn.classList.toggle("active", on);
+    focusModeBtn.innerHTML = on ? ICON_FOCUS_OFF : ICON_FOCUS_ON;
+  }
+  focusModeBtn.addEventListener("click", function(){
+    setFocusMode(!document.body.classList.contains("focus-mode"));
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key !== "Escape") return;
+    /* Escape nejdřív zavře otevřené okno / postranní panel, až pak ukončí režim celé obrazovky */
+    var open = [restoreConfirmModal, deleteModal, linkModal, importModal, exportModal, templatesModal].filter(function(m){ return !m.hidden; });
+    if (open.length){
+      open.forEach(closeModal);
+      if (open.indexOf(restoreConfirmModal) !== -1) pendingRestoreData = null;
+      return;
+    }
+    if (sidebar.classList.contains("open")){ closeSidebarMobile(); return; }
+    if (document.body.classList.contains("focus-mode")) setFocusMode(false);
+  });
+
+  document.getElementById("exportTxtOpt").addEventListener("click", function(){
+    saveCurrentDoc(); closeModal(exportModal);
+    var blob = new Blob([editor.innerText], { type:"text/plain;charset=utf-8" });
+    downloadBlob(blob, safeFilename(docTitleInput.value) + ".txt");
+    showToast(t("toastTxtExported"));
+  });
+
+  document.getElementById("exportDocxOpt").addEventListener("click", function(){
+    saveCurrentDoc(); closeModal(exportModal);
+    var title = docTitleInput.value || t("untitled");
+    var bodyHtml = "<div style=\"font-family:Calibri,Arial,sans-serif;\">" + editor.innerHTML + "</div>";
+    waitForGlobal("htmlDocx", 4000).then(function(ok){
+      if (ok){
+        try {
+          var blob = window.htmlDocx.asBlob("<!doctype html><html><head><meta charset='utf-8'><title>" + escapeHtml(title) + "</title></head><body>" + bodyHtml + "</body></html>");
+          downloadBlob(blob, safeFilename(title) + ".docx");
+          showToast(t("toastDocxExported"));
+          return;
+        } catch(e){ /* fall through to legacy export */ }
+      }
+      var htmlDoc = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>" + escapeHtml(title) + "</title></head><body>" + bodyHtml + "</body></html>";
+      var legacyBlob = new Blob(["﻿", htmlDoc], { type:"application/msword" });
+      downloadBlob(legacyBlob, safeFilename(title) + ".doc");
+      showToast(t("toastDocxFallback"));
+    });
+  });
+
+  document.getElementById("exportJsonOpt").addEventListener("click", function(){
+    saveCurrentDoc(); closeModal(exportModal);
+    var blob = new Blob([JSON.stringify({ app:"xtally", version:1, exportedAt:new Date().toISOString(), docs:docs }, null, 2)], { type:"application/json" });
+    downloadBlob(blob, "xtally-backup-" + todayStr() + ".json");
+    showToast(t("toastBackupSaved"));
+  });
+  document.getElementById("backupBtn").addEventListener("click", function(){ document.getElementById("exportJsonOpt").click(); });
+
+  /* ============ Import menu ============ */
+  document.getElementById("openImportBtn").addEventListener("click", function(){ openModal(importModal); });
+  document.getElementById("closeImportModal").addEventListener("click", function(){ closeModal(importModal); });
+
+  var importDocxInput = document.getElementById("importDocxInput");
+  var importTxtInput = document.getElementById("importTxtInput");
+  var restoreJsonInput = document.getElementById("restoreJsonInput");
+
+  document.getElementById("importDocxOpt").addEventListener("click", function(){ closeModal(importModal); importDocxInput.value = ""; importDocxInput.click(); });
+  document.getElementById("importTxtOpt").addEventListener("click", function(){ closeModal(importModal); importTxtInput.value = ""; importTxtInput.click(); });
+  document.getElementById("importJsonOpt").addEventListener("click", function(){ closeModal(importModal); restoreJsonInput.value = ""; restoreJsonInput.click(); });
+  document.getElementById("restoreBtn").addEventListener("click", function(){ restoreJsonInput.value = ""; restoreJsonInput.click(); });
+
+  importDocxInput.addEventListener("change", function(){
+    var file = this.files && this.files[0];
+    if (!file) return;
+    waitForGlobal("mammoth", 5000).then(function(ok){
+      if (!ok){ showToast(t("toastLibLoading")); return; }
+      var reader = new FileReader();
+      reader.onload = function(){
+        var buf = reader.result;
+        window.mammoth.convertToHtml({ arrayBuffer: buf })
+          .then(function(result){
+            var html = result.value || "";
+            var looksEmpty = !html.replace(/<[^>]*>|&nbsp;|\s/g, "") && !/<img/i.test(html);
+            if (!looksEmpty) return html;
+            /* Soubor exportovaný z Xtally (altChunk) – obsah je uložen v word/afchunk.mht */
+            return readZipEntry(buf, "word/afchunk.mht").then(function(bytes){
+              return bytes ? mhtToHtml(new TextDecoder("utf-8").decode(bytes)) : html;
+            });
+          })
+          .then(function(html){
+            var name = file.name.replace(/\.docx$/i, "");
+            saveCurrentDoc();
+            var d = createDoc(name || t("untitled"), sanitizeHtml(html));
+            selectDoc(d.id);
+            showToast(t("toastDocxImported"));
+          })
+          .catch(function(){ showToast(t("toastDocxImportBad")); });
+      };
+      reader.onerror = function(){ showToast(t("toastDocxImportBad")); };
+      reader.readAsArrayBuffer(file);
+    });
+  });
+
+  importTxtInput.addEventListener("change", function(){
+    var file = this.files && this.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(){
+      var text = String(reader.result || "");
+      var html = text.split(/\r\n|\r|\n/).map(function(line){ return "<p>" + (escapeHtml(line) || "&nbsp;") + "</p>"; }).join("");
+      var name = file.name.replace(/\.txt$/i, "");
+      var d = createDoc(name || t("untitled"), html);
+      selectDoc(d.id);
+      showToast(t("toastTxtImported"));
+    };
+    reader.onerror = function(){ showToast(t("toastRestoreBad")); };
+    reader.readAsText(file);
+  });
+
+  var pendingRestoreData = null;
+  restoreJsonInput.addEventListener("change", function(){
+    var file = this.files && this.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(){
+      try {
+        var data = JSON.parse(String(reader.result || "{}"));
+        var list = Array.isArray(data) ? data : (Array.isArray(data.docs) ? data.docs : null);
+        if (!list) throw new Error("bad format");
+        pendingRestoreData = list;
+        openModal(restoreConfirmModal);
+      } catch(e){ showToast(t("toastRestoreBad")); }
+    };
+    reader.onerror = function(){ showToast(t("toastRestoreBad")); };
+    reader.readAsText(file);
+  });
+  document.getElementById("closeRestoreModal").addEventListener("click", function(){ closeModal(restoreConfirmModal); pendingRestoreData = null; });
+  document.getElementById("cancelRestore").addEventListener("click", function(){ closeModal(restoreConfirmModal); pendingRestoreData = null; });
+  document.getElementById("confirmRestore").addEventListener("click", function(){
+    if (pendingRestoreData){
+      saveCurrentDoc();
+      syncDocs();
+      var firstId = null, found = 0;
+      /* review 09/2026: dokument, který už v appce je (stejný název i obsah), se nepřidá znovu */
+      var existing = {};
+      docs.forEach(function(d){ existing[d.title + "\u0000" + d.html] = true; });
+      pendingRestoreData.slice().reverse().forEach(function(item){
+        if (item && typeof item.html === "string"){
+          found++;
+          var nd = { id: uid(), title: String(item.title || t("untitled")).slice(0, 120), html: sanitizeHtml(item.html), updatedAt: (typeof item.updatedAt === "number" && isFinite(item.updatedAt)) ? item.updatedAt : Date.now() };
+          if (existing[nd.title + "\u0000" + nd.html] || existing[nd.title + "\u0000" + item.html]) return;
+          docs.unshift(nd); firstId = nd.id;
+        }
+      });
+      var ok = persistDocs();
+      if (firstId) selectDoc(firstId); else renderDocList();
+      if (ok) showToast(found && !firstId ? t("toastRestoreSame") : t("toastRestoreOk"));
+    }
+    pendingRestoreData = null;
+    closeModal(restoreConfirmModal);
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.addEventListener("keydown", function(e){
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s"){
+      e.preventDefault();
+      var ok = saveCurrentDoc(); renderDocList();
+      if (ok) showToast(t("toastSaved"));
+    }
+  });
+
+})();
+</script>
+
+<style media="print">
+  /* Tiskne se jen #printArea. Ostatní prvky se skryjí přes display:none (ne visibility),
+     aby za dokumentem nevznikaly prázdné stránky, a barvy se vždy vynutí světlé –
+     jinak by v tmavém režimu vyšel světlý text na bílém papíře. */
+  @page{ margin:16mm; }
+  html, body{ background:#fff !important; color:#000 !important; overflow:visible !important; height:auto !important; padding:0 !important; }
+  body > *:not(#printArea){ display:none !important; }
+  #printArea{
+    display:block !important; position:static !important; width:auto !important; padding:0; margin:0;
+    color:#000; background:#fff; font-family:'Inter',system-ui,sans-serif; line-height:1.5;
+    --ink:#16161f; --ink-soft:#55566b; --line:#cfcfdc; --accent:#4f46e5; --paper:#fff; --bg:#fff; --bg-soft:#fff; --card:#fff;
+  }
+  #printArea h1{ font-size:1.5rem; }
+  #printArea a{ color:#1d4ed8; }
+  #printArea img{ max-width:100%; height:auto; }
+  #printArea table{ border-collapse:collapse; }
+  #printArea td, #printArea th{ border:1px solid #999; padding:4px 8px; }
+  #printTitle:empty{ display:none; }
+</style>
+</body>
+</html>
