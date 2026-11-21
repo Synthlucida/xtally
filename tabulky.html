@@ -734,7 +734,7 @@
 <div class="modal-backdrop" id="templatesModal" hidden>
   <div class="modal">
     <div class="modal-head"><h2 data-i18n="tplModalTitle">Vyberte šablonu</h2>
-      <button class="icon-btn" id="closeTemplates" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeTemplates" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body"><div class="tpl-grid" id="tplGrid"></div></div>
   </div>
@@ -744,7 +744,7 @@
 <div class="modal-backdrop" id="exportModal" hidden>
   <div class="modal">
     <div class="modal-head"><h2 data-i18n="exportModalTitle">Export tabulky</h2>
-      <button class="icon-btn" id="closeExport" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeExport" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body">
       <div class="export-opts">
@@ -773,7 +773,7 @@
 <div class="modal-backdrop" id="importModal" hidden>
   <div class="modal">
     <div class="modal-head"><h2 data-i18n="importModalTitle">Import souboru</h2>
-      <button class="icon-btn" id="closeImport" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeImport" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body">
       <div class="import-opts">
@@ -898,16 +898,18 @@ var FUNC_ALIASES = {
 function canonicalFormula(src){
   var s = String(src), i, inQ = false, semi = false;
   for (i = 0; i < s.length; i++){ var ch0 = s[i]; if (ch0 === '"') inQ = !inQ; else if (!inQ && ch0 === ";"){ semi = true; break; } }
-  var out = "", depth = 0; inQ = false;
+  var out = "", depth = 0, callStack = []; inQ = false;
   var IDCH = /[A-Za-z0-9_$À-ſ]/, IDSTART = /[A-Za-z_À-ſ]/;
   for (i = 0; i < s.length; i++){
     var c = s[i];
     if (c === '"'){ inQ = !inQ; out += c; continue; }
     if (inQ){ out += c; continue; }
-    if (c === "(") depth++;
-    else if (c === ")") depth = Math.max(0, depth - 1);
+    if (c === "("){ depth++; callStack.push(/[A-Za-z0-9_À-ſ]\s*$/.test(out)); }
+    else if (c === ")"){ depth = Math.max(0, depth - 1); callStack.pop(); }
     if (c === ";"){ out += ","; continue; }
-    if (c === "," && /[0-9]/.test(s[i+1] || "") && /[0-9]/.test(s[i-1] || "") && (semi || depth === 0)){
+    /* čárka v obyčejné závorce (ne ve funkci) je desetinná: =(1,5+1)*2 */
+    var inCall = callStack.length ? callStack[callStack.length-1] : false;
+    if (c === "," && /[0-9]/.test(s[i+1] || "") && /[0-9]/.test(s[i-1] || "") && (semi || depth === 0 || !inCall)){
       var j = i - 1; while (j >= 0 && /[0-9]/.test(s[j])) j--;
       if (j < 0 || !IDCH.test(s[j])){ out += "."; continue; } /* jen u čísla, ne u odkazu typu A1 */
     }
@@ -1049,6 +1051,8 @@ function evaluateAST(ast, ctx, visiting){
     case "range": {
       var from=parseCellRef(ast.from), to=parseCellRef(ast.to); if (!from||!to) return ERR("#REF!");
       var c0=Math.min(from.col,to.col), c1=Math.max(from.col,to.col), r0=Math.min(from.row,to.row), r1=Math.max(from.row,to.row);
+      /* mimo maximální rozměr tabulky nic být nemůže – obří rozsah (A1:Z100000) by zamrazil kartu */
+      c1=Math.min(c1, 25); r1=Math.min(r1, 299); /* = COLS_MAX 26, ROWS_MAX 300 */
       var out=[];
       for (var r=r0; r<=r1; r++) for (var c=c0; c<=c1; c++) out.push(ctx.getCell(c,r,visiting));
       return { __range: true, values: out };
@@ -1239,7 +1243,7 @@ var I18N = {
     restoreModalTitle:"Obnovit zálohu?", restoreModalBody:"Tento soubor obsahuje kompletní zálohu Xtally Tabulky. Otevře se jako nová tabulka, vaše ostatní tabulky zůstanou beze změny.", restoreConfirm:"Obnovit",
     sheetWord:"List", toastTemplate:"Šablona „{0}“ vytvořena", toastDuplicated:"Tabulka zduplikována", toastDeleted:"Tabulka smazána",
     toastXlsxExported:"Export .xlsx dokončen", toastCsvExported:"Export CSV dokončen", toastJsonExported:"Záloha stažena",
-    toastImported:"Soubor importován", toastRestored:"Záloha obnovena",
+    aClose:"Zavřít", toastImportTruncated:"Soubor importován – data za 300. řádkem nebo 26. sloupcem se nevešla a byla vynechána", toastImported:"Soubor importován", toastRestored:"Záloha obnovena",
     toastSheetAdded:"List přidán", toastLimitReached:"Dosažen maximální rozměr tabulky (300 řádků × 26 sloupců)", toastSheetDeleted:"List smazán", toastCantDeleteLastSheet:"Sešit musí mít alespoň jeden list",
     toastInvalidFile:"Soubor se nepodařilo přečíst", toastSaved:"Uloženo", welcomeSheetName:"List1",
     printTitle:"Tisk tabulky",
@@ -1320,7 +1324,7 @@ var I18N = {
     restoreModalTitle:"Restore backup?", restoreModalBody:"This file contains a full Xtally Sheets backup. It will open as a new spreadsheet — your other spreadsheets stay unchanged.", restoreConfirm:"Restore",
     sheetWord:"Sheet", toastTemplate:"Template \"{0}\" created", toastDuplicated:"Spreadsheet duplicated", toastDeleted:"Spreadsheet deleted",
     toastXlsxExported:".xlsx export complete", toastCsvExported:"CSV export complete", toastJsonExported:"Backup downloaded",
-    toastImported:"File imported", toastRestored:"Backup restored",
+    aClose:"Close", toastImportTruncated:"File imported – data beyond row 300 or column 26 didn't fit and was skipped", toastImported:"File imported", toastRestored:"Backup restored",
     toastSheetAdded:"Sheet added", toastLimitReached:"Maximum sheet size reached (300 rows × 26 columns)", toastSheetDeleted:"Sheet deleted", toastCantDeleteLastSheet:"A workbook needs at least one sheet",
     toastInvalidFile:"Couldn't read that file", toastSaved:"Saved", welcomeSheetName:"Sheet1",
     printTitle:"Print spreadsheet",
@@ -2612,7 +2616,10 @@ function exportCsv(){
       var ref = colToLetter(c) + (r+1);
       var v = sheet.cells[ref] ? cellComputedValue(sheet, ref) : "";
       if (v !== "" && v !== null && v !== undefined) rowHasData = true;
-      cols.push(csvEscape(csvCellText(v, cz), sep));
+      var csvTxt = csvCellText(v, cz);
+      /* text začínající = nebo @ by Excel po otevření CSV spustil jako vzorec */
+      if (typeof v === "string" && /^[=@]/.test(csvTxt)) csvTxt = "'" + csvTxt;
+      cols.push(csvEscape(csvTxt, sep));
     }
     if (rowHasData || lines.length) lines.push(cols.join(sep));
   }
@@ -2684,11 +2691,13 @@ function handleImportFile(file){
   else if (ext === "json") importJsonFile(file);
   else S.showToast(t("toastInvalidFile"));
 }
+var importTruncated = false;
 function finishImportSheets(title, sheets){
   var wb2 = S.createWorkbook(title, sheets);
   S.selectDoc(wb2.id);
   closeModal(importModal);
-  S.showToast(t("toastImported"));
+  S.showToast(t(importTruncated ? "toastImportTruncated" : "toastImported"));
+  importTruncated = false;
 }
 function importXlsx(file){
   if (typeof XLSX === "undefined"){ S.showToast(t("toastInvalidFile")); return; }
@@ -2704,7 +2713,7 @@ function importXlsx(file){
         Object.keys(ws).forEach(function(addr){
           if (addr[0] === "!") return;
           var pos = parseCellRef(addr); if (!pos) return;
-          if (pos.row >= CORE.ROWS_MAX || pos.col >= CORE.COLS_MAX) return;
+          if (pos.row >= CORE.ROWS_MAX || pos.col >= CORE.COLS_MAX){ importTruncated = true; return; }
           var cellObj = ws[addr];
           maxRow = Math.max(maxRow,pos.row); maxCol = Math.max(maxCol,pos.col);
           var cell = emptyCell();
@@ -2782,7 +2791,12 @@ function importCsv(file){
   var reader = new FileReader();
   reader.onload = function(e){
     try {
-      var rows = parseCsvText(String(e.target.result)).slice(0, CORE.ROWS_MAX);
+      var buf = e.target.result, text;
+      try { text = new TextDecoder("utf-8", { fatal: true }).decode(buf); }
+      catch (decErr){ try { text = new TextDecoder("windows-1250").decode(buf); } catch (e2){ text = new TextDecoder("utf-8").decode(buf); } }
+      var allRows = parseCsvText(text);
+      var rows = allRows.slice(0, CORE.ROWS_MAX);
+      importTruncated = allRows.length > CORE.ROWS_MAX || rows.some(function(cols){ return cols.length > CORE.COLS_MAX && cols.slice(CORE.COLS_MAX).some(function(v){ return v !== ""; }); });
       var sheet = newSheet(t("welcomeSheetName"));
       var maxCol = 0;
       rows.forEach(function(cols, r){
@@ -2802,7 +2816,7 @@ function importCsv(file){
     } catch (err){ S.showToast(t("toastInvalidFile")); }
   };
   reader.onerror = function(){ S.showToast(t("toastInvalidFile")); };
-  reader.readAsText(file, "utf-8");
+  reader.readAsArrayBuffer(file);
 }
 function importJsonFile(file){
   var reader = new FileReader();
@@ -3152,9 +3166,9 @@ document.addEventListener("paste", function(e){
       var ref = colToLetter(c) + (r+1);
       if (val === ""){ delete sheet.cells[ref]; return; }
       var entry = coerceEntry(val);
-      var cell = emptyCell();
+      var cell = sheet.cells[ref] || emptyCell();
       cell.f = entry.f; cell.v = entry.v;
-      if (entry.__autoFmt) cell.fmt = entry.__autoFmt;
+      if (entry.__autoFmt && (!cell.fmt || cell.fmt === "general")) cell.fmt = entry.__autoFmt;
       sheet.cells[ref] = cell;
     });
   });

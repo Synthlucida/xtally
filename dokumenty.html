@@ -402,7 +402,7 @@
     </aside>
 
     <div class="editor-col">
-      <div class="toolbar" role="toolbar" aria-label="Formátování textu">
+      <div class="toolbar" role="toolbar" data-i18n-aria="aToolbar" aria-label="Formátování textu">
         <div class="grp">
           <button class="tbtn mobile-only" id="sidebarToggle" type="button" data-i18n-title="myDocs" data-i18n-aria="myDocs" title="Moje dokumenty" aria-label="Moje dokumenty">
             <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -700,7 +700,7 @@
 <div class="modal-backdrop" id="templatesModal" hidden>
   <div class="modal">
     <div class="modal-head"><h2 data-i18n="tplModalTitle">Vyberte šablonu</h2>
-      <button class="icon-btn" id="closeTemplates" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeTemplates" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body"><div class="tpl-grid" id="tplGrid"></div></div>
   </div>
@@ -710,7 +710,7 @@
 <div class="modal-backdrop" id="exportModal" hidden>
   <div class="modal">
     <div class="modal-head"><h2 data-i18n="exportModalTitle">Exportovat dokument</h2>
-      <button class="icon-btn" id="closeExportModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeExportModal" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body">
       <div class="option-list">
@@ -740,7 +740,7 @@
 <div class="modal-backdrop" id="importModal" hidden>
   <div class="modal">
     <div class="modal-head"><h2 data-i18n="importModalTitle">Importovat dokument</h2>
-      <button class="icon-btn" id="closeImportModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeImportModal" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body">
       <div class="option-list">
@@ -766,7 +766,7 @@
 <div class="modal-backdrop" id="linkModal" hidden>
   <div class="modal small">
     <div class="modal-head"><h2 data-i18n="linkModalTitle">Vložit odkaz</h2>
-      <button class="icon-btn" id="closeLinkModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeLinkModal" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body">
       <div class="field"><label for="linkUrlInput" data-i18n="linkUrlLabel">Adresa (URL)</label><input type="url" id="linkUrlInput" placeholder="https://…"></div>
@@ -782,7 +782,7 @@
 <div class="modal-backdrop" id="deleteModal" hidden>
   <div class="modal small">
     <div class="modal-head"><h2 data-i18n="deleteModalTitle">Smazat dokument?</h2>
-      <button class="icon-btn" id="closeDeleteModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeDeleteModal" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body">
       <p style="margin-top:0;color:var(--ink-soft);" data-i18n="deleteModalText">Tuto akci nelze vrátit zpět. Dokument bude trvale odstraněn z tohoto zařízení.</p>
@@ -798,7 +798,7 @@
 <div class="modal-backdrop" id="restoreConfirmModal" hidden>
   <div class="modal small">
     <div class="modal-head"><h2 data-i18n="restoreModalTitle">Obnovit zálohu?</h2>
-      <button class="icon-btn" id="closeRestoreModal" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="icon-btn" id="closeRestoreModal" type="button" data-i18n-aria="aClose" aria-label="Zavřít"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <div class="modal-body">
       <p style="margin-top:0;color:var(--ink-soft);" id="restoreModalText" data-i18n="restoreModalText">Dokumenty ze zálohy budou přidány k vašim stávajícím dokumentům.</p>
@@ -906,7 +906,7 @@ function a(e,t){return n(e)||r(e,t)||o(e,t)||i()}function o(e,n){if(e){if(typeof
       restoreModalTitle:"Obnovit zálohu?", restoreModalText:"Dokumenty ze zálohy budou přidány k vašim stávajícím dokumentům.",
       welcomeTitle:"Vítejte v Xtally",
       welcomeHtml:"<h1>Vítejte v Xtally 👋</h1><p>Toto je váš první dokument. Klidně ho smažte a začněte nový, nebo vyberte hotovou šablonu vlevo nahoře.</p><ul><li>Formátujte text pomocí lišty nahoře</li><li>Vše se automaticky ukládá do tohoto zařízení</li><li>Dokument můžete kdykoliv exportovat do PDF, Wordu, textu, nebo importovat existující .docx</li></ul>",
-      untitled:"Bez názvu", noDocs:"Zatím žádné dokumenty.", updatedAt:"Upraveno",
+      aClose:"Zavřít", aToolbar:"Formátování textu", untitled:"Bez názvu", noDocs:"Zatím žádné dokumenty.", updatedAt:"Upraveno",
       toastTemplate:"Šablona „{0}“ vložena", toastDuplicated:"Dokument zduplikován", toastDeleted:"Dokument smazán",
       toastSaved:"Uloženo", toastTxtExported:"Text exportován", toastDocxExported:"Word dokument exportován", toastDocxFallback:"Knihovna pro Word se nenačetla, export proběhl ve zjednodušeném formátu .doc",
       toastBackupSaved:"Záloha stažena", toastDocxImported:"Word dokument importován", toastTxtImported:"Textový soubor importován",
@@ -987,7 +987,7 @@ function a(e,t){return n(e)||r(e,t)||o(e,t)||i()}function o(e,n){if(e){if(typeof
       restoreModalTitle:"Restore backup?", restoreModalText:"Documents from the backup will be added to your existing documents.",
       welcomeTitle:"Welcome to Xtally",
       welcomeHtml:"<h1>Welcome to Xtally 👋</h1><p>This is your first document. Feel free to delete it and start a new one, or pick a ready-made template from the top left.</p><ul><li>Format text using the toolbar above</li><li>Everything is saved automatically to this device</li><li>Export anytime to PDF, Word, or text, or import an existing .docx</li></ul>",
-      untitled:"Untitled", noDocs:"No documents yet.", updatedAt:"Updated",
+      aClose:"Close", aToolbar:"Text formatting", untitled:"Untitled", noDocs:"No documents yet.", updatedAt:"Updated",
       toastTemplate:"Template \"{0}\" inserted", toastDuplicated:"Document duplicated", toastDeleted:"Document deleted",
       toastSaved:"Saved", toastTxtExported:"Text exported", toastDocxExported:"Word document exported", toastDocxFallback:"The Word library failed to load, exported using the simplified .doc format instead",
       toastBackupSaved:"Backup downloaded", toastDocxImported:"Word document imported", toastTxtImported:"Text file imported",

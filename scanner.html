@@ -265,7 +265,7 @@
 </style>
 </head>
 <body>
-<a href="#app" class="skip-link">Přeskočit na appku</a>
+<a href="#app" class="skip-link" data-i18n="skipLink">Přeskočit na appku</a>
 
 <header class="site">
   <div class="wrap header-inner">
@@ -279,7 +279,7 @@
         <button type="button" data-lang="cs">CS</button>
         <button type="button" data-lang="en">EN</button>
       </div>
-      <button class="icon-btn" id="themeToggle" type="button" title="Přepnout vzhled" aria-label="Přepnout vzhled">
+      <button class="icon-btn" id="themeToggle" type="button" title="Přepnout vzhled" aria-label="Přepnout vzhled" data-i18n-aria="aTheme">
         <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/></svg>
       </button>
     </div>
@@ -327,7 +327,7 @@
         <div class="camera-controls">
           <button type="button" class="btn btn-primary" id="startCameraBtn" data-i18n="cameraStartBtn">Spustit fotoaparát</button>
           <button type="button" class="btn btn-primary" id="captureBtn" hidden data-i18n="cameraCaptureBtn">📸 Vyfotit stránku</button>
-          <button type="button" class="icon-btn" id="switchCameraBtn" hidden title="Přepnout kameru" aria-label="Přepnout kameru">
+          <button type="button" class="icon-btn" id="switchCameraBtn" hidden title="Přepnout kameru" aria-label="Přepnout kameru" data-i18n-aria="aSwitchCam">
             <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13" r="3.3" stroke="currentColor" stroke-width="1.7"/></svg>
           </button>
           <button type="button" class="btn btn-ghost" id="stopCameraBtn" hidden data-i18n="cameraStopBtn">Zastavit</button>
@@ -492,7 +492,7 @@
   <div class="modal-box">
     <div class="modal-head">
       <h2 data-i18n="pageEditTitle">Upravit stránku</h2>
-      <button type="button" class="icon-btn" id="editorCloseBtn" aria-label="Zavřít">
+      <button type="button" class="icon-btn" id="editorCloseBtn" aria-label="Zavřít" data-i18n-aria="aClose">
         <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
@@ -583,6 +583,7 @@
       uploadDropText:"Klikněte nebo přetáhněte fotky sem", uploadDropHint:"Podporuje více souborů najednou (JPG, PNG…)",
       batchLoading:"Zpracovávám fotky…",
       pagesTitle:"Stránky", clearAllBtn:"🗑 Smazat vše", exportPdfBtn:"⬇️ Stáhnout jako PDF", exportingLabel:"Sestavuji PDF…",
+      aTheme:"Přepnout vzhled", aSwitchCam:"Přepnout kameru", aClose:"Zavřít", skipLink:"Přeskočit na appku", exportNoLib:"Knihovna pro PDF se nenačetla. Zkontrolujte připojení k internetu a obnovte stránku (naskenované stránky se tím ale ztratí).",
       exportError:"Export do PDF se nepodařil. Zkuste to prosím znovu.",
       toastImageUnsupported:"Tento obrázek prohlížeč neumí otevřít (např. HEIC z iPhonu). Zkuste JPG nebo PNG.",
       toastSomeFailed:"Některé soubory se nepodařilo načíst: {0}",
@@ -638,6 +639,7 @@
       uploadDropText:"Click or drop photos here", uploadDropHint:"Supports multiple files at once (JPG, PNG…)",
       batchLoading:"Processing photos…",
       pagesTitle:"Pages", clearAllBtn:"🗑 Clear all", exportPdfBtn:"⬇️ Download as PDF", exportingLabel:"Building PDF…",
+      aTheme:"Toggle theme", aSwitchCam:"Switch camera", aClose:"Close", skipLink:"Skip to the app", exportNoLib:"The PDF library didn't load. Check your internet connection and reload the page (note that reloading discards the scanned pages).",
       exportError:"Exporting to PDF failed. Please try again.",
       toastImageUnsupported:"Your browser can't open this image (e.g. HEIC from an iPhone). Try JPG or PNG.",
       toastSomeFailed:"Some files couldn't be loaded: {0}",
@@ -687,6 +689,11 @@
       var key = el.getAttribute("data-i18n");
       var val = t(key);
       if (HTML_KEYS[key]) el.innerHTML = val; else el.textContent = val;
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function(el){
+      var v = t(el.getAttribute("data-i18n-aria"));
+      el.setAttribute("aria-label", v);
+      if (el.hasAttribute("title")) el.title = v;
     });
     document.querySelectorAll("#langSwitch button").forEach(function(b){
       var isActive = b.dataset.lang === currentLang;
@@ -1378,27 +1385,44 @@
     });
   }
 
-  var activeHandle = null;
+  var activeHandle = null, activePointer = null;
+  /* čtyřúhelník musí zůstat konvexní – překřížené rohy daly nesmyslný výřez */
+  function isConvexQuad(q){
+    var sign = 0;
+    for (var k = 0; k < 4; k++){
+      var a = q[k], b = q[(k+1)%4], c = q[(k+2)%4];
+      var cr = (b.x-a.x)*(c.y-b.y) - (b.y-a.y)*(c.x-b.x);
+      if (Math.abs(cr) < 1e-6) return false;
+      var sg = cr > 0 ? 1 : -1;
+      if (!sign) sign = sg; else if (sg !== sign) return false;
+    }
+    return true;
+  }
   handles.forEach(function(h){
     h.addEventListener("pointerdown", function(e){
+      if (activeHandle !== null) return; /* druhý prst na jiném rohu nic nemění */
+      activePointer = e.pointerId;
       activeHandle = parseInt(h.dataset.idx, 10);
       try { h.setPointerCapture(e.pointerId); } catch(err){}
       e.preventDefault();
     });
   });
   document.addEventListener("pointermove", function(e){
-    if (activeHandle === null || !editorState) return;
+    if (activeHandle === null || !editorState || e.pointerId !== activePointer) return;
     var wrapRect = editorImageWrap.getBoundingClientRect();
     var box = getImageBox();
     var px = clamp(e.clientX - wrapRect.left - box.offsetX, 0, box.w);
     var py = clamp(e.clientY - wrapRect.top - box.offsetY, 0, box.h);
     var scaleX = box.w / editorImg.naturalWidth, scaleY = box.h / editorImg.naturalHeight;
-    editorState.quad[activeHandle] = { x: px/scaleX, y: py/scaleY };
+    var cand = editorState.quad.slice(); cand[activeHandle] = { x: px/scaleX, y: py/scaleY };
+    if (!isConvexQuad(cand)) return;
+    editorState.quad[activeHandle] = cand[activeHandle];
     renderHandles();
   });
-  function endHandleDrag(){
+  function endHandleDrag(e){
     if (activeHandle === null) return;
-    activeHandle = null;
+    if (e && e.pointerId !== undefined && activePointer !== null && e.pointerId !== activePointer) return;
+    activeHandle = null; activePointer = null;
     regeneratePreview();
   }
   document.addEventListener("pointerup", endHandleDrag);
@@ -1481,7 +1505,7 @@
     setTimeout(function(){
       try {
         var ctor = (window.jspdf && window.jspdf.jsPDF) || window.jsPDF;
-        if (!ctor) throw new Error("jsPDF not loaded");
+        if (!ctor){ window.alert(t("exportNoLib")); return; }
         /* na šířku naskenované stránky dostanou A4 na šířku (dřív byly malé uprostřed svislé A4) */
         function orient(pg){ return pg.fullW > pg.fullH ? "landscape" : "portrait"; }
         var doc = new ctor({ unit: "pt", format: "a4", orientation: orient(pages[0]) });
